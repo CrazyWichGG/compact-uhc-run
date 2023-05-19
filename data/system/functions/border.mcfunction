@@ -1,0 +1,10 @@
+execute if score game-time time = border500 time run function border:500
+execute if score game-time time = border500-done time run function border:500-done
+execute if score game-time time = border200 time run function border:200
+execute if score game-time time = border200-done time run function border:200-done
+execute if score game-time time = border50 time run function border:50
+execute if score game-time time = border50-done time run function border:50-done
+execute if score game-time time = border20 time run function border:20
+execute if score game-time time = border20-done time run function border:20-done
+execute if score game-time time = border1 time run function border:1
+execute if score game-time time = border1-done time run function border:1-done

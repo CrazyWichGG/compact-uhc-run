@@ -1,0 +1,2 @@
+give @s snowball{display:{Name:'[{"text":"Slowball","italic":false,"color":"aqua"},{"text":" (Right Click)","color":"gray"}]',Lore:['[{"text":"Creates a slow aura effect","italic":false,"color":"white"}]','[{"text":"when thrown on the ground.","italic":false,"color":"white"}]']}}
+tellraw @s [{"text":"Gave 1 Slowball to "},{"selector":"@s"}]

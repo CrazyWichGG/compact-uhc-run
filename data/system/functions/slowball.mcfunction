@@ -1,0 +1,3 @@
+execute as @e[type=minecraft:snowball] at @s run particle minecraft:poof ~ ~ ~ 0 0 0 0.2 5 force
+execute as @e[type=minecraft:snowball] at @s unless block ~ ~-1 ~ minecraft:air unless block ~ ~-1 ~ minecraft:grass unless block ~ ~-1 ~ minecraft:tall_grass run summon potion ~ ~ ~ {Item:{id:"lingering_potion",Count:1,tag:{CustomPotionEffects:[{Id:2,Duration:60,Amplifier:1}]}}}
+execute as @e[type=minecraft:snowball] at @s unless block ~ ~-1 ~ minecraft:air unless block ~ ~-1 ~ minecraft:grass unless block ~ ~-1 ~ minecraft:tall_grass run kill @e[type=minecraft:snowball,limit=1]
