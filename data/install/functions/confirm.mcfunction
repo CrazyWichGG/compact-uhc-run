@@ -31,6 +31,17 @@ execute as @s[tag=setup-request] at @s run scoreboard players set border20-done 
 execute as @s[tag=setup-request] at @s run scoreboard players set border1 time 21600
 execute as @s[tag=setup-request] at @s run scoreboard players set border1-done time 22200
 
+#score border countdown
+execute as @s[tag=setup-request] at @s run scoreboard objectives add border-countdown dummy
+execute as @s[tag=setup-request] at @s run scoreboard players set tick border-countdown 0
+execute as @s[tag=setup-request] at @s run scoreboard players set second border-countdown 0
+execute as @s[tag=setup-request] at @s run scoreboard players set minute border-countdown 0
+execute as @s[tag=setup-request] at @s run scoreboard players set border-state border-countdown 0
+
+#score border size
+execute as @s[tag=setup-request] at @s run scoreboard objectives add border-size dummy
+execute as @s[tag=setup-request] at @s run scoreboard players set size border-size 0
+
 #score bossbar
 execute as @s[tag=setup-request] at @s run scoreboard objectives add bossbar dummy
 execute as @s[tag=setup-request] at @s run scoreboard players set border bossbar 0
@@ -73,12 +84,21 @@ execute as @s[tag=setup-request] at @s run scoreboard players set ingame player 
 execute as @s[tag=setup-request] at @s run scoreboard players set player-left player 0
 execute as @s[tag=setup-request] at @s run scoreboard players set can-start player 2
 
+#score shop
+execute as @s[tag=setup-request] at @s run scoreboard objectives add hold-shop dummy
+execute as @s[tag=setup-request] at @s run scoreboard players set @a hold-shop 0
+execute as @s[tag=setup-request] at @s run scoreboard players set default hold-shop 0
+
 #team ingame
 execute as @s[tag=setup-request] at @s run team add ingame
 execute as @s[tag=setup-request] at @s run team modify ingame color red
 
+#team shop entity
+execute as @s[tag=setup-request] at @s run team add shop-entity
+execute as @s[tag=setup-request] at @s run team modify shop-entity collisionRule never
+
 #bossbar main
-execute as @s[tag=setup-request] at @s run bossbar add main {"text":"Ultimate UHC","color":"white","bold":true}
+execute as @s[tag=setup-request] at @s run bossbar add main {"text":"UHC Run","color":"white","bold":true}
 execute as @s[tag=setup-request] at @s run bossbar set minecraft:main color green
 execute as @s[tag=setup-request] at @s run bossbar set minecraft:main max 100
 execute as @s[tag=setup-request] at @s run bossbar set minecraft:main value 100
@@ -113,6 +133,7 @@ execute as @s[tag=setup-request] at @s run gamerule sendCommandFeedback false
 execute as @s[tag=setup-request] at @s run gamerule keepInventory false
 execute as @s[tag=setup-request] at @s run gamerule doTraderSpawning false
 execute as @s[tag=setup-request] at @s run gamerule announceAdvancements false
+execute as @s[tag=setup-request] at @s run gamerule naturalRegeneration false
 
 #time set
 execute as @s[tag=setup-request] at @s run time set day
@@ -124,7 +145,7 @@ execute as @s[tag=setup-request] at @s run difficulty normal
 execute as @s[tag=setup-request] at @s run setworldspawn ~ ~ ~
 
 #setblock command_block with function run
-execute as @s[tag=setup-request] at @s run setblock ~ ~-2 ~ repeating_command_block{Command:"function system:run",auto:true}
+#execute as @s[tag=setup-request] at @s run setblock ~ ~-2 ~ repeating_command_block{Command:"function system:run",auto:true}
 
 #permission remove
 execute as @s[tag=setup-request] at @s run tellraw @s {"text":"\nSetup complete","color":"green"}

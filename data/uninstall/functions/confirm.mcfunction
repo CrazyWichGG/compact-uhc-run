@@ -16,6 +16,9 @@ execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remov
 execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove total-death
 execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove player-kills
 execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove entity-kills
+execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove border-countdown
+execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove border-size
+execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove hold-shop
 
 #bossbar remove
 execute as @s[tag=setup-uninstall-request] at @s run bossbar remove border
@@ -24,6 +27,8 @@ execute as @s[tag=setup-uninstall-request] at @s run bossbar remove main
 #team remove
 execute as @s[tag=setup-uninstall-request] at @s run team empty ingame
 execute as @s[tag=setup-uninstall-request] at @s run team remove ingame
+execute as @s[tag=setup-uninstall-request] at @s run team empty shop-entity
+execute as @s[tag=setup-uninstall-request] at @s run team remove shop-entity
 
 #gamemode
 execute as @s[tag=setup-uninstall-request] at @s run gamemode survival @a
@@ -37,6 +42,8 @@ execute as @s[tag=setup-uninstall-request] at @s run gamerule doMobSpawning true
 execute as @s[tag=setup-uninstall-request] at @s run gamerule commandBlockOutput true
 execute as @s[tag=setup-uninstall-request] at @s run gamerule keepInventory false
 execute as @s[tag=setup-uninstall-request] at @s run gamerule doTraderSpawning true
+execute as @s[tag=setup-uninstall-request] at @s run gamerule announceAdvancements true
+execute as @s[tag=setup-uninstall-request] at @s run gamerule naturalRegeneration true
 
 #max health reset
 execute as @s[tag=setup-uninstall-request] at @s run execute as @a at @s run attribute @s generic.max_health base set 20
@@ -47,7 +54,7 @@ execute as @s[tag=setup-uninstall-request] at @s run execute as @s at @s unless 
 
 #remove armor stand center
 execute as @s[tag=setup-uninstall-request] at @s run execute as @e[type=minecraft:armor_stand,name="map-center"] at @s run tp @a[tag=setup-uninstall-request] @s
-execute as @s[tag=setup-uninstall-request] at @s run execute as @e[type=minecraft:armor_stand,name="map-center"] at @s run fill ~3 ~3 ~3 ~-3 ~-3 ~-3 air replace repeating_command_block
+#execute as @s[tag=setup-uninstall-request] at @s run execute as @e[type=minecraft:armor_stand,name="map-center"] at @s run fill ~3 ~3 ~3 ~-3 ~-3 ~-3 air replace repeating_command_block
 execute as @s[tag=setup-uninstall-request] at @s run kill @e[type=minecraft:armor_stand,name="map-center"]
 
 #permission remove
