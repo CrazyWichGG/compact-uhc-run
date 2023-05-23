@@ -89,6 +89,23 @@ execute as @s[tag=setup-request] at @s run scoreboard objectives add hold-shop d
 execute as @s[tag=setup-request] at @s run scoreboard players set @a hold-shop 0
 execute as @s[tag=setup-request] at @s run scoreboard players set default hold-shop 0
 
+#score mined ores
+# -iron
+execute as @s[tag=setup-request] at @s run scoreboard objectives add mined-ore-iron minecraft.mined:minecraft.iron_ore
+execute as @s[tag=setup-request] at @s run scoreboard players set @a mined-ore-iron 0
+
+# -gold
+execute as @s[tag=setup-request] at @s run scoreboard objectives add mined-ore-gold minecraft.mined:minecraft.gold_ore
+execute as @s[tag=setup-request] at @s run scoreboard players set @a mined-ore-gold 0
+
+# -deepslate iron
+execute as @s[tag=setup-request] at @s run scoreboard objectives add mined-ore-deepslate-iron minecraft.mined:minecraft.deepslate_iron_ore
+execute as @s[tag=setup-request] at @s run scoreboard players set @a mined-ore-deepslate-iron 0
+
+# -deepslate gold
+execute as @s[tag=setup-request] at @s run scoreboard objectives add mined-ore-deepslate-gold minecraft.mined:minecraft.deepslate_gold_ore
+execute as @s[tag=setup-request] at @s run scoreboard players set @a mined-ore-deepslate-gold 0
+
 #team ingame
 execute as @s[tag=setup-request] at @s run team add ingame
 execute as @s[tag=setup-request] at @s run team modify ingame color red

@@ -19,6 +19,10 @@ execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remov
 execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove border-countdown
 execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove border-size
 execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove hold-shop
+execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove mined-ore-iron
+execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove mined-ore-gold
+execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove mined-ore-deepslate-iron
+execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove mined-ore-deepslate-gold
 
 #bossbar remove
 execute as @s[tag=setup-uninstall-request] at @s run bossbar remove border
