@@ -13,7 +13,7 @@ This datapack doesn't change any game mechanic except some gamerules, so most da
 
 Use `/function install:_` or `/function install:random` then `/function install:confirm` to install the game first.
 
-Then use `/function _:game_start` to start the game. (require at least 2 players to start)
+Then use `/function _:start-game` to start the game. (require at least 2 players to start)
 
 If want to uninstall consider using `/function uninstall:_` then `/function uninstall:confirm`
 
