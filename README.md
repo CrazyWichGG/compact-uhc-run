@@ -7,15 +7,15 @@ You can add other features using datapacks or plugins from other creators to enh
 
 This datapack doesn't change any game mechanic except some gamerules, so most datapacks and plugins should work fine.
 
-📥 For those who download the datapack, if you find any bug or issue in the game. Please report it at Issue page of this github repository.
+📥 For those who download the datapack, if you find any bug or issue in the game. Please report it at the Issue page of this GitHub repository.
 
 ## 🎮 How to play
 
-Use `/function install:_` or `/function install:random` then `/function install:confirm` to install the game first.
+Use `/function install:_` or `/function install:random` (to random map location) then `/function install:confirm` to install the game first.
 
 Then use `/function _:start-game` to start the game. (require at least 2 players to start)
 
-If want to uninstall consider using `/function uninstall:_` then `/function uninstall:confirm`
+If you want to uninstall consider using `/function uninstall:_` then `/function uninstall:confirm`
 
 ## 📥 New to Github?
 
