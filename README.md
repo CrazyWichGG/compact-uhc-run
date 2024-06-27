@@ -5,7 +5,7 @@
 This datapack is a compact UHC game that can be installed in every Minecraft map even the custom generated one. 
 You can add other features using datapacks or plugins from other creators to enhance your UHC experience such as Tree Capitator, Death Chest, Custom Structure, etc. 
 
-This datapack doesn't change any game mechanic except some gamerules, so most datapacks and plugins should work fine.
+This datapack only changes some game mechanics such as loot tables, recipes, and some gamerules, so most datapacks and plugins should work fine.
 
 📥 For those who download the datapack, if you find any bug or issue in the game. Please report it at the Issue page of this GitHub repository.
 
