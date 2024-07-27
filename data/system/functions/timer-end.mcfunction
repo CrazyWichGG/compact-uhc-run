@@ -1,2 +1,2 @@
-execute if score before-end timer matches 20 run function system:game-before-end
-execute if score before-end timer matches 400 run function system:game-end
+execute if score end-timer timer = winner-annouce-time timer run function system:game-before-end
+execute if score end-timer timer = game-end-time timer run function system:game-end

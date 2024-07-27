@@ -1,1 +1,0 @@
-This datapack support minecraft java edition 1.16 +

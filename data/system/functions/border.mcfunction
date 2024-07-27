@@ -1,10 +1,6 @@
-execute if score game-time time = border500 time run function border:500
-execute if score game-time time = border500-done time run function border:500-done
-execute if score game-time time = border200 time run function border:200
-execute if score game-time time = border200-done time run function border:200-done
-execute if score game-time time = border50 time run function border:50
-execute if score game-time time = border50-done time run function border:50-done
-execute if score game-time time = border20 time run function border:20
-execute if score game-time time = border20-done time run function border:20-done
-execute if score game-time time = border1 time run function border:1
-execute if score game-time time = border1-done time run function border:1-done
+execute if score game-time time = state-2 time run function border:state-2
+execute if score game-time time = state-3 time run function border:state-3
+execute if score game-time time = state-4 time run function border:state-4
+execute if score game-time time = state-5 time run function border:state-5
+
+execute if score border-state border-countdown matches 5 run function system:border-move

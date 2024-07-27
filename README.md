@@ -1,4 +1,4 @@
-📄 **Note:** This datapack is under heavy development, every data in it can be changed anytime.
+📄 **Note:** This datapack is under heavy development, everything can be changed anytime.
 
 # Compact UHC Run
 
@@ -11,9 +11,11 @@ This datapack only changes some game mechanics such as loot tables, recipes, and
 
 ## 🎮 How to play
 
-Use `/function install:_` or `/function install:random` (to random map location) then `/function install:confirm` to install the game first.
+Use `/function install:_` or `/function install:random` (to randomize map center location) then `/function install:confirm` to install the game first.
 
 Then use `/function _:start-game` to start the game. (require at least 2 players to start)
+
+If you want to randomize the new map location, use `/function _:random-center` without any comfirmation.
 
 If you want to uninstall consider using `/function uninstall:_` then `/function uninstall:confirm`
 

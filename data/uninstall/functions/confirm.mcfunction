@@ -19,20 +19,50 @@ execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remov
 execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove border-countdown
 execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove border-size
 execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove hold-shop
+execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove mined-ore-coal
+execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove mined-ore-deepslate-coal
+execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove mined-ore-copper
+execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove mined-ore-deepslate-copper
 execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove mined-ore-iron
-execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove mined-ore-gold
 execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove mined-ore-deepslate-iron
+execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove mined-ore-lapis
+execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove mined-ore-deepslate-lapis
+execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove mined-ore-redstone
+execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove mined-ore-deepslate-redstone
+execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove mined-ore-gold
 execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove mined-ore-deepslate-gold
+execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove mined-ore-diamond
+execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove mined-ore-deepslate-diamond
+execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove mined-ore-emerald
+execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove mined-ore-deepslate-emerald
+execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove game-state
+execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove game-time
+execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove bossbar-animation
+execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove invincibility-bossbar
+execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove gen-chunk
+execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove is-chunk-generated
+execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove spectator-spectate-player
+execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove settings
 
 #bossbar remove
-execute as @s[tag=setup-uninstall-request] at @s run bossbar remove border
+execute as @s[tag=setup-uninstall-request] at @s run bossbar remove ingame
 execute as @s[tag=setup-uninstall-request] at @s run bossbar remove main
+execute as @s[tag=setup-uninstall-request] at @s run bossbar remove invincibility
+execute as @s[tag=setup-uninstall-request] at @s run bossbar remove gen-chunk
 
 #team remove
-execute as @s[tag=setup-uninstall-request] at @s run team empty ingame
 execute as @s[tag=setup-uninstall-request] at @s run team remove ingame
-execute as @s[tag=setup-uninstall-request] at @s run team empty shop-entity
+execute as @s[tag=setup-uninstall-request] at @s run team remove spectator
 execute as @s[tag=setup-uninstall-request] at @s run team remove shop-entity
+execute as @s[tag=setup-uninstall-request] at @s run team remove glowing-color-aqua
+execute as @s[tag=setup-uninstall-request] at @s run team remove glowing-color-gold
+execute as @s[tag=setup-uninstall-request] at @s run team remove glowing-color-green
+execute as @s[tag=setup-uninstall-request] at @s run team remove glowing-color-light_purple
+execute as @s[tag=setup-uninstall-request] at @s run team remove glowing-color-red
+execute as @s[tag=setup-uninstall-request] at @s run team remove glowing-color-yellow
+
+#clear effect
+execute as @s[tag=setup-uninstall-request] at @s run effect clear @a
 
 #gamemode
 execute as @s[tag=setup-uninstall-request] at @s run gamemode survival @a
@@ -48,6 +78,11 @@ execute as @s[tag=setup-uninstall-request] at @s run gamerule keepInventory fals
 execute as @s[tag=setup-uninstall-request] at @s run gamerule doTraderSpawning true
 execute as @s[tag=setup-uninstall-request] at @s run gamerule announceAdvancements true
 execute as @s[tag=setup-uninstall-request] at @s run gamerule naturalRegeneration true
+execute as @s[tag=setup-uninstall-request] at @s run gamerule sendCommandFeedback true
+execute as @s[tag=setup-uninstall-request] at @s run gamerule spawnRadius 10
+execute as @s[tag=setup-uninstall-request] at @s run gamerule doMobSpawning true
+execute as @s[tag=setup-uninstall-request] at @s run gamerule playersNetherPortalDefaultDelay 80
+execute as @s[tag=setup-uninstall-request] at @s run gamerule playersNetherPortalCreativeDelay 1
 
 #max health reset
 execute as @s[tag=setup-uninstall-request] at @s run execute as @a at @s run attribute @s generic.max_health base set 20

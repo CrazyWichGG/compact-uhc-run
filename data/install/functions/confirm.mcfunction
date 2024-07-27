@@ -15,21 +15,16 @@ execute as @s[tag=setup-request] at @s run tellraw @s {"text":"Starting setup ma
 execute as @s[tag=setup-request] at @s run tellraw @s {"text":"DO NOT MOVE!","color":"red"}
 
 #armor stand center
-execute as @s[tag=setup-request] at @a run summon armor_stand ~ ~ ~ {Invisible:1b,Invulnerable:1b,NoBasePlate:1b,NoGravity:1b,Marker:1b,CustomName:'{"text":"map-center"}'}
+execute as @s[tag=setup-request] at @s align xyz positioned ~0.5 ~ ~0.5 run summon armor_stand ~ ~ ~ {Invisible:1b,Invulnerable:1b,NoBasePlate:1b,NoGravity:1b,Marker:1b,CustomName:'{"text":"map-center"}'}
 
 #score time
 execute as @s[tag=setup-request] at @a run scoreboard objectives add time dummy
-execute as @s[tag=setup-request] at @s run scoreboard players set game-time time 30000
-execute as @s[tag=setup-request] at @s run scoreboard players set border500 time 6000
-execute as @s[tag=setup-request] at @s run scoreboard players set border500-done time 9600
-execute as @s[tag=setup-request] at @s run scoreboard players set border200 time 13200
-execute as @s[tag=setup-request] at @s run scoreboard players set border200-done time 15000
-execute as @s[tag=setup-request] at @s run scoreboard players set border50 time 17400
-execute as @s[tag=setup-request] at @s run scoreboard players set border50-done time 18600
-execute as @s[tag=setup-request] at @s run scoreboard players set border20 time 19800
-execute as @s[tag=setup-request] at @s run scoreboard players set border20-done time 20400
-execute as @s[tag=setup-request] at @s run scoreboard players set border1 time 21600
-execute as @s[tag=setup-request] at @s run scoreboard players set border1-done time 22200
+execute as @s[tag=setup-request] at @s run scoreboard players set game-time time 0
+execute as @s[tag=setup-request] at @s run scoreboard players set state-1 time 0
+execute as @s[tag=setup-request] at @s run scoreboard players set state-2 time 12000
+execute as @s[tag=setup-request] at @s run scoreboard players set state-3 time 48000
+execute as @s[tag=setup-request] at @s run scoreboard players set state-4 time 54000
+execute as @s[tag=setup-request] at @s run scoreboard players set state-5 time 56400
 
 #score border countdown
 execute as @s[tag=setup-request] at @s run scoreboard objectives add border-countdown dummy
@@ -48,22 +43,21 @@ execute as @s[tag=setup-request] at @s run scoreboard players set border bossbar
 
 #score health
 execute as @s[tag=setup-request] at @s run scoreboard objectives add health health {"text":"♥","color":"red"}
-execute as @s[tag=setup-request] at @s run scoreboard objectives setdisplay belowName health
+execute as @s[tag=setup-request] at @s run scoreboard objectives setdisplay below_name health
 
 #score player-kills
 execute as @s[tag=setup-request] at @s run scoreboard objectives add kills playerKillCount
-execute as @s[tag=setup-request] at @s run scoreboard objectives setdisplay list kills
 execute as @s[tag=setup-request] at @s run scoreboard players set @a kills 0
 
-#score player-total-kills
+#score player-total-kills (for emerald)
 execute as @s[tag=setup-request] at @s run scoreboard objectives add player-kills playerKillCount
 execute as @s[tag=setup-request] at @s run scoreboard players set @a player-kills 0
 
-#score entity-total-kills
+#score entity-total-kills (for emerald)
 execute as @s[tag=setup-request] at @s run scoreboard objectives add entity-kills totalKillCount
 execute as @s[tag=setup-request] at @s run scoreboard players set @a entity-kills 0
 
-#score death
+#score death (for death detection)
 execute as @s[tag=setup-request] at @s run scoreboard objectives add death deathCount
 execute as @s[tag=setup-request] at @s run scoreboard players set @a death 0
 
@@ -75,13 +69,16 @@ execute as @s[tag=setup-request] at @s run scoreboard players set @a total-death
 execute as @s[tag=setup-request] at @s run scoreboard objectives add timer dummy
 execute as @s[tag=setup-request] at @s run scoreboard players set tick timer 0
 execute as @s[tag=setup-request] at @s run scoreboard players set second timer 20
-execute as @s[tag=setup-request] at @s run scoreboard players set before-end timer 0
-execute as @s[tag=setup-request] at @s run scoreboard players set before-end-time timer 400
+execute as @s[tag=setup-request] at @s run scoreboard players set end-timer timer 0
+execute as @s[tag=setup-request] at @s run scoreboard players set winner-annouce-time timer 1
+execute as @s[tag=setup-request] at @s run scoreboard players set game-end-time timer 300
 
 #score player
 execute as @s[tag=setup-request] at @s run scoreboard objectives add player dummy
 execute as @s[tag=setup-request] at @s run scoreboard players set ingame player 0
+execute as @s[tag=setup-request] at @s run scoreboard players set spectator player 0
 execute as @s[tag=setup-request] at @s run scoreboard players set player-left player 0
+execute as @s[tag=setup-request] at @s run scoreboard players set no-player player 0
 execute as @s[tag=setup-request] at @s run scoreboard players set can-start player 2
 
 #score shop
@@ -89,50 +86,174 @@ execute as @s[tag=setup-request] at @s run scoreboard objectives add hold-shop d
 execute as @s[tag=setup-request] at @s run scoreboard players set @a hold-shop 0
 execute as @s[tag=setup-request] at @s run scoreboard players set default hold-shop 0
 
+#score game state
+execute as @s[tag=setup-request] at @s run scoreboard objectives add game-state dummy
+execute as @s[tag=setup-request] at @s run scoreboard players set lobby game-state 1
+execute as @s[tag=setup-request] at @s run scoreboard players set ingame game-state 0
+execute as @s[tag=setup-request] at @s run scoreboard players set gen-chunk game-state 0
+
+#score game time
+execute as @s[tag=setup-request] at @s run scoreboard objectives add game-time dummy
+execute as @s[tag=setup-request] at @s run scoreboard players set tick game-time 0
+execute as @s[tag=setup-request] at @s run scoreboard players set second game-time 0
+execute as @s[tag=setup-request] at @s run scoreboard players set minute game-time 0
+
+#score main bossbar animation
+execute as @s[tag=setup-request] at @s run scoreboard objectives add bossbar-animation dummy
+execute as @s[tag=setup-request] at @s run scoreboard players set main bossbar-animation 0
+execute as @s[tag=setup-request] at @s run scoreboard players set ingame-state-5 bossbar-animation 0
+
+#score invin bossbar
+execute as @s[tag=setup-request] at @s run scoreboard objectives add invincibility-bossbar dummy
+execute as @s[tag=setup-request] at @s run scoreboard players set tick invincibility-bossbar 0
+execute as @s[tag=setup-request] at @s run scoreboard players set second invincibility-bossbar 0
+execute as @s[tag=setup-request] at @s run scoreboard players set progress invincibility-bossbar 0
+
+#score gen chunk
+execute as @s[tag=setup-request] at @s run scoreboard objectives add gen-chunk dummy
+execute as @s[tag=setup-request] at @s run scoreboard players set tick gen-chunk 0
+execute as @s[tag=setup-request] at @s run scoreboard players set second gen-chunk 0
+execute as @s[tag=setup-request] at @s run scoreboard players set minute gen-chunk 0
+execute as @s[tag=setup-request] at @s run scoreboard players set player-total gen-chunk 0
+execute as @s[tag=setup-request] at @s run scoreboard players set player-generated gen-chunk 0
+
+#score is chunk generated
+execute as @s[tag=setup-request] at @s run scoreboard objectives add is-chunk-generated dummy
+
+#score spectator spectate player
+execute as @s[tag=setup-request] at @s run scoreboard objectives add spectator-spectate-player dummy
+
+#score settings (for upcoming features)
+execute as @s[tag=setup-request] at @s run scoreboard objectives add settings dummy
+execute as @s[tag=setup-request] at @s run scoreboard players set attack-speed settings 0
+execute as @s[tag=setup-request] at @s run scoreboard players set spectator-generate-chunks settings 0
+
+
 #score mined ores
+# -coal
+execute as @s[tag=setup-request] at @s run scoreboard objectives add mined-ore-coal minecraft.mined:minecraft.coal_ore
+execute as @s[tag=setup-request] at @s run scoreboard players set @a mined-ore-coal 0
+# -deepslate coal
+execute as @s[tag=setup-request] at @s run scoreboard objectives add mined-ore-deepslate-coal minecraft.mined:minecraft.deepslate_coal_ore
+execute as @s[tag=setup-request] at @s run scoreboard players set @a mined-ore-deepslate-coal 0
+# -copper
+execute as @s[tag=setup-request] at @s run scoreboard objectives add mined-ore-copper minecraft.mined:minecraft.copper_ore
+execute as @s[tag=setup-request] at @s run scoreboard players set @a mined-ore-copper 0
+# -deepslate copper
+execute as @s[tag=setup-request] at @s run scoreboard objectives add mined-ore-deepslate-copper minecraft.mined:minecraft.deepslate_copper_ore
+execute as @s[tag=setup-request] at @s run scoreboard players set @a mined-ore-deepslate-copper 0
 # -iron
 execute as @s[tag=setup-request] at @s run scoreboard objectives add mined-ore-iron minecraft.mined:minecraft.iron_ore
 execute as @s[tag=setup-request] at @s run scoreboard players set @a mined-ore-iron 0
-
-# -gold
-execute as @s[tag=setup-request] at @s run scoreboard objectives add mined-ore-gold minecraft.mined:minecraft.gold_ore
-execute as @s[tag=setup-request] at @s run scoreboard players set @a mined-ore-gold 0
-
 # -deepslate iron
 execute as @s[tag=setup-request] at @s run scoreboard objectives add mined-ore-deepslate-iron minecraft.mined:minecraft.deepslate_iron_ore
 execute as @s[tag=setup-request] at @s run scoreboard players set @a mined-ore-deepslate-iron 0
-
+# -lapis
+execute as @s[tag=setup-request] at @s run scoreboard objectives add mined-ore-lapis minecraft.mined:minecraft.lapis_ore
+execute as @s[tag=setup-request] at @s run scoreboard players set @a mined-ore-lapis 0
+# -deepslate lapis
+execute as @s[tag=setup-request] at @s run scoreboard objectives add mined-ore-deepslate-lapis minecraft.mined:minecraft.deepslate_lapis_ore
+execute as @s[tag=setup-request] at @s run scoreboard players set @a mined-ore-deepslate-lapis 0
+# -redstone
+execute as @s[tag=setup-request] at @s run scoreboard objectives add mined-ore-redstone minecraft.mined:minecraft.redstone_ore
+execute as @s[tag=setup-request] at @s run scoreboard players set @a mined-ore-redstone 0
+# -deepslate redstone
+execute as @s[tag=setup-request] at @s run scoreboard objectives add mined-ore-deepslate-redstone minecraft.mined:minecraft.deepslate_redstone_ore
+execute as @s[tag=setup-request] at @s run scoreboard players set @a mined-ore-deepslate-redstone 0
+# -gold
+execute as @s[tag=setup-request] at @s run scoreboard objectives add mined-ore-gold minecraft.mined:minecraft.gold_ore
+execute as @s[tag=setup-request] at @s run scoreboard players set @a mined-ore-gold 0
 # -deepslate gold
 execute as @s[tag=setup-request] at @s run scoreboard objectives add mined-ore-deepslate-gold minecraft.mined:minecraft.deepslate_gold_ore
 execute as @s[tag=setup-request] at @s run scoreboard players set @a mined-ore-deepslate-gold 0
+# -diamond
+execute as @s[tag=setup-request] at @s run scoreboard objectives add mined-ore-diamond minecraft.mined:minecraft.diamond_ore
+execute as @s[tag=setup-request] at @s run scoreboard players set @a mined-ore-diamond 0
+# -deepslate diamond
+execute as @s[tag=setup-request] at @s run scoreboard objectives add mined-ore-deepslate-diamond minecraft.mined:minecraft.deepslate_diamond_ore
+execute as @s[tag=setup-request] at @s run scoreboard players set @a mined-ore-deepslate-diamond 0
+# -emerald
+execute as @s[tag=setup-request] at @s run scoreboard objectives add mined-ore-emerald minecraft.mined:minecraft.emerald_ore
+execute as @s[tag=setup-request] at @s run scoreboard players set @a mined-ore-emerald 0
+# -deepslate emerald
+execute as @s[tag=setup-request] at @s run scoreboard objectives add mined-ore-deepslate-emerald minecraft.mined:minecraft.deepslate_emerald_ore
+execute as @s[tag=setup-request] at @s run scoreboard players set @a mined-ore-deepslate-emerald 0
+
 
 #team ingame
 execute as @s[tag=setup-request] at @s run team add ingame
 execute as @s[tag=setup-request] at @s run team modify ingame color red
+execute as @s[tag=setup-request] at @s run team modify ingame seeFriendlyInvisibles false
+
+#team spectator
+execute as @s[tag=setup-request] at @s run team add spectator
+execute as @s[tag=setup-request] at @s run team modify spectator color gray
+execute as @s[tag=setup-request] at @s run team modify spectator seeFriendlyInvisibles true
+execute as @s[tag=setup-request] at @s run team modify spectator collisionRule never
 
 #team shop entity
 execute as @s[tag=setup-request] at @s run team add shop-entity
 execute as @s[tag=setup-request] at @s run team modify shop-entity collisionRule never
 
+#team glowing color
+# -aqua
+execute as @s[tag=setup-request] at @s run team add glowing-color-aqua
+execute as @s[tag=setup-request] at @s run team modify glowing-color-aqua color aqua
+# -gold
+execute as @s[tag=setup-request] at @s run team add glowing-color-gold
+execute as @s[tag=setup-request] at @s run team modify glowing-color-gold color gold
+# -green
+execute as @s[tag=setup-request] at @s run team add glowing-color-green
+execute as @s[tag=setup-request] at @s run team modify glowing-color-green color green
+# -light purple
+execute as @s[tag=setup-request] at @s run team add glowing-color-light_purple
+execute as @s[tag=setup-request] at @s run team modify glowing-color-light_purple color light_purple
+# -red
+execute as @s[tag=setup-request] at @s run team add glowing-color-red
+execute as @s[tag=setup-request] at @s run team modify glowing-color-red color red
+# -yellow
+execute as @s[tag=setup-request] at @s run team add glowing-color-yellow
+execute as @s[tag=setup-request] at @s run team modify glowing-color-yellow color yellow
+
+
+
 #bossbar main
-execute as @s[tag=setup-request] at @s run bossbar add main {"text":"UHC Run","color":"white","bold":true}
-execute as @s[tag=setup-request] at @s run bossbar set minecraft:main color green
-execute as @s[tag=setup-request] at @s run bossbar set minecraft:main max 100
-execute as @s[tag=setup-request] at @s run bossbar set minecraft:main value 100
+execute as @s[tag=setup-request] at @s run bossbar add main {"text":"ULTRA HARDCORE","color":"yellow","bold":true}
+execute as @s[tag=setup-request] at @s run bossbar set minecraft:main color yellow
+execute as @s[tag=setup-request] at @s run bossbar set minecraft:main style notched_10
+execute as @s[tag=setup-request] at @s run bossbar set minecraft:main max 1
+execute as @s[tag=setup-request] at @s run bossbar set minecraft:main value 1
 execute as @s[tag=setup-request] at @s run bossbar set minecraft:main visible true
 execute as @s[tag=setup-request] at @s run bossbar set minecraft:main players @a
 
-#bossbar border
-execute as @s[tag=setup-request] at @s run bossbar add border {"text":"World Border"}
-execute as @s[tag=setup-request] at @s run bossbar set minecraft:border color green
-execute as @s[tag=setup-request] at @s run bossbar set minecraft:border max 6000
-execute as @s[tag=setup-request] at @s run bossbar set minecraft:border value 6000
-execute as @s[tag=setup-request] at @s run bossbar set minecraft:border visible false
-execute as @s[tag=setup-request] at @s run bossbar set minecraft:border style notched_10
+#bossbar ingame
+execute as @s[tag=setup-request] at @s run bossbar add ingame {"text":"World Border"}
+execute as @s[tag=setup-request] at @s run bossbar set minecraft:ingame color green
+execute as @s[tag=setup-request] at @s run bossbar set minecraft:ingame max 6000
+execute as @s[tag=setup-request] at @s run bossbar set minecraft:ingame value 6000
+execute as @s[tag=setup-request] at @s run bossbar set minecraft:ingame visible false
+execute as @s[tag=setup-request] at @s run bossbar set minecraft:ingame style notched_10
+
+#bossbar invincibility
+execute as @s[tag=setup-request] at @s run bossbar add invincibility {"text":"Invincibility"}
+execute as @s[tag=setup-request] at @s run bossbar set minecraft:invincibility color blue
+execute as @s[tag=setup-request] at @s run bossbar set minecraft:invincibility max 1200
+execute as @s[tag=setup-request] at @s run bossbar set minecraft:invincibility value 1200
+execute as @s[tag=setup-request] at @s run bossbar set minecraft:invincibility visible false
+execute as @s[tag=setup-request] at @s run bossbar set minecraft:invincibility style progress
+
+#bossbar before game start (waiting for chunk to generate)
+execute as @s[tag=setup-request] at @s run bossbar add gen-chunk {"text":"Waiting for chunks to generate..."}
+execute as @s[tag=setup-request] at @s run bossbar set minecraft:gen-chunk color yellow
+execute as @s[tag=setup-request] at @s run bossbar set minecraft:gen-chunk max 1
+execute as @s[tag=setup-request] at @s run bossbar set minecraft:gen-chunk value 1
+execute as @s[tag=setup-request] at @s run bossbar set minecraft:gen-chunk visible false
+execute as @s[tag=setup-request] at @s run bossbar set minecraft:gen-chunk style progress
+
 
 #worldborder
-execute as @s[tag=setup-request] at @s run worldborder center ~ ~
-execute as @s[tag=setup-request] at @s run worldborder set 1000
+execute as @s[tag=setup-request] at @e[type=minecraft:armor_stand,name="map-center",limit=1] run worldborder center ~ ~
+execute as @s[tag=setup-request] at @s run worldborder set 50
 execute as @s[tag=setup-request] at @s run worldborder damage buffer 0
 execute as @s[tag=setup-request] at @s run worldborder damage amount 1
 
@@ -151,6 +272,13 @@ execute as @s[tag=setup-request] at @s run gamerule keepInventory false
 execute as @s[tag=setup-request] at @s run gamerule doTraderSpawning false
 execute as @s[tag=setup-request] at @s run gamerule announceAdvancements false
 execute as @s[tag=setup-request] at @s run gamerule naturalRegeneration false
+execute as @s[tag=setup-request] at @s run gamerule spawnRadius 0
+execute as @s[tag=setup-request] at @s run gamerule doMobSpawning false
+execute as @s[tag=setup-request] at @s run gamerule playersNetherPortalDefaultDelay 2147483647
+execute as @s[tag=setup-request] at @s run gamerule playersNetherPortalCreativeDelay 2147483647
+
+#title times
+execute as @s[tag=setup-request] at @s run title @a times 0 100 20
 
 #time set
 execute as @s[tag=setup-request] at @s run time set day

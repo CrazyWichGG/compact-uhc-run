@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:entity",
+"pools": [
+  	{
+  	  "rolls": 1,
+  	  "entries": [
+  	    {
+  	  	  "type": "item",
+  	  	  "name": "minecraft:player_head",
+          "functions": [
+						{
+							"function": "set_name",
+							"name": [
+								[
+									{"selector": "@s", "color": "gold", "bold": true, "italic": false},
+									{"text": "'s Head", "color": "gold", "bold": true, "italic": false}
+								]
+							],
+							"entity": "this"
+						},
+            {
+              "function": "fill_player_head",
+              "entity": "this"
+            }
+          ],
+					"conditions": [
+						{
+							"condition": "killed_by_player"
+						}
+					]
+  	    }
+  	  ]
+  	}
+  ],
+  "random_sequence": "minecraft:entities/player"
+}
