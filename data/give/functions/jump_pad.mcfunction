@@ -1,2 +1,0 @@
-give @s slime_block{display:{Name:'[{"text":"Jump Pad","italic":false,"color":"yellow"},{"text":" (Place)","color":"gray"}]',Lore:['[{"text":"Place on the ground and step on","italic":false,"color":"white"}]','[{"text":"to fly up and glide down.","italic":false,"color":"white"}]']}}
-tellraw @s [{"text":"Gave 1 Jump Pad to "},{"selector":"@s"}]

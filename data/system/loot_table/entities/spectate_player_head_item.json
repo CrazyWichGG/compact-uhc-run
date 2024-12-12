@@ -1,0 +1,118 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:player_head",
+          "functions": [
+            {
+              "function": "minecraft:fill_player_head",
+              "entity": "this"
+            },
+            {
+              "function": "set_custom_data",
+              "tag": "{inventory-handler:1b}"
+            },
+            {
+              "function": "set_name",
+              "name": [
+                [
+                  {
+                    "selector": "@s",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "text": "'s Info",
+                    "color": "white",
+                    "italic": false
+                  }
+                ]
+              ],
+              "entity": "this"
+            },
+            {
+              "function": "set_lore",
+              "lore": [
+                [
+                  {
+                    "text": ""
+                  }
+                ],
+                [
+                  {
+                    "text": "♥ Health: ",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "score": {
+                      "name": "@s",
+                      "objective": "health"
+                    },
+                    "color": "red",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": "🍗 Hunger: ",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "score": {
+                      "name": "@s",
+                      "objective": "player-hunger"
+                    },
+                    "color": "gold",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": "🛡 Armor: ",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "score": {
+                      "name": "@s",
+                      "objective": "player-armor"
+                    },
+                    "color": "aqua",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text":""
+                  }
+                ],
+                [
+                  {
+                    "text": "⚔ Kills: ",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "score": {
+                      "name": "@s",
+                      "objective": "ingame-player-kills"
+                    },
+                    "color": "green",
+                    "italic": false
+                  }
+                ]
+              ],
+              "entity": "this",
+              "mode": "replace_all"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

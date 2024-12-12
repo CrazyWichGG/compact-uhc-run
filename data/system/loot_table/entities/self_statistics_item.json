@@ -1,0 +1,113 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:player_head",
+          "functions": [
+            {
+              "function": "minecraft:fill_player_head",
+              "entity": "this"
+            },
+            {
+              "function": "set_custom_data",
+              "tag": "{inventory-handler:1b}"
+            },
+            {
+              "function": "set_name",
+              "name": [
+                [
+                  {
+                    "selector": "@s",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "text": "'s Statistics",
+                    "color": "white",
+                    "italic": false
+                  }
+                ]
+              ],
+              "entity": "this"
+            },
+            {
+              "function": "set_lore",
+              "lore": [
+                [
+                  {
+                    "text": ""
+                  }
+                ],
+                [
+                  {
+                    "text": "🎮 Total Games Played: ",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "score": {
+                      "name": "@s",
+                      "objective": "total-games-played"
+                    },
+                    "color": "green",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": "🏆 Total Wins: ",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "score": {
+                      "name": "@s",
+                      "objective": "total-wins"
+                    },
+                    "color": "green",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": "⚔ Total Kills: ",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "score": {
+                      "name": "@s",
+                      "objective": "total-player-kills"
+                    },
+                    "color": "green",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": "💀 Total Deaths: ",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "score": {
+                      "name": "@s",
+                      "objective": "total-deaths"
+                    },
+                    "color": "green",
+                    "italic": false
+                  }
+                ]
+              ],
+              "entity": "this",
+              "mode": "replace_all"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
