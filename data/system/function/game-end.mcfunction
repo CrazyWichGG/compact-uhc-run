@@ -67,3 +67,7 @@ xp set @a 0 points
 #customs
 # -night mode
 time set day
+
+# -tiny
+execute if score tiny customs matches 0 as @a[team=ingame] at @s run attribute @s minecraft:generic.scale base set 1
+execute if score tiny customs matches 1 as @a[team=ingame] at @s run attribute @s minecraft:generic.scale base set 0.5
