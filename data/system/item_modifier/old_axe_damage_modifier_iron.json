@@ -5,27 +5,11 @@
       {
         "attribute": "generic.attack_damage",
         "operation": "add_value",
-        "amount": 4.0,
+        "amount": -4.0,
         "id": "old_axe_damage_modifier_iron",
         "slot": "mainhand"
       }
     ],
-    "replace": true
-  },
-  {
-    "function": "minecraft:toggle_tooltips",
-    "toggles": {
-      "attribute_modifiers": false
-    }
-  },
-  {
-    "function": "minecraft:set_lore",
-    "lore": [
-      [{"text":"","italic":false}],
-      [{"text":"When in Main Hand:","color":"gray","italic":false}],
-      [{"text":" 5 Attack Damage","color":"dark_green","italic":false}],
-      [{"text":" 96.9 Attack Speed","color":"dark_green","italic":false}]
-    ],
-    "mode": "replace_all"
+    "replace": false
   }
 ]
