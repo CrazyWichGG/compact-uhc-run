@@ -4,7 +4,7 @@ execute as @s at @s if entity @e[type=minecraft:armor_stand,name="map-center"] i
 #run if installed and game has not started
 execute as @s at @s if entity @e[type=minecraft:armor_stand,name="map-center"] if score lobby game-state matches 1 run scoreboard players set tiny customs 0
 execute as @s at @s if entity @e[type=minecraft:armor_stand,name="map-center"] if score lobby game-state matches 1 run tellraw @s {"text":"[Tiny] has been disabled","color":"red"}
-execute as @s at @s if entity @e[type=minecraft:armor_stand,name="map-center"] if score lobby game-state matches 1 as @a at @s run attribute @s minecraft:generic.scale base set 1
+execute as @s at @s if entity @e[type=minecraft:armor_stand,name="map-center"] if score lobby game-state matches 1 as @a at @s run attribute @s minecraft:scale base set 1
 
 #run if not installed
 execute as @s at @s unless entity @e[type=minecraft:armor_stand,name="map-center"] run tellraw @s [{"text":"You must install the game first by using ","color":"red"},{"text":"/function install:_","color":"gray","italic": true}]

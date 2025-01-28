@@ -20,11 +20,12 @@ execute as @s[tag=setup-request] at @s align xyz positioned ~0.5 ~ ~0.5 run summ
 #score time
 execute as @s[tag=setup-request] at @a run scoreboard objectives add time dummy
 execute as @s[tag=setup-request] at @s run scoreboard players set game-time time 0
-execute as @s[tag=setup-request] at @s run scoreboard players set state-1 time 0
-execute as @s[tag=setup-request] at @s run scoreboard players set state-2 time 12000
-execute as @s[tag=setup-request] at @s run scoreboard players set state-3 time 48000
-execute as @s[tag=setup-request] at @s run scoreboard players set state-4 time 54000
-execute as @s[tag=setup-request] at @s run scoreboard players set state-5 time 56400
+execute as @s[tag=setup-request] at @s run scoreboard players set stage-1 time 0
+execute as @s[tag=setup-request] at @s run scoreboard players set stage-2 time 12000
+execute as @s[tag=setup-request] at @s run scoreboard players set stage-3 time 24000
+execute as @s[tag=setup-request] at @s run scoreboard players set stage-4 time 60000
+execute as @s[tag=setup-request] at @s run scoreboard players set stage-5 time 66000
+execute as @s[tag=setup-request] at @s run scoreboard players set stage-6 time 68400
 
 #score border countdown
 execute as @s[tag=setup-request] at @s run scoreboard objectives add border-countdown dummy
@@ -113,7 +114,7 @@ execute as @s[tag=setup-request] at @s run scoreboard players set minute game-ti
 #score main bossbar animation
 execute as @s[tag=setup-request] at @s run scoreboard objectives add bossbar-animation dummy
 execute as @s[tag=setup-request] at @s run scoreboard players set main bossbar-animation 0
-execute as @s[tag=setup-request] at @s run scoreboard players set ingame-state-5 bossbar-animation 0
+execute as @s[tag=setup-request] at @s run scoreboard players set ingame-stage-final bossbar-animation 0
 
 #score invin bossbar
 execute as @s[tag=setup-request] at @s run scoreboard objectives add invincibility-bossbar dummy

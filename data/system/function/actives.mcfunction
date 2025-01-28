@@ -5,7 +5,7 @@ execute as @a[team=!ingame] at @s if score @s ingame-death matches 1 run scorebo
 setworldspawn ~ ~2 ~
 execute as @a at @s run effect give @s night_vision infinite 0 true
 execute if score lobby game-state matches 1 as @a[gamemode=!creative] at @s run gamemode adventure @s
-execute if score border-state border-countdown matches 4 run effect give @a[team=ingame] glowing infinite 0 true
+execute if score border-state border-countdown matches 5.. run effect give @a[team=ingame] glowing infinite 0 true
 
 execute as @a[team=ingame] at @s run particle minecraft:dust{color:[1f,0f,0f],scale:1} ~ ~ ~ 0 0 0 0.2 5 force @a[team=spectator]
 

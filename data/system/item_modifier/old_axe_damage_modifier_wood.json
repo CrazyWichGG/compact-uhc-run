@@ -3,7 +3,7 @@
     "function": "minecraft:set_attributes",
     "modifiers": [
       {
-        "attribute": "generic.attack_damage",
+        "attribute": "attack_damage",
         "operation": "add_value",
         "amount": -4.0,
         "id": "old_axe_damage_modifier_wood",

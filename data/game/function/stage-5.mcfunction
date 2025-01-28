@@ -11,4 +11,4 @@ execute as @a at @s run playsound entity.ender_dragon.growl master @s ~ ~ ~ 1 1 
 effect give @a[team=ingame] glowing infinite 0 true
 
 #border state (sync with system:border-bossbar-name.mcfunction)
-scoreboard players set border-state border-countdown 4
+scoreboard players set border-state border-countdown 5

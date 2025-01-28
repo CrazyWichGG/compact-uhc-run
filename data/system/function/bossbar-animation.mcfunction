@@ -21,11 +21,11 @@ execute if score main bossbar-animation matches 40 run bossbar set minecraft:mai
 execute if score main bossbar-animation matches 45 run bossbar set minecraft:main name [{"text":"ULTRA HARDCORE","color":"yellow","bold":true}]
 execute if score main bossbar-animation matches 145.. run scoreboard players set main bossbar-animation 0
 
-#ingame state-5 bossbar animation
-execute unless score border-state border-countdown matches 5 run scoreboard players set ingame-state-5 bossbar-animation 0
-execute if score border-state border-countdown matches 5 run scoreboard players add ingame-state-5 bossbar-animation 1
+#ingame stage-final bossbar animation
+execute unless score border-state border-countdown matches 6 run scoreboard players set ingame-stage-final bossbar-animation 0
+execute if score border-state border-countdown matches 6 run scoreboard players add ingame-stage-final bossbar-animation 1
 
-execute if score ingame-state-5 bossbar-animation matches 20 run bossbar set minecraft:ingame name [{"text":"/!\\ ","color":"red"},{"text":"BORDER IS NOW MOVING!","color":"white"},{"text":" /!\\","color":"red"}]
-execute if score ingame-state-5 bossbar-animation matches 40 run bossbar set minecraft:ingame name [{"text":"/!\\ BORDER IS NOW MOVING! /!\\","color":"red"}]
-execute if score ingame-state-5 bossbar-animation matches 40.. run scoreboard players set ingame-state-5 bossbar-animation 0
+execute if score ingame-stage-final bossbar-animation matches 20 run bossbar set minecraft:ingame name [{"text":"/!\\ ","color":"red"},{"text":"BORDER IS NOW MOVING!","color":"white"},{"text":" /!\\","color":"red"}]
+execute if score ingame-stage-final bossbar-animation matches 40 run bossbar set minecraft:ingame name [{"text":"/!\\ BORDER IS NOW MOVING! /!\\","color":"red"}]
+execute if score ingame-stage-final bossbar-animation matches 40.. run scoreboard players set ingame-stage-final bossbar-animation 0
 

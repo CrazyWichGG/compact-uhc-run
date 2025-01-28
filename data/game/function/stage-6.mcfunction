@@ -11,4 +11,4 @@ execute as @e[type=minecraft:armor_stand,name="map-center",limit=1] at @s run su
 execute as @e[type=minecraft:armor_stand,name="map-center",limit=1] at @s run spreadplayers ~ ~ 0 100 false @e[type=minecraft:armor_stand,name="border-target",limit=1]
 
 #border state (sync with system:border-bossbar-name.mcfunction and system:border-move.mcfunction)
-scoreboard players set border-state border-countdown 5
+scoreboard players set border-state border-countdown 6
