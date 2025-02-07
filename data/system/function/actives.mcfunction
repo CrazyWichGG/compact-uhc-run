@@ -18,8 +18,6 @@ function system:border
 function system:gliding
 function system:jump-pad
 function system:total-player
-#function system:slowball
-#function system:haystack
 function system:obtain-emerald
 function system:border-countdown
 function system:border-bossbar-name
@@ -35,7 +33,6 @@ function system:bossbar-animation
 function system:ingame-early-invin
 function system:gen-chunk
 function system:spectator-spectate-player
-#function system:raycasting
 function system:customs-actives
 #function system:settings-default
 function system:inventory-item-handler
