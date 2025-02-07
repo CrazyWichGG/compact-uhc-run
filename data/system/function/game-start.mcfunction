@@ -51,7 +51,7 @@ clear @a[team=ingame]
 item replace entity @a[team=ingame] hotbar.0 with stone_axe 1
 item replace entity @a[team=ingame] hotbar.1 with stone_pickaxe 1
 item replace entity @a[team=ingame] hotbar.2 with stone_shovel 1
-item replace entity @a[team=ingame] hotbar.8 with nether_star[custom_data={special-item:shop-menu},custom_name='[{"text":"Shop Menu ","italic":false,"color":"yellow"},{"text":"(Right Click)","color":"gray"}]',lore=['[{"text":"Collect ","italic":false,"color":"white"},{"text":"emeralds","color":"green"},{"text":" by killing mobs","color":"white"}]','[{"text":"or mining ores and using ","italic":false,"color":"white"},{"text":"Shop Menu ","color":"yellow"}]','[{"text":"to buy items!","italic":false,"color":"white"}]','[{"text":"DO NOT THROW AWAY!","italic":false,"color":"red","bold":true}]']]
+loot replace entity @a[team=ingame] hotbar.8 loot system:custom_item/shop_menu
 
 #title
 title @a times 0 100 20

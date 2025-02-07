@@ -55,6 +55,12 @@ execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remov
 execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove customs
 execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove settings-global
 execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove settings-personal-spectator-trail
+execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove supply-state-landing
+execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove supply-state-landed
+execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove supply-coordinates-x
+execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove supply-coordinates-y
+execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove supply-coordinates-z
+execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove supply-queue
 
 #bossbar remove
 execute as @s[tag=setup-uninstall-request] at @s run bossbar remove ingame
@@ -73,6 +79,14 @@ execute as @s[tag=setup-uninstall-request] at @s run team remove glowing-color-g
 execute as @s[tag=setup-uninstall-request] at @s run team remove glowing-color-light_purple
 execute as @s[tag=setup-uninstall-request] at @s run team remove glowing-color-red
 execute as @s[tag=setup-uninstall-request] at @s run team remove glowing-color-yellow
+execute as @s[tag=setup-uninstall-request] at @s run team remove supply-state-ready
+execute as @s[tag=setup-uninstall-request] at @s run team remove supply-state-landing
+execute as @s[tag=setup-uninstall-request] at @s run team remove supply-state-landed
+execute as @s[tag=setup-uninstall-request] at @s run team remove supply-glowing-green
+execute as @s[tag=setup-uninstall-request] at @s run team remove supply-glowing-yellow
+execute as @s[tag=setup-uninstall-request] at @s run team remove supply-glowing-red
+execute as @s[tag=setup-uninstall-request] at @s run team remove supply-glowing-light-purple
+execute as @s[tag=setup-uninstall-request] at @s run team remove supply-glowing-aqua
 
 #clear effect
 execute as @s[tag=setup-uninstall-request] at @s run effect clear @a

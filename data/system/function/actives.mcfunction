@@ -43,3 +43,4 @@ function system:inventory-item-handler-action
 function system:statistics-handler
 function system:server-status
 function system:entities-timeout
+function system:supply-drop

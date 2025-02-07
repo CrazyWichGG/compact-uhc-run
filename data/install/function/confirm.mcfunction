@@ -136,6 +136,16 @@ execute as @s[tag=setup-request] at @s run scoreboard objectives add is-chunk-ge
 #score spectator spectate player
 execute as @s[tag=setup-request] at @s run scoreboard objectives add spectator-spectate-player dummy
 
+#score supply data
+execute as @s[tag=setup-request] at @s run scoreboard objectives add supply-state-landing dummy
+execute as @s[tag=setup-request] at @s run scoreboard objectives add supply-state-landed dummy
+
+execute as @s[tag=setup-request] at @s run scoreboard objectives add supply-coordinates-x dummy
+execute as @s[tag=setup-request] at @s run scoreboard objectives add supply-coordinates-y dummy
+execute as @s[tag=setup-request] at @s run scoreboard objectives add supply-coordinates-z dummy
+
+execute as @s[tag=setup-request] at @s run scoreboard objectives add supply-queue dummy
+
 #score optimization
 # -server entities
 execute as @s[tag=setup-request] at @s run scoreboard objectives add server-entities dummy
@@ -256,6 +266,25 @@ execute as @s[tag=setup-request] at @s run team modify glowing-color-red color r
 execute as @s[tag=setup-request] at @s run team add glowing-color-yellow
 execute as @s[tag=setup-request] at @s run team modify glowing-color-yellow color yellow
 
+#team supply state
+execute as @s[tag=setup-request] at @s run team add supply-state-ready
+execute as @s[tag=setup-request] at @s run team add supply-state-landing
+execute as @s[tag=setup-request] at @s run team add supply-state-landed
+
+execute as @s[tag=setup-request] at @s run team add supply-glowing-green
+execute as @s[tag=setup-request] at @s run team modify supply-glowing-green color green
+
+execute as @s[tag=setup-request] at @s run team add supply-glowing-yellow
+execute as @s[tag=setup-request] at @s run team modify supply-glowing-yellow color yellow
+
+execute as @s[tag=setup-request] at @s run team add supply-glowing-red
+execute as @s[tag=setup-request] at @s run team modify supply-glowing-red color red
+
+execute as @s[tag=setup-request] at @s run team add supply-glowing-light-purple
+execute as @s[tag=setup-request] at @s run team modify supply-glowing-light-purple color light_purple
+
+execute as @s[tag=setup-request] at @s run team add supply-glowing-aqua
+execute as @s[tag=setup-request] at @s run team modify supply-glowing-aqua color aqua
 
 
 #bossbar main

@@ -31,6 +31,6 @@ tellraw @s[team=spectator] [{"text":"You are dead!","color":"red"},{"text":" You
 execute as @s at @s run playsound entity.lightning_bolt.thunder master @a ~ ~ ~ 1 1 0.1
 
 #kill shop item
-execute as @s at @s run kill @e[type=item,nbt={Item:{id:"minecraft:nether_star",components:{"minecraft:custom_data":{special-item:shop-menu}}}},distance=..10,limit=1]
+execute as @s at @s run kill @e[type=item,nbt={Item:{id:"minecraft:nether_star",components:{"minecraft:custom_data":{custom_item:shop_menu}}}},distance=..10,limit=1]
 
 #customs

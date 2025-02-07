@@ -1,8 +1,9 @@
+#for supply please see event:summon-supply-drop.mcfunction
+
 # update game time when ingame
 execute if score ingame game-state matches 1 run scoreboard players add game-time time 1
 
-
-# pvp count down - stage 1
+#pvp count down - stage 1
 execute if score game-time time matches 6000 run title @a subtitle [{"text":"PvP enable in ","color":"white"},{"text":"5 minutes","color":"red"}]
 execute if score game-time time matches 6000 run title @a title [{"text":""}]
 execute if score game-time time matches 6000 run tellraw @a [{"text":"PvP will be enabled in ","color":"yellow"},{"text":"5 minutes","color":"red"}, {"text":".","color":"yellow"}]

@@ -1,0 +1,881 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": {
+        "min": 6,
+        "max": 8
+      },
+      "bonus_rolls": {
+        "min": 0,
+        "max": 2
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:golden_apple",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 2
+              }
+            }
+          ],
+          "weight": 5
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_ingot",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 3
+              },
+              "add": true
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.5
+            }
+          ],
+          "weight": 5
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:gold_ingot",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 3
+              },
+              "add": true
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.5
+            }
+          ],
+          "weight": 5
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:diamond",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 2
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.25
+            }
+          ],
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:obsidian",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 3
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.5
+            }
+          ],
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:flint_and_steel",
+          "conditions": [
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.2
+            }
+          ],
+          "weight": 3
+        },
+        {
+          "type": "minecraft:group",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:iron_helmet",
+              "functions": [
+                {
+                  "function": "minecraft:enchant_with_levels",
+                  "options": [
+                    "protection",
+                    "projectile_protection",
+                    "fire_protection",
+                    "blast_protection",
+                    "thorns",
+                    "respiration",
+                    "unbreaking"
+                  ],
+                  "levels": {
+                    "min": 1,
+                    "max": 2
+                  },
+                  "conditions": [
+                    {
+                      "condition": "minecraft:random_chance",
+                      "chance": 0.25
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:iron_chestplate",
+              "functions": [
+                {
+                  "function": "minecraft:enchant_with_levels",
+                  "options": [
+                    "protection",
+                    "projectile_protection",
+                    "fire_protection",
+                    "blast_protection",
+                    "thorns",
+                    "unbreaking"
+                  ],
+                  "levels": {
+                    "min": 1,
+                    "max": 2
+                  },
+                  "conditions": [
+                    {
+                      "condition": "minecraft:random_chance",
+                      "chance": 0.25
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:iron_leggings",
+              "functions": [
+                {
+                  "function": "minecraft:enchant_with_levels",
+                  "options": [
+                    "protection",
+                    "projectile_protection",
+                    "fire_protection",
+                    "blast_protection",
+                    "thorns",
+                    "unbreaking"
+                  ],
+                  "levels": {
+                    "min": 1,
+                    "max": 2
+                  },
+                  "conditions": [
+                    {
+                      "condition": "minecraft:random_chance",
+                      "chance": 0.25
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:iron_boots",
+              "functions": [
+                {
+                  "function": "minecraft:enchant_with_levels",
+                  "options": [
+                    "protection",
+                    "projectile_protection",
+                    "fire_protection",
+                    "blast_protection",
+                    "feather_falling",
+                    "depth_strider",
+                    "frost_walker",
+                    "unbreaking"
+                  ],
+                  "levels": {
+                    "min": 1,
+                    "max": 2
+                  },
+                  "conditions": [
+                    {
+                      "condition": "minecraft:random_chance",
+                      "chance": 0.25
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.5
+            }
+          ]
+        },
+        {
+          "type": "minecraft:group",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "name": "iron_sword",
+              "functions": [
+                {
+                  "function": "minecraft:enchant_with_levels",
+                  "options": [
+                    "sharpness",
+                    "knockback",
+                    "looting",
+                    "unbreaking"
+                  ],
+                  "levels": {
+                    "min": 1,
+                    "max": 2
+                  },
+                  "conditions": [
+                    {
+                      "condition": "minecraft:random_chance",
+                      "chance": 0.25
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "iron_pickaxe",
+              "functions": [
+                {
+                  "function": "minecraft:enchant_with_levels",
+                  "options": [
+                    "efficiency",
+                    "fortune",
+                    "unbreaking"
+                  ],
+                  "levels": {
+                    "min": 1,
+                    "max": 2
+                  },
+                  "conditions": [
+                    {
+                      "condition": "minecraft:random_chance",
+                      "chance": 0.25
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "iron_axe",
+              "functions": [
+                {
+                  "function": "minecraft:enchant_with_levels",
+                  "options": [
+                    "sharpness",
+                    "efficiency",
+                    "fortune",
+                    "unbreaking"
+                  ],
+                  "levels": {
+                    "min": 1,
+                    "max": 2
+                  },
+                  "conditions": [
+                    {
+                      "condition": "minecraft:random_chance",
+                      "chance": 0.25
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.5
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:bow",
+          "functions": [
+            {
+              "function": "minecraft:enchant_with_levels",
+              "options": [
+                "power",
+                "punch",
+                "unbreaking"
+              ],
+              "levels": {
+                "min": 1,
+                "max": 2
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.25
+                }
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.25
+            }
+          ],
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:crossbow",
+          "functions": [
+            {
+              "function": "minecraft:enchant_with_levels",
+              "options": [
+                "quick_charge",
+                "multishot",
+                "piercing",
+                "unbreaking"
+              ],
+              "levels": {
+                "min": 1,
+                "max": 2
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.25
+                }
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.25
+            }
+          ],
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:arrow",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 8,
+                "max": 16
+              },
+              "add": true
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.75
+            }
+          ],
+          "weight": 5
+        },
+        {
+          "type": "minecraft:item",
+          "name": "spectral_arrow",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 4
+              },
+              "add": true
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.25
+            }
+          ],
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:wind_charge",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 2,
+                "max": 8
+              },
+              "add": true
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.5
+            }
+          ],
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:snowball",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 8,
+                "max": 16
+              },
+              "add": true
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.5
+            }
+          ],
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:cooked_beef",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 2
+              },
+              "add": true
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.25
+            }
+          ],
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:book",
+          "functions": [
+            {
+              "function": "minecraft:enchant_with_levels",
+              "options": [
+                "protection",
+                "projectile_protection",
+                "fire_protection",
+                "blast_protection",
+                "feather_falling",
+                "thorns",
+                "frost_walker",
+                "depth_strider",
+                "sharpness",
+                "fire_aspect",
+                "knockback",
+                "looting",
+                "power",
+                "flame",
+                "punch",
+                "efficiency",
+                "fortune",
+                "unbreaking",
+                "quick_charge",
+                "multishot",
+                "piercing"
+              ],
+              "levels": {
+                "min": 1,
+                "max": 2
+              },
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.9
+                }
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.5
+            }
+          ],
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "minecraft:healing"
+            },
+            {
+              "function": "minecraft:set_potion",
+              "id": "minecraft:strong_healing",
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.5
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_potion",
+              "id": "minecraft:swiftness",
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.5
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_potion",
+              "id": "minecraft:fire_resistance",
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.25
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_potion",
+              "id": "minecraft:regeneration",
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.075
+                }
+              ]
+            }
+          ],
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:experience_bottle",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 4
+              },
+              "add": true
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.5
+            }
+          ],
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:lapis_lazuli",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 4,
+                "max": 8
+              },
+              "add": true
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.5
+            }
+          ],
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:ender_pearl",
+          "conditions": [
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.25
+            }
+          ],
+          "weight": 2
+        },
+        {
+          "type": "minecraft:group",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:diamond_helmet",
+              "functions": [
+                {
+                  "function": "minecraft:enchant_with_levels",
+                  "options": [
+                    "protection",
+                    "projectile_protection",
+                    "fire_protection",
+                    "blast_protection",
+                    "thorns",
+                    "respiration",
+                    "unbreaking"
+                  ],
+                  "levels": {
+                    "min": 1,
+                    "max": 2
+                  },
+                  "conditions": [
+                    {
+                      "condition": "minecraft:random_chance",
+                      "chance": 0.1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:diamond_chestplate",
+              "functions": [
+                {
+                  "function": "minecraft:enchant_with_levels",
+                  "options": [
+                    "protection",
+                    "projectile_protection",
+                    "fire_protection",
+                    "blast_protection",
+                    "thorns",
+                    "unbreaking"
+                  ],
+                  "levels": {
+                    "min": 1,
+                    "max": 2
+                  },
+                  "conditions": [
+                    {
+                      "condition": "minecraft:random_chance",
+                      "chance": 0.1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:diamond_leggings",
+              "functions": [
+                {
+                  "function": "minecraft:enchant_with_levels",
+                  "options": [
+                    "protection",
+                    "projectile_protection",
+                    "fire_protection",
+                    "blast_protection",
+                    "thorns",
+                    "unbreaking"
+                  ],
+                  "levels": {
+                    "min": 1,
+                    "max": 2
+                  },
+                  "conditions": [
+                    {
+                      "condition": "minecraft:random_chance",
+                      "chance": 0.1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:diamond_boots",
+              "functions": [
+                {
+                  "function": "minecraft:enchant_with_levels",
+                  "options": [
+                    "protection",
+                    "projectile_protection",
+                    "fire_protection",
+                    "blast_protection",
+                    "feather_falling",
+                    "depth_strider",
+                    "frost_walker",
+                    "unbreaking"
+                  ],
+                  "levels": {
+                    "min": 1,
+                    "max": 2
+                  },
+                  "conditions": [
+                    {
+                      "condition": "minecraft:random_chance",
+                      "chance": 0.1
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.2
+            }
+          ]
+        },
+        {
+          "type": "minecraft:group",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "name": "diamond_sword",
+              "functions": [
+                {
+                  "function": "minecraft:enchant_with_levels",
+                  "options": [
+                    "sharpness",
+                    "knockback",
+                    "looting",
+                    "unbreaking"
+                  ],
+                  "levels": {
+                    "min": 1,
+                    "max": 2
+                  },
+                  "conditions": [
+                    {
+                      "condition": "minecraft:random_chance",
+                      "chance": 0.1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "diamond_pickaxe",
+              "functions": [
+                {
+                  "function": "minecraft:enchant_with_levels",
+                  "options": [
+                    "efficiency",
+                    "fortune",
+                    "unbreaking"
+                  ],
+                  "levels": {
+                    "min": 1,
+                    "max": 2
+                  },
+                  "conditions": [
+                    {
+                      "condition": "minecraft:random_chance",
+                      "chance": 0.1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "diamond_axe",
+              "functions": [
+                {
+                  "function": "minecraft:enchant_with_levels",
+                  "options": [
+                    "sharpness",
+                    "efficiency",
+                    "fortune",
+                    "unbreaking"
+                  ],
+                  "levels": {
+                    "min": 1,
+                    "max": 2
+                  },
+                  "conditions": [
+                    {
+                      "condition": "minecraft:random_chance",
+                      "chance": 0.1
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.2
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "system:custom_item/jump_pad",
+          "conditions": [
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.1
+            }
+          ],
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:enchanted_golden_apple",
+          "conditions": [
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.005
+            }
+          ],
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

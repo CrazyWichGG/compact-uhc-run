@@ -6,12 +6,12 @@
     "GGG"
   ],
   "key": {
-    "G": {
-      "item": "minecraft:gold_ingot"
-    },
-    "H": {
-      "item": "minecraft:player_head"
-    }
+    "G": [
+      "minecraft:gold_ingot"
+    ],
+    "H": [
+      "minecraft:player_head"
+    ]
   },
   "result": {
     "id": "minecraft:enchanted_golden_apple"

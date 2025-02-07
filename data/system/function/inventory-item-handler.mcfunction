@@ -16,12 +16,18 @@ execute if score lobby game-state matches 1 as @a at @s unless items entity @s a
 # -offhand
 execute if score lobby game-state matches 1 as @a at @s unless items entity @s weapon.offhand air run item replace entity @s weapon.offhand with air
 
+# -crafting
+execute if score lobby game-state matches 1 as @a at @s unless items entity @s player.crafting.0 air run item replace entity @s player.crafting.0 with air
+execute if score lobby game-state matches 1 as @a at @s unless items entity @s player.crafting.1 air run item replace entity @s player.crafting.1 with air
+execute if score lobby game-state matches 1 as @a at @s unless items entity @s player.crafting.2 air run item replace entity @s player.crafting.2 with air
+execute if score lobby game-state matches 1 as @a at @s unless items entity @s player.crafting.3 air run item replace entity @s player.crafting.3 with air
+
 # -inventory (inventory handler)
 execute if score lobby game-state matches 1 as @a at @s unless items entity @s inventory.0 gray_stained_glass[custom_data={inventory-handler:1b}] run item replace entity @s inventory.0 with gray_stained_glass_pane[custom_data={inventory-handler:1b},custom_name='[""]']
 execute if score lobby game-state matches 1 as @a at @s unless items entity @s inventory.1 gray_stained_glass[custom_data={inventory-handler:1b}] run item replace entity @s inventory.1 with gray_stained_glass_pane[custom_data={inventory-handler:1b},custom_name='[""]']
 execute if score lobby game-state matches 1 as @a at @s unless items entity @s inventory.2 gray_stained_glass[custom_data={inventory-handler:1b}] run item replace entity @s inventory.2 with gray_stained_glass_pane[custom_data={inventory-handler:1b},custom_name='[""]']
 execute if score lobby game-state matches 1 as @a at @s unless items entity @s inventory.3 gray_stained_glass[custom_data={inventory-handler:1b}] run item replace entity @s inventory.3 with gray_stained_glass_pane[custom_data={inventory-handler:1b},custom_name='[""]']
-execute if score lobby game-state matches 1 as @a at @s unless items entity @s inventory.4 player_head[custom_data={inventory-handler:1b}] run loot replace entity @s inventory.4 loot system:custom_items/self_statistics_item
+execute if score lobby game-state matches 1 as @a at @s unless items entity @s inventory.4 player_head[custom_data={inventory-handler:1b}] run loot replace entity @s inventory.4 loot system:inventory_handler/self_statistics_item
 execute if score lobby game-state matches 1 as @a at @s unless items entity @s inventory.5 gray_stained_glass[custom_data={inventory-handler:1b}] run item replace entity @s inventory.5 with gray_stained_glass_pane[custom_data={inventory-handler:1b},custom_name='[""]']
 execute if score lobby game-state matches 1 as @a at @s unless items entity @s inventory.6 gray_stained_glass[custom_data={inventory-handler:1b}] run item replace entity @s inventory.6 with gray_stained_glass_pane[custom_data={inventory-handler:1b},custom_name='[""]']
 execute if score lobby game-state matches 1 as @a at @s unless items entity @s inventory.7 gray_stained_glass[custom_data={inventory-handler:1b}] run item replace entity @s inventory.7 with gray_stained_glass_pane[custom_data={inventory-handler:1b},custom_name='[""]']
@@ -126,7 +132,7 @@ execute if score lobby game-state matches 0 as @a[team=spectator,gamemode=specta
 #ingame spectator (spectating)
 # -armor
 #execute if score lobby game-state matches 0 as @a[team=spectator,gamemode=spectator] at @s if score @s spectator-spectate-player matches 1.. run item replace entity @s armor.head with player_head[custom_data={inventory-handler:1b}]
-execute if score lobby game-state matches 0 as @a[team=spectator,gamemode=spectator] at @s if score @s spectator-spectate-player matches 1.. as @a[team=ingame,limit=1,sort=nearest] at @s run loot replace entity @a[team=spectator,gamemode=spectator,distance=..1,scores={spectator-spectate-player=1..}] armor.head loot system:custom_items/spectate_player_head_item
+execute if score lobby game-state matches 0 as @a[team=spectator,gamemode=spectator] at @s if score @s spectator-spectate-player matches 1.. as @a[team=ingame,limit=1,sort=nearest] at @s run loot replace entity @a[team=spectator,gamemode=spectator,distance=..1,scores={spectator-spectate-player=1..}] armor.head loot system:inventory_handler/spectate_player_head_item
 execute if score lobby game-state matches 0 as @a[team=spectator,gamemode=spectator] at @s if score @s spectator-spectate-player matches 1.. run item replace entity @s armor.chest from entity @a[team=ingame,limit=1,sort=nearest] armor.chest system:apply_inventory_handler
 execute if score lobby game-state matches 0 as @a[team=spectator,gamemode=spectator] at @s if score @s spectator-spectate-player matches 1.. run item replace entity @s armor.legs from entity @a[team=ingame,limit=1,sort=nearest] armor.legs system:apply_inventory_handler
 execute if score lobby game-state matches 0 as @a[team=spectator,gamemode=spectator] at @s if score @s spectator-spectate-player matches 1.. run item replace entity @s armor.feet from entity @a[team=ingame,limit=1,sort=nearest] armor.feet system:apply_inventory_handler

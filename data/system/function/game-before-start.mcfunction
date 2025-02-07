@@ -60,6 +60,9 @@ weather clear
 #tellraw
 tellraw @a [{"text":"Waiting for chunks to generate before game start... ","color":"yellow"}]
 
+#summon supply drop
+function event:supply-drop/summon-supply-drop
+
 #spread players
 spreadplayers ~ ~ 150 700 false @a[team=ingame]
 

@@ -1,0 +1,89 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:nether_star",
+          "functions": [
+            {
+              "function": "set_custom_data",
+              "tag": "{custom_item:shop_menu}"
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": [
+                {
+                  "text": "Shop Menu",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": " (Right Click)",
+                  "color": "gray",
+                  "italic": false
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                [
+                  {
+                    "text": "Collect ",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "text": "emeralds ",
+                    "color": "green",
+                    "italic": false
+                  },
+                  {
+                    "text": "by killing mobs ",
+                    "color": "white",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": "or mining ores and use ",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "text": "Shop Menu ",
+                    "color": "yellow",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": "to buy items!",
+                    "color": "white",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": ""
+                  }
+                ],
+                [
+                  {
+                    "text": "DO NOT THROW AWAY!",
+                    "color": "red",
+                    "bold": true,
+                    "italic": false
+                  }
+                ]
+              ],
+              "mode": "replace_all"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

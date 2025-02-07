@@ -50,8 +50,8 @@ execute as @e[type=item,nbt={Item:{id:"minecraft:mace"}}] run data modify entity
 execute as @e[type=item,nbt={Item:{id:"minecraft:mace"}}] run team join glowing-color-light_purple @s
 
 # -red
-execute as @e[type=item,nbt={Item:{id:"minecraft:nether_star",components:{"minecraft:custom_data":{special-item:shop-menu}}}}] run data modify entity @s Glowing set value true
-execute as @e[type=item,nbt={Item:{id:"minecraft:nether_star",components:{"minecraft:custom_data":{special-item:shop-menu}}}}] run team join glowing-color-red @s
+execute as @e[type=item,nbt={Item:{id:"minecraft:nether_star",components:{"minecraft:custom_data":{custom_item:shop_menu}}}}] run data modify entity @s Glowing set value true
+execute as @e[type=item,nbt={Item:{id:"minecraft:nether_star",components:{"minecraft:custom_data":{custom_item:shop_menu}}}}] run team join glowing-color-red @s
 
 # -yellow
 execute as @e[type=item,nbt={Item:{id:"minecraft:golden_apple"}}] run data modify entity @s Glowing set value true

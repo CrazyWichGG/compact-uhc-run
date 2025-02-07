@@ -57,6 +57,18 @@ kill @e[type=!player,type=!armor_stand]
 kill @e[type=item]
 kill @e[type=wandering_trader]
 
+#delete landing supply drop
+execute as @e[type=armor_stand,tag=supply-drop,team=supply-state-landing] run kill @e[type=block_display,name="supply-display",limit=1]
+execute as @e[type=armor_stand,tag=supply-drop,team=supply-state-landing] run kill @s
+execute as @e[type=armor_stand,tag=supply-drop,team=supply-state-landed] run kill @e[type=shulker,tag=supply-drop-glowing,limit=1]
+execute as @e[type=armor_stand,tag=supply-drop,team=supply-state-landed] run kill @s
+kill @e[type=armor_stand,tag=supply-drop]
+forceload remove all
+team empty supply-state-prepare
+team empty supply-state-ready
+team empty supply-state-landing
+team empty supply-state-landed
+
 #clear inventory
 clear @a
 
