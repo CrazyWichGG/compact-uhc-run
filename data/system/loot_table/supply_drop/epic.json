@@ -217,8 +217,7 @@
                   "function": "minecraft:enchant_with_levels",
                   "options": [
                     "protection",
-                    "thorns",
-                    "unbreaking"
+                    "thorns"
                   ],
                   "levels": {
                     "min": 1,
@@ -235,8 +234,7 @@
                   "function": "minecraft:enchant_with_levels",
                   "options": [
                     "protection",
-                    "thorns",
-                    "unbreaking"
+                    "thorns"
                   ],
                   "levels": {
                     "min": 1,
@@ -253,8 +251,7 @@
                   "function": "minecraft:enchant_with_levels",
                   "options": [
                     "protection",
-                    "thorns",
-                    "unbreaking"
+                    "thorns"
                   ],
                   "levels": {
                     "min": 1,
@@ -273,8 +270,7 @@
                     "protection",
                     "feather_falling",
                     "depth_strider",
-                    "frost_walker",
-                    "unbreaking"
+                    "frost_walker"
                   ],
                   "levels": {
                     "min": 1,

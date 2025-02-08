@@ -20,6 +20,12 @@
                   }
                 ]
               ]
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "hide_tooltip": {} 
+              }
             }
           ]
         }

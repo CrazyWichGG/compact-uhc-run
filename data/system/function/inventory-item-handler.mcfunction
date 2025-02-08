@@ -6,15 +6,16 @@ kill @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{inventory-hand
 #action bar title
 execute if score lobby game-state matches 1 as @a at @s run title @s actionbar [{"text":"Press ","color":"white"},{"text":"[","color":"green"},{"keybind": "key.inventory","color":"green"},{"text":"]","color":"green"},{"text":" to view your statistics and more","color":"white"}]
 
+
 #lobby
 # -armor
-execute if score lobby game-state matches 1 as @a at @s unless items entity @s armor.head air run item replace entity @a armor.head with air
-execute if score lobby game-state matches 1 as @a at @s unless items entity @s armor.chest air run item replace entity @a armor.chest with air
-execute if score lobby game-state matches 1 as @a at @s unless items entity @s armor.legs air run item replace entity @a armor.legs with air
-execute if score lobby game-state matches 1 as @a at @s unless items entity @s armor.feet air run item replace entity @a armor.feet with air
+execute if score lobby game-state matches 1 as @a[gamemode=!creative] at @s unless items entity @s armor.head air run item replace entity @a armor.head with air
+execute if score lobby game-state matches 1 as @a[gamemode=!creative] at @s unless items entity @s armor.chest air run item replace entity @a armor.chest with air
+execute if score lobby game-state matches 1 as @a[gamemode=!creative] at @s unless items entity @s armor.legs air run item replace entity @a armor.legs with air
+execute if score lobby game-state matches 1 as @a[gamemode=!creative] at @s unless items entity @s armor.feet air run item replace entity @a armor.feet with air
 
 # -offhand
-execute if score lobby game-state matches 1 as @a at @s unless items entity @s weapon.offhand air run item replace entity @s weapon.offhand with air
+execute if score lobby game-state matches 1 as @a[gamemode=!creative] at @s unless items entity @s weapon.offhand air run item replace entity @s weapon.offhand with air
 
 # -crafting
 execute if score lobby game-state matches 1 as @a at @s unless items entity @s player.crafting.0 air run item replace entity @s player.crafting.0 with air
@@ -51,8 +52,26 @@ execute if score lobby game-state matches 1 as @a[gamemode=!creative] at @s run 
 execute if score lobby game-state matches 1 as @a[gamemode=!creative] at @s run item replace entity @s inventory.25 with air
 execute if score lobby game-state matches 1 as @a[gamemode=!creative] at @s run item replace entity @s inventory.26 with air
 
-# -hotbar (inventory handler for creative player)
-execute if score lobby game-state matches 1 as @a[gamemode=creative] at @s if items entity @s container.* *[custom_data={inventory-handler:1b}] run clear @s *[custom_data={inventory-handler:1b}]
+# -inventory/hotbar (inventory handler for creative player)
+execute if score lobby game-state matches 1 as @a[gamemode=creative] at @s if items entity @s inventory.9 *[custom_data={inventory-handler:1b}] run clear @s *[custom_data={inventory-handler:1b}]
+execute if score lobby game-state matches 1 as @a[gamemode=creative] at @s if items entity @s inventory.10 *[custom_data={inventory-handler:1b}] run clear @s *[custom_data={inventory-handler:1b}]
+execute if score lobby game-state matches 1 as @a[gamemode=creative] at @s if items entity @s inventory.11 *[custom_data={inventory-handler:1b}] run clear @s *[custom_data={inventory-handler:1b}]
+execute if score lobby game-state matches 1 as @a[gamemode=creative] at @s if items entity @s inventory.12 *[custom_data={inventory-handler:1b}] run clear @s *[custom_data={inventory-handler:1b}]
+execute if score lobby game-state matches 1 as @a[gamemode=creative] at @s if items entity @s inventory.13 *[custom_data={inventory-handler:1b}] run clear @s *[custom_data={inventory-handler:1b}]
+execute if score lobby game-state matches 1 as @a[gamemode=creative] at @s if items entity @s inventory.14 *[custom_data={inventory-handler:1b}] run clear @s *[custom_data={inventory-handler:1b}]
+execute if score lobby game-state matches 1 as @a[gamemode=creative] at @s if items entity @s inventory.15 *[custom_data={inventory-handler:1b}] run clear @s *[custom_data={inventory-handler:1b}]
+execute if score lobby game-state matches 1 as @a[gamemode=creative] at @s if items entity @s inventory.16 *[custom_data={inventory-handler:1b}] run clear @s *[custom_data={inventory-handler:1b}]
+execute if score lobby game-state matches 1 as @a[gamemode=creative] at @s if items entity @s inventory.17 *[custom_data={inventory-handler:1b}] run clear @s *[custom_data={inventory-handler:1b}]
+execute if score lobby game-state matches 1 as @a[gamemode=creative] at @s if items entity @s inventory.18 *[custom_data={inventory-handler:1b}] run clear @s *[custom_data={inventory-handler:1b}]
+execute if score lobby game-state matches 1 as @a[gamemode=creative] at @s if items entity @s inventory.19 *[custom_data={inventory-handler:1b}] run clear @s *[custom_data={inventory-handler:1b}]
+execute if score lobby game-state matches 1 as @a[gamemode=creative] at @s if items entity @s inventory.20 *[custom_data={inventory-handler:1b}] run clear @s *[custom_data={inventory-handler:1b}]
+execute if score lobby game-state matches 1 as @a[gamemode=creative] at @s if items entity @s inventory.21 *[custom_data={inventory-handler:1b}] run clear @s *[custom_data={inventory-handler:1b}]
+execute if score lobby game-state matches 1 as @a[gamemode=creative] at @s if items entity @s inventory.22 *[custom_data={inventory-handler:1b}] run clear @s *[custom_data={inventory-handler:1b}]
+execute if score lobby game-state matches 1 as @a[gamemode=creative] at @s if items entity @s inventory.23 *[custom_data={inventory-handler:1b}] run clear @s *[custom_data={inventory-handler:1b}]
+execute if score lobby game-state matches 1 as @a[gamemode=creative] at @s if items entity @s inventory.24 *[custom_data={inventory-handler:1b}] run clear @s *[custom_data={inventory-handler:1b}]
+execute if score lobby game-state matches 1 as @a[gamemode=creative] at @s if items entity @s inventory.25 *[custom_data={inventory-handler:1b}] run clear @s *[custom_data={inventory-handler:1b}]
+execute if score lobby game-state matches 1 as @a[gamemode=creative] at @s if items entity @s inventory.26 *[custom_data={inventory-handler:1b}] run clear @s *[custom_data={inventory-handler:1b}]
+execute if score lobby game-state matches 1 as @a[gamemode=creative] at @s if items entity @s hotbar.* *[custom_data={inventory-handler:1b}] run clear @s *[custom_data={inventory-handler:1b}]
 
 # -hotbar (non-creative player)
 execute if score lobby game-state matches 1 as @a[gamemode=!creative] at @s unless items entity @s hotbar.0 air run item replace entity @s hotbar.0 with air

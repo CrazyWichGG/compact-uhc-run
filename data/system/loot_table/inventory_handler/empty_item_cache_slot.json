@@ -1,0 +1,114 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:barrier",
+          "functions": [
+            {
+              "function": "set_custom_data",
+              "tag": "{inventory-handler:1b}"
+            },
+            {
+              "function": "set_name",
+              "name": [
+                [
+                  {
+                    "text": "No Item Cached",
+                    "color": "red",
+                    "bold": true,
+                    "italic": false
+                  }
+                ]
+              ]
+            },
+            {
+              "function": "set_lore",
+              "lore": [
+                [
+                  {
+                    "text": "Item cache will be stored here when the system needs it",
+                    "color": "white",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": ""
+                  }
+                ],
+                [
+                  {
+                    "text": "Ender Chest is not meant to store items in this UHC.",
+                    "color": "gray",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": "But instead, it is used to store your item data like a cache",
+                    "color": "gray",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": "for various features.",
+                    "color": "gray",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": ""
+                  }
+                ],
+                [
+                  {
+                    "text": "Normally, Ender Chest is unobtainable in this UHC and it is not meant",
+                    "color": "gray",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                  "text": "to be interacted with. If you managed to obtain it, ",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "DO NOT INTERACT!",
+                    "color": "red",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": "Interact with Ender Chest can cause the system to break",
+                    "color": "gray",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": "and especially, it can cause the ",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "lost of your items.",
+                    "color": "red",
+                    "italic": false
+                  }
+                ]
+              ],
+              "mode": "replace_all"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

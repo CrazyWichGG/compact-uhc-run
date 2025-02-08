@@ -68,6 +68,9 @@ tag @a[team=ingame] add gliding
 scoreboard players add @a[team=ingame] total-games-played 1
 
 #customs
+# -old combat
+execute if score old-combat customs matches 1 as @a[team=ingame] at @s run loot replace entity @s weapon.offhand loot system:inventory_handler/old_combat_shield
+
 # -night mode
 execute if score night-mode customs matches 0 run title @a subtitle {"text":"Good luck and have fun!","color":"white"}
 execute if score night-mode customs matches 0 run title @a title {"text":"UHC Run","color":"green","bold": true}
