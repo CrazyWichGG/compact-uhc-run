@@ -453,27 +453,6 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:snowball",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 8,
-                "max": 16
-              },
-              "add": true
-            }
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:random_chance",
-              "chance": 0.5
-            }
-          ],
-          "weight": 2
-        },
-        {
-          "type": "minecraft:item",
           "name": "minecraft:cooked_beef",
           "functions": [
             {
