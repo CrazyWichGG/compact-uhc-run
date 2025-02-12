@@ -1,7 +1,7 @@
 ```
 📌 License Update Notice
 
-Starting with v1.3.0-alpha, this project will be licensed under GNU Lesser General Public License v3.0 (LGPLv3).
+Starting with v1.3.0-alpha, this project will be licensed under GNU Lesser General Public License v3.0.
 All contributions and distributed versions from this version onward are subject to the GNU LGPLv3 terms.
 ```
 
