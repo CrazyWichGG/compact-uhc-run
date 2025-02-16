@@ -16,6 +16,7 @@ execute as @e[type=skeleton_horse] run tag @s add entities-timeout-exception
 execute as @e[type=zombie_horse] run tag @s add entities-timeout-exception
 execute as @e[type=llama] run tag @s add entities-timeout-exception
 execute as @e[type=trader_llama] run tag @s add entities-timeout-exception
+execute as @e[type=wandering_trader] run tag @s add entities-timeout-exception
 execute as @e[type=pig,nbt={Saddle:1b}] run tag @s add entities-timeout-exception
 execute as @e[type=strider,nbt={Saddle:1b}] run tag @s add entities-timeout-exception
 execute as @e[tag=!entities-timeout-exception] at @s run scoreboard players add @s entities-timeout 1

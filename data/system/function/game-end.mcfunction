@@ -52,10 +52,9 @@ bossbar set minecraft:main visible true
 
 #kill all entities
 kill @e[type=armor_stand,name='gen-chunk']
-execute as @e[type=!player,type=!armor_stand] at @s run tp @s ~ -300 ~
-kill @e[type=!player,type=!armor_stand]
 kill @e[type=item]
-kill @e[type=wandering_trader]
+execute as @e[tag=!entities-timeout-exception] at @s run tp @s ~ -300 ~
+kill @e[tag=!entities-timeout-exception]
 
 #delete landing supply drop
 execute as @e[type=armor_stand,tag=supply-drop,team=supply-state-landing] run kill @e[type=block_display,name="supply-display",limit=1]
