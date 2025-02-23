@@ -221,12 +221,35 @@ execute as @s[tag=setup-request] at @s run scoreboard objectives add settings-gl
 # -spectator trail
 execute as @s[tag=setup-request] at @s run scoreboard objectives add settings-personal-spectator-trail dummy
 
-#score customs (additional ingame event/feature)
-execute as @s[tag=setup-request] at @s run scoreboard objectives add customs dummy
-execute as @s[tag=setup-request] at @s run scoreboard players set night-mode customs 0
-execute as @s[tag=setup-request] at @s run scoreboard players set old-combat customs 0
-execute as @s[tag=setup-request] at @s run scoreboard players set tiny customs 0
+#score player uuid
+execute as @s[tag=setup-request] at @s run scoreboard objectives add player-uuid dummy
 
+#score custom (additional ingame event/feature)
+execute as @s[tag=setup-request] at @s run scoreboard objectives add custom dummy
+execute as @s[tag=setup-request] at @s run scoreboard players set night-mode custom 0
+execute as @s[tag=setup-request] at @s run scoreboard players set old-combat custom 0
+execute as @s[tag=setup-request] at @s run scoreboard players set tiny custom 0
+execute as @s[tag=setup-request] at @s run scoreboard players set gambling custom 0
+
+#score custom gambling
+execute as @s[tag=setup-request] at @s run scoreboard objectives add custom-gambling-emerald-count dummy
+execute as @s[tag=setup-request] at @s run scoreboard objectives add custom-gambling-is-dropped-book dropped:written_book
+execute as @s[tag=setup-request] at @s run scoreboard objectives add custom-gambling-is-spinning dummy
+execute as @s[tag=setup-request] at @s run scoreboard objectives add custom-gambling-is-spinning-time dummy
+execute as @s[tag=setup-request] at @s run scoreboard objectives add custom-gambling-is-skip-animation dummy
+execute as @s[tag=setup-request] at @s run scoreboard objectives add custom-gambling-set-bet-amount dummy
+execute as @s[tag=setup-request] at @s run scoreboard objectives add custom-gambling-set-bet-amount-trigger trigger
+execute as @s[tag=setup-request] at @s run scoreboard objectives add custom-gambling-bet-amount dummy
+execute as @s[tag=setup-request] at @s run scoreboard objectives add custom-gambling-reel1 dummy
+execute as @s[tag=setup-request] at @s run scoreboard objectives add custom-gambling-reel2 dummy
+execute as @s[tag=setup-request] at @s run scoreboard objectives add custom-gambling-reel3 dummy
+execute as @s[tag=setup-request] at @s run scoreboard objectives add custom-gambling-reel4 dummy
+execute as @s[tag=setup-request] at @s run scoreboard objectives add custom-gambling-reel5 dummy
+execute as @s[tag=setup-request] at @s run scoreboard objectives add custom-gambling-reward-3reels dummy
+execute as @s[tag=setup-request] at @s run scoreboard objectives add custom-gambling-reward-4reels dummy
+execute as @s[tag=setup-request] at @s run scoreboard objectives add custom-gambling-reward-5reels dummy
+execute as @s[tag=setup-request] at @s run scoreboard objectives add custom-gambling-reward-pool dummy
+execute as @s[tag=setup-request] at @s run scoreboard objectives add custom-gambling-is-winning dummy
 
 #team ingame
 execute as @s[tag=setup-request] at @s run team add ingame

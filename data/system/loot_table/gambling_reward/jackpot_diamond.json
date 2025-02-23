@@ -1,0 +1,84 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:diamond_sword",
+          "functions": [
+            {
+              "function": "set_custom_data",
+              "tag": "{custom_item:jackpot_sword}"
+            },
+            {
+              "function": "set_name",
+              "name": [
+                {
+                  "text": "JACKPOT Sword",
+                  "color": "gold",
+                  "italic": false,
+                  "bold": true
+                }
+              ]
+            },
+            {
+              "function": "set_lore",
+              "lore": [
+                [
+                  {
+                    "text": ""
+                  }
+                ],
+                [
+                  {
+                  "text": "A sword powered by your bet. The higher the wager,",
+                  "color": "white",
+                  "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": "the stronger the enchantment",
+                    "color": "white",
+                    "italic": false
+                  }
+                ]
+              ],
+              "mode": "replace_all"
+            },
+            {
+              "function": "set_enchantments",
+              "enchantments": {
+                "sharpness": {
+                  "type": "score",
+                  "score": "custom-gambling-bet-amount",
+                  "target": "this",
+                  "scale": 3
+                },
+                "knockback": {
+                  "type": "score",
+                  "score": "custom-gambling-bet-amount",
+                  "target": "this",
+                  "scale": 1
+                },
+                "fire_aspect": {
+                  "type": "score",
+                  "score": "custom-gambling-bet-amount",
+                  "target": "this",
+                  "scale": 2
+                }
+              }
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "unbreakable": {}
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,313 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "diamond_helmet",
+          "functions": [
+            {
+              "function": "set_custom_data",
+              "tag": "{custom_item:jackpot_helmet}"
+            },
+            {
+              "function": "set_name",
+              "name": [
+                {
+                  "text": "JACKPOT Helmet",
+                  "color": "gold",
+                  "italic": false,
+                  "bold": true
+                }
+              ]
+            },
+            {
+              "function": "set_lore",
+              "lore": [
+                [
+                  {
+                    "text": ""
+                  }
+                ],
+                [
+                  {
+                  "text": "A helmet powered by your bet. The higher the wager,",
+                  "color": "white",
+                  "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": "the stronger the enchantment",
+                    "color": "white",
+                    "italic": false
+                  }
+                ]
+              ],
+              "mode": "replace_all"
+            },
+            {
+              "function": "set_enchantments",
+              "enchantments": {
+                "protection": {
+                  "type": "score",
+                  "score": "custom-gambling-bet-amount",
+                  "target": "this",
+                  "scale": 3.984375
+                },
+                "thorns": {
+                  "type": "score",
+                  "score": "custom-gambling-bet-amount",
+                  "target": "this",
+                  "scale": 0.15625
+                },
+                "respiration": {
+                  "type": "score",
+                  "score": "custom-gambling-bet-amount",
+                  "target": "this",
+                  "scale": 1
+                }
+              }
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "unbreakable": {}
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "diamond_chestplate",
+          "functions": [
+            {
+              "function": "set_custom_data",
+              "tag": "{custom_item:jackpot_chestplate}"
+            },
+            {
+              "function": "set_name",
+              "name": [
+                {
+                  "text": "JACKPOT Chestplate",
+                  "color": "gold",
+                  "italic": false,
+                  "bold": true
+                }
+              ]
+            },
+            {
+              "function": "set_lore",
+              "lore": [
+                [
+                  {
+                    "text": ""
+                  }
+                ],
+                [
+                  {
+                  "text": "A chestplate powered by your bet. The higher the wager,",
+                  "color": "white",
+                  "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": "the stronger the enchantment",
+                    "color": "white",
+                    "italic": false
+                  }
+                ]
+              ],
+              "mode": "replace_all"
+            },
+            {
+              "function": "set_enchantments",
+              "enchantments": {
+                "protection": {
+                  "type": "score",
+                  "score": "custom-gambling-bet-amount",
+                  "target": "this",
+                  "scale": 3.984375
+                },
+                "thorns": {
+                  "type": "score",
+                  "score": "custom-gambling-bet-amount",
+                  "target": "this",
+                  "scale": 0.15625
+                }
+              }
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "unbreakable": {}
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "diamond_leggings",
+          "functions": [
+            {
+              "function": "set_custom_data",
+              "tag": "{custom_item:jackpot_leggings}"
+            },
+            {
+              "function": "set_name",
+              "name": [
+                {
+                  "text": "JACKPOT Leggings",
+                  "color": "gold",
+                  "italic": false,
+                  "bold": true
+                }
+              ]
+            },
+            {
+              "function": "set_lore",
+              "lore": [
+                [
+                  {
+                    "text": ""
+                  }
+                ],
+                [
+                  {
+                  "text": "A leggings powered by your bet. The higher the wager,",
+                  "color": "white",
+                  "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": "the stronger the enchantment",
+                    "color": "white",
+                    "italic": false
+                  }
+                ]
+              ],
+              "mode": "replace_all"
+            },
+            {
+              "function": "set_enchantments",
+              "enchantments": {
+                "protection": {
+                  "type": "score",
+                  "score": "custom-gambling-bet-amount",
+                  "target": "this",
+                  "scale": 3.984375
+                },
+                "thorns": {
+                  "type": "score",
+                  "score": "custom-gambling-bet-amount",
+                  "target": "this",
+                  "scale": 0.15625
+                }
+              }
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "unbreakable": {}
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "diamond_boots",
+          "functions": [
+            {
+              "function": "set_custom_data",
+              "tag": "{custom_item:jackpot_boots}"
+            },
+            {
+              "function": "set_name",
+              "name": [
+                {
+                  "text": "JACKPOT Boots",
+                  "color": "gold",
+                  "italic": false,
+                  "bold": true
+                }
+              ]
+            },
+            {
+              "function": "set_lore",
+              "lore": [
+                [
+                  {
+                    "text": ""
+                  }
+                ],
+                [
+                  {
+                  "text": "A boots powered by your bet. The higher the wager,",
+                  "color": "white",
+                  "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": "the stronger the enchantment",
+                    "color": "white",
+                    "italic": false
+                  }
+                ]
+              ],
+              "mode": "replace_all"
+            },
+            {
+              "function": "set_enchantments",
+              "enchantments": {
+                "protection": {
+                  "type": "score",
+                  "score": "custom-gambling-bet-amount",
+                  "target": "this",
+                  "scale": 3.984375
+                },
+                "thorns": {
+                  "type": "score",
+                  "score": "custom-gambling-bet-amount",
+                  "target": "this",
+                  "scale": 0.15625
+                },
+                "feather_falling": {
+                  "type": "score",
+                  "score": "custom-gambling-bet-amount",
+                  "target": "this",
+                  "scale": 3.984375
+                },
+                "depth_strider": 3
+              }
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "unbreakable": {}
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

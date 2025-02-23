@@ -77,13 +77,13 @@ execute as @a[team=ingame] at @s run ride @s mount @e[type=armor_stand,name='gen
 
 #customs
 # -night mode
-execute if score night-mode customs matches 0 run time set day
-execute if score night-mode customs matches 1 run time set midnight
+execute if score night-mode custom matches 0 run time set day
+execute if score night-mode custom matches 1 run time set midnight
 
 # -old combat
-execute if score old-combat customs matches 0 as @a[team=ingame] at @s run attribute @s minecraft:attack_speed base set 4
-execute if score old-combat customs matches 1 as @a[team=ingame] at @s run attribute @s minecraft:attack_speed base set 100
+execute if score old-combat custom matches 0 as @a[team=ingame] at @s run attribute @s minecraft:attack_speed base set 4
+execute if score old-combat custom matches 1 as @a[team=ingame] at @s run attribute @s minecraft:attack_speed base set 100
 
 # -tiny
-execute if score tiny customs matches 0 as @a[team=ingame] at @s run attribute @s minecraft:scale base set 1
-execute if score tiny customs matches 1 as @a[team=ingame] at @s run attribute @s minecraft:scale base set 0.5
+execute if score tiny custom matches 0 as @a[team=ingame] at @s run attribute @s minecraft:scale base set 1
+execute if score tiny custom matches 1 as @a[team=ingame] at @s run attribute @s minecraft:scale base set 0.5

@@ -1,0 +1,121 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:music_disc_wait",
+          "functions": [
+            {
+              "function": "set_custom_data",
+              "tag": "{custom_item:instant_adrenaline}"
+            },
+            {
+              "function": "set_name",
+              "name": [
+                {
+                  "text": "Instant Adrenaline",
+                  "color": "blue",
+                  "italic": false
+                },
+                {
+                  "text": " (Consume)",
+                  "color": "gray",
+                  "italic": false
+                }
+              ]
+            },
+            {
+              "function": "set_lore",
+              "lore": [
+                [
+                  {
+                    "text": "Temporarily boosts your strength, speed,",
+                    "color": "white",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": "and endurance for a short time",
+                    "color": "white",
+                    "italic": false
+                  }
+                ]
+              ],
+              "mode": "replace_all"
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "!jukebox_playable": {},
+                "max_stack_size": 16,
+                "item_model": "potion",
+                "enchantment_glint_override": true,
+                "consumable": {
+                  "animation": "drink",
+                  "consume_seconds": 1.65,
+                  "on_consume_effects": [
+                    {
+                      "type": "apply_effects",
+                      "effects": [
+                        {
+                          "id": "speed",
+                          "amplifier": 4,
+                          "duration": 1200,
+                          "show_icon": true,
+                          "show_particles": true
+                        },
+                        {
+                          "id": "jump_boost",
+                          "amplifier": 4,
+                          "duration": 1200,
+                          "show_icon": true,
+                          "show_particles": true
+                        },
+                        {
+                          "id": "haste",
+                          "amplifier": 2,
+                          "duration": 1200,
+                          "show_icon": true,
+                          "show_particles": true
+                        },
+                        {
+                          "id": "absorption",
+                          "amplifier": 9,
+                          "duration": 1200,
+                          "show_icon": true,
+                          "show_particles": true
+                        },
+                        {
+                          "id": "regeneration",
+                          "amplifier": 4,
+                          "duration": 200,
+                          "show_icon": true,
+                          "show_particles": true
+                        },
+                        {
+                          "id": "strength",
+                          "amplifier": 1,
+                          "duration": 1200,
+                          "show_icon": true,
+                          "show_particles": true 
+                        }
+                      ]
+                    }
+                  ],
+                  "sound": "entity.generic.drink",
+                  "has_consume_particles": false
+                },
+                "use_remainder": {
+                  "id": "glass_bottle"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

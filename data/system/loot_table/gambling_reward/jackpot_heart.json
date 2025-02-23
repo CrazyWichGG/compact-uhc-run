@@ -1,0 +1,38 @@
+{
+  "pools": [
+    {
+      "rolls": {
+        "type": "score",
+        "score": "custom-gambling-bet-amount",
+        "target": "this",
+        "scale": 1
+      },
+      "entries": [
+        {
+          "type": "loot_table",
+          "value": "system:custom_item/instant_adrenaline"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:enchanted_golden_apple",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "type": "score",
+                "score": "custom-gambling-bet-amount",
+                "target": "this",
+                "scale": 32
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

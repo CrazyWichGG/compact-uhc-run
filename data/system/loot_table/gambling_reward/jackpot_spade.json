@@ -1,0 +1,99 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:bow",
+          "functions": [
+            {
+              "function": "set_custom_data",
+              "tag": "{custom_item:jackpot_bow}"
+            },
+            {
+              "function": "set_name",
+              "name": [
+                {
+                  "text": "JACKPOT Bow",
+                  "color": "gold",
+                  "italic": false,
+                  "bold": true
+                }
+              ]
+            },
+            {
+              "function": "set_lore",
+              "lore": [
+                [
+                  {
+                    "text": ""
+                  }
+                ],
+                [
+                  {
+                  "text": "A bow powered by your bet. The higher the wager,",
+                  "color": "white",
+                  "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": "the stronger the enchantment",
+                    "color": "white",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": ""
+                  }
+                ]
+              ],
+              "mode": "replace_all"
+            },
+            {
+              "function": "set_enchantments",
+              "enchantments": {
+                "power": {
+                  "type": "score",
+                  "score": "custom-gambling-bet-amount",
+                  "target": "this",
+                  "scale": 3
+                },
+                "punch": {
+                  "type": "score",
+                  "score": "custom-gambling-bet-amount",
+                  "target": "this",
+                  "scale": 1
+                },
+                "flame": {
+                  "type": "score",
+                  "score": "custom-gambling-bet-amount",
+                  "target": "this",
+                  "scale": 2
+                },
+                "infinity": 1
+              }
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "unbreakable": {}
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "arrow"
+        }
+      ]
+    }
+  ]
+}

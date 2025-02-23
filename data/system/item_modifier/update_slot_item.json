@@ -1,0 +1,184 @@
+[
+  {
+    "function": "set_written_book_pages",
+    "pages": [ 
+      [
+        {
+          "text": "    CURRENT BET: ",
+          "italic": false,
+          "color": "gold"
+        },
+        {
+          "score": {
+            "name": "@s",
+            "objective": "custom-gambling-set-bet-amount"
+          },
+          "italic": false,
+          "color": "gold"
+        },
+        {
+          "text": "\n\nSelect your bet below",
+          "italic": false,
+          "color": "black"
+        },
+        {
+          "text": "\n-------------------",
+          "italic": false,
+          "color": "gold"
+        },
+        {
+          "text": "\n1 emerald",
+          "italic": false,
+          "color": "black",
+          "clickEvent": {
+            "action": "run_command",
+            "value": "/trigger custom-gambling-set-bet-amount-trigger set 1"
+          },
+          "hoverEvent": {
+            "action": "show_text",
+            "contents": [
+              {
+                "text": "Click to set your bet to 1 emerald"
+              }
+            ]
+          }
+        },
+        {
+          "text": "\n2 emeralds",
+          "italic": false,
+          "color": "black",
+          "clickEvent": {
+            "action": "run_command",
+            "value": "/trigger custom-gambling-set-bet-amount-trigger set 2"
+          },
+          "hoverEvent": {
+            "action": "show_text",
+            "contents": [
+              {
+                "text": "Click to set your bet to 2 emeralds"
+              }
+            ]
+          }
+        },
+        {
+          "text": "\n4 emeralds",
+          "italic": false,
+          "color": "black",
+          "clickEvent": {
+            "action": "run_command",
+            "value": "/trigger custom-gambling-set-bet-amount-trigger set 4"
+          },
+          "hoverEvent": {
+            "action": "show_text",
+            "contents": [
+              {
+                "text": "Click to set your bet to 4 emeralds"
+              }
+            ]
+          }
+        },
+        {
+          "text": "\n8 emeralds",
+          "italic": false,
+          "color": "black",
+          "clickEvent": {
+            "action": "run_command",
+            "value": "/trigger custom-gambling-set-bet-amount-trigger set 8"
+          },
+          "hoverEvent": {
+            "action": "show_text",
+            "contents": [
+              {
+                "text": "Click to set your bet to 8 emeralds"
+              }
+            ]
+          }
+        },
+        {
+          "text": "\n16 emeralds",
+          "italic": false,
+          "color": "black",
+          "clickEvent": {
+            "action": "run_command",
+            "value": "/trigger custom-gambling-set-bet-amount-trigger set 16"
+          },
+          "hoverEvent": {
+            "action": "show_text",
+            "contents": [
+              {
+                "text": "Click to set your bet to 16 emeralds"
+              }
+            ]
+          }
+        },
+        {
+          "text": "\n32 emeralds",
+          "italic": false,
+          "color": "black",
+          "clickEvent": {
+            "action": "run_command",
+            "value": "/trigger custom-gambling-set-bet-amount-trigger set 32"
+          },
+          "hoverEvent": {
+            "action": "show_text",
+            "contents": [
+              {
+                "text": "Click to set your bet to 32 emeralds"
+              }
+            ]
+          }
+        },
+        {
+          "text": "\n64 emeralds",
+          "italic": false,
+          "color": "black",
+          "clickEvent": {
+            "action": "run_command",
+            "value": "/trigger custom-gambling-set-bet-amount-trigger set 64"
+          },
+          "hoverEvent": {
+            "action": "show_text",
+            "contents": [
+              {
+                "text": "Click to set your bet to 64 emeralds"
+              }
+            ]
+          }
+        },
+        {
+          "text": "\n-------------------",
+          "italic": false,
+          "color": "gold"
+        },
+        {
+          "text": "\nand press ",
+          "italic": false,
+          "color": "black"
+        },
+        [
+          {
+            "text": "[",
+            "italic": false,
+            "color": "gold"
+          },
+          {
+            "keybind": "key.drop",
+            "italic": false,
+            "color": "gold"
+          },
+          {
+            "text": "]",
+            "italic": false,
+            "color": "gold"
+          }
+        ],
+        {
+          "text": " to spin!",
+          "italic": false,
+          "color": "black"
+        }
+      ]
+    ],
+    "mode": "replace_all"
+  }
+]

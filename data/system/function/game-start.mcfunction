@@ -69,13 +69,16 @@ scoreboard players add @a[team=ingame] total-games-played 1
 
 #customs
 # -old combat
-execute if score old-combat customs matches 1 as @a[team=ingame] at @s run loot replace entity @s weapon.offhand loot system:inventory_handler/old_combat_shield
+execute if score old-combat custom matches 1 as @a[team=ingame] at @s run loot replace entity @s weapon.offhand loot system:inventory_handler/old_combat_shield
 
 # -night mode
-execute if score night-mode customs matches 0 run title @a subtitle {"text":"Good luck and have fun!","color":"white"}
-execute if score night-mode customs matches 0 run title @a title {"text":"UHC Run","color":"green","bold": true}
-execute if score night-mode customs matches 0 as @a at @s run playsound entity.experience_orb.pickup master @s ~ ~ ~ 1 1 1
+execute if score night-mode custom matches 0 run title @a subtitle {"text":"Good luck and have fun!","color":"white"}
+execute if score night-mode custom matches 0 run title @a title {"text":"UHC Run","color":"green","bold": true}
+execute if score night-mode custom matches 0 as @a at @s run playsound entity.experience_orb.pickup master @s ~ ~ ~ 1 1 1
 
-execute if score night-mode customs matches 1 run title @a subtitle {"text":"Monsters can now spawn on ground!","color":"white"}
-execute if score night-mode customs matches 1 run title @a title {"text":"Night Mode","color":"#9933ff"}
-execute if score night-mode customs matches 1 as @a at @s run playsound block.end_portal.spawn master @s ~ ~ ~ 1 1 1
+execute if score night-mode custom matches 1 run title @a subtitle {"text":"Monsters can now spawn on ground!","color":"white"}
+execute if score night-mode custom matches 1 run title @a title {"text":"Night Mode","color":"#9933ff"}
+execute if score night-mode custom matches 1 as @a at @s run playsound block.end_portal.spawn master @s ~ ~ ~ 1 1 1
+
+# -gambling
+execute if score gambling custom matches 1 run loot replace entity @a[team=ingame] hotbar.7 loot system:custom_item/gambling_slot_item

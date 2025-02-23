@@ -1,4 +1,4 @@
-#commands
+# commands
 execute as @a at @s run spawnpoint @s ~ ~ ~
 execute as @a[team=ingame] at @s if score @s ingame-death matches 1 run function system:ingame-player-dead
 execute as @a[team=!ingame] at @s if score @s ingame-death matches 1 run scoreboard players set @s ingame-death 0
@@ -9,7 +9,9 @@ execute if score border-state border-countdown matches 5.. run effect give @a[te
 
 execute as @a[team=ingame] at @s run particle minecraft:dust{color:[1f,0f,0f],scale:1} ~ ~ ~ 0 0 0 0.2 5 force @a[team=spectator]
 
-#functions
+execute as @a at @s store result score @s player-uuid run data get entity @s UUID[1] 1
+
+# functions
 function system:disable-pvp
 function system:disable-nether
 function system:timer
@@ -33,7 +35,6 @@ function system:bossbar-animation
 function system:ingame-early-invin
 function system:gen-chunk
 function system:spectator-spectate-player
-function system:customs-actives
 #function system:settings-default
 function system:inventory-item-handler
 function system:inventory-item-handler-action
@@ -42,3 +43,7 @@ function system:server-status
 function system:entities-timeout
 function system:supply-drop
 function system:enderchest
+
+## custom
+function system:custom-active/gambling
+function system:custom-active/old-combat
