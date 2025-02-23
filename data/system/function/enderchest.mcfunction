@@ -24,6 +24,7 @@ execute as @a at @s unless items entity @s enderchest.21 * run loot replace enti
 execute as @a at @s unless items entity @s enderchest.22 * run loot replace entity @s enderchest.22 loot system:inventory_handler/empty_item_cache_slot
 execute as @a at @s unless items entity @s enderchest.23 * run loot replace entity @s enderchest.23 loot system:inventory_handler/empty_item_cache_slot
 execute as @a at @s unless items entity @s enderchest.24 * run loot replace entity @s enderchest.24 loot system:inventory_handler/empty_item_cache_slot
+execute as @a at @s unless items entity @s enderchest.25 * run loot replace entity @s enderchest.25 loot system:inventory_handler/empty_item_cache_slot
 execute as @a at @s unless items entity @s enderchest.26 * run loot replace entity @s enderchest.26 loot system:inventory_handler/empty_item_cache_slot
 
 #prevent placing enderchest
