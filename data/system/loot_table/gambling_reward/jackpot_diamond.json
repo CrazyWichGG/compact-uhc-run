@@ -73,7 +73,8 @@
             {
               "function": "set_components",
               "components": {
-                "unbreakable": {}
+                "unbreakable": {},
+                "item_model": "golden_sword"
               }
             }
           ]
