@@ -47,8 +47,9 @@ execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remov
 execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove game-time
 execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove bossbar-animation
 execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove invincibility-bossbar
-execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove gen-chunk
+execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove preload-game
 execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove is-chunk-generated
+execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove is-player-rode-armorstand
 execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove spectator-spectate-player
 execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove server-entities
 execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove entities-timeout
@@ -98,6 +99,8 @@ execute as @s[tag=setup-uninstall-request] at @s run team remove glowing-color-g
 execute as @s[tag=setup-uninstall-request] at @s run team remove glowing-color-light_purple
 execute as @s[tag=setup-uninstall-request] at @s run team remove glowing-color-red
 execute as @s[tag=setup-uninstall-request] at @s run team remove glowing-color-yellow
+execute as @s[tag=setup-uninstall-request] at @s run team remove supply-state-load
+execute as @s[tag=setup-uninstall-request] at @s run team remove supply-state-prepare
 execute as @s[tag=setup-uninstall-request] at @s run team remove supply-state-ready
 execute as @s[tag=setup-uninstall-request] at @s run team remove supply-state-landing
 execute as @s[tag=setup-uninstall-request] at @s run team remove supply-state-landed
@@ -116,6 +119,10 @@ execute as @s[tag=setup-uninstall-request] at @s run clear @a *[custom_data={inv
 #gamemode
 execute as @s[tag=setup-uninstall-request] at @s run gamemode survival @a
 execute as @s[tag=setup-uninstall-request] at @s run defaultgamemode survival
+
+#title
+execute as @s[tag=setup-uninstall-request] at @s run title @a reset
+execute as @s[tag=setup-uninstall-request] at @s run title @a clear
 
 #gamerule
 execute as @s[tag=setup-uninstall-request] at @s run gamerule doImmediateRespawn false
@@ -144,6 +151,9 @@ execute as @s[tag=setup-uninstall-request] at @s run execute as @s at @s unless 
 execute as @s[tag=setup-uninstall-request] at @s run execute as @e[type=minecraft:armor_stand,name="map-center"] at @s run tp @a[tag=setup-uninstall-request] @s
 #execute as @s[tag=setup-uninstall-request] at @s run execute as @e[type=minecraft:armor_stand,name="map-center"] at @s run fill ~3 ~3 ~3 ~-3 ~-3 ~-3 air replace repeating_command_block
 execute as @s[tag=setup-uninstall-request] at @s run kill @e[type=minecraft:armor_stand,name="map-center"]
+
+#remove forceload
+execute as @s[tag=setup-uninstall-request] at @s run forceload remove all
 
 #permission remove
 execute as @s[tag=setup-uninstall-request] at @s run tellraw @s {"text":"\nUninstall complete","color":"green"}

@@ -1,6 +1,7 @@
 #set game state
 scoreboard players set lobby game-state 0
 scoreboard players set gen-chunk game-state 0
+scoreboard players set load-asset game-state 0
 scoreboard players set ingame game-state 1
 
 #tellraw

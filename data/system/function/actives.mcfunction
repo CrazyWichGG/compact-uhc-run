@@ -33,7 +33,8 @@ function system:game-time-event
 function system:player-join-late
 function system:bossbar-animation
 function system:ingame-early-invin
-function system:gen-chunk
+function system:preload-game/load-asset
+function system:preload-game/generate-chunk
 function system:spectator-spectate-player
 #function system:settings-default
 function system:inventory-item-handler

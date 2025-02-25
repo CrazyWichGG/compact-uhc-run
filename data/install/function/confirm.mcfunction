@@ -104,6 +104,7 @@ execute as @s[tag=setup-request] at @s run scoreboard objectives add game-state 
 execute as @s[tag=setup-request] at @s run scoreboard players set lobby game-state 1
 execute as @s[tag=setup-request] at @s run scoreboard players set ingame game-state 0
 execute as @s[tag=setup-request] at @s run scoreboard players set gen-chunk game-state 0
+execute as @s[tag=setup-request] at @s run scoreboard players set load-asset game-state 0
 
 #score game time
 execute as @s[tag=setup-request] at @s run scoreboard objectives add game-time dummy
@@ -122,13 +123,20 @@ execute as @s[tag=setup-request] at @s run scoreboard players set tick invincibi
 execute as @s[tag=setup-request] at @s run scoreboard players set second invincibility-bossbar 0
 execute as @s[tag=setup-request] at @s run scoreboard players set progress invincibility-bossbar 0
 
-#score gen chunk
-execute as @s[tag=setup-request] at @s run scoreboard objectives add gen-chunk dummy
-execute as @s[tag=setup-request] at @s run scoreboard players set tick gen-chunk 0
-execute as @s[tag=setup-request] at @s run scoreboard players set second gen-chunk 0
-execute as @s[tag=setup-request] at @s run scoreboard players set minute gen-chunk 0
-execute as @s[tag=setup-request] at @s run scoreboard players set player-total gen-chunk 0
-execute as @s[tag=setup-request] at @s run scoreboard players set player-generated gen-chunk 0
+#score preload game
+execute as @s[tag=setup-request] at @s run scoreboard objectives add preload-game dummy
+execute as @s[tag=setup-request] at @s run scoreboard players set tick preload-game 0
+execute as @s[tag=setup-request] at @s run scoreboard players set second preload-game 0
+execute as @s[tag=setup-request] at @s run scoreboard players set minute preload-game 0
+execute as @s[tag=setup-request] at @s run scoreboard players set player-total preload-game 0
+execute as @s[tag=setup-request] at @s run scoreboard players set player-generated preload-game 0
+execute as @s[tag=setup-request] at @s run scoreboard players set player-rode-armorstand preload-game 0
+execute as @s[tag=setup-request] at @s run scoreboard players set loaded-asset preload-game 0
+execute as @s[tag=setup-request] at @s run scoreboard players set required-asset preload-game 0
+execute as @s[tag=setup-request] at @s run scoreboard players set load-asset-stage preload-game 0
+
+#score is player rode armorstand
+execute as @s[tag=setup-request] at @s run scoreboard objectives add is-player-rode-armorstand dummy
 
 #score is chunk generated
 execute as @s[tag=setup-request] at @s run scoreboard objectives add is-chunk-generated dummy
@@ -290,6 +298,8 @@ execute as @s[tag=setup-request] at @s run team add glowing-color-yellow
 execute as @s[tag=setup-request] at @s run team modify glowing-color-yellow color yellow
 
 #team supply state
+execute as @s[tag=setup-request] at @s run team add supply-state-load
+execute as @s[tag=setup-request] at @s run team add supply-state-prepare
 execute as @s[tag=setup-request] at @s run team add supply-state-ready
 execute as @s[tag=setup-request] at @s run team add supply-state-landing
 execute as @s[tag=setup-request] at @s run team add supply-state-landed

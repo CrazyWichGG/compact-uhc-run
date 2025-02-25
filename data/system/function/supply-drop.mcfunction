@@ -1,4 +1,5 @@
 #add teams when sever restart
+team add supply-state-load
 team add supply-state-prepare
 team add supply-state-ready
 team add supply-state-landing

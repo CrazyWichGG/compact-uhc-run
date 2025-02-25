@@ -1,6 +1,7 @@
 #set game state
 scoreboard players set ingame game-state 0
 scoreboard players set gen-chunk game-state 0
+scoreboard players set load-asset game-state 0
 scoreboard players set lobby game-state 1
 
 #tellraw
@@ -63,6 +64,7 @@ execute as @e[type=armor_stand,tag=supply-drop,team=supply-state-landed] run kil
 execute as @e[type=armor_stand,tag=supply-drop,team=supply-state-landed] run kill @s
 kill @e[type=armor_stand,tag=supply-drop]
 forceload remove all
+team empty supply-state-load
 team empty supply-state-prepare
 team empty supply-state-ready
 team empty supply-state-landing
