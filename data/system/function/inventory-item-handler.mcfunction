@@ -9,10 +9,10 @@ execute if score lobby game-state matches 1 as @a at @s run title @s actionbar [
 
 #lobby
 # -armor
-execute if score lobby game-state matches 1 as @a[gamemode=!creative] at @s unless items entity @s armor.head air run item replace entity @a armor.head with air
-execute if score lobby game-state matches 1 as @a[gamemode=!creative] at @s unless items entity @s armor.chest air run item replace entity @a armor.chest with air
-execute if score lobby game-state matches 1 as @a[gamemode=!creative] at @s unless items entity @s armor.legs air run item replace entity @a armor.legs with air
-execute if score lobby game-state matches 1 as @a[gamemode=!creative] at @s unless items entity @s armor.feet air run item replace entity @a armor.feet with air
+execute if score lobby game-state matches 1 as @a[gamemode=!creative] at @s unless items entity @s armor.head air run item replace entity @s armor.head with air
+execute if score lobby game-state matches 1 as @a[gamemode=!creative] at @s unless items entity @s armor.chest air run item replace entity @s armor.chest with air
+execute if score lobby game-state matches 1 as @a[gamemode=!creative] at @s unless items entity @s armor.legs air run item replace entity @s armor.legs with air
+execute if score lobby game-state matches 1 as @a[gamemode=!creative] at @s unless items entity @s armor.feet air run item replace entity @s armor.feet with air
 
 # -offhand
 execute if score lobby game-state matches 1 as @a[gamemode=!creative] at @s unless items entity @s weapon.offhand air run item replace entity @s weapon.offhand with air
