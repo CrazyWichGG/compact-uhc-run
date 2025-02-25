@@ -242,6 +242,7 @@ execute as @s[tag=setup-request] at @s run scoreboard players set gambling custo
 #score custom gambling
 execute as @s[tag=setup-request] at @s run scoreboard objectives add custom-gambling-emerald-count dummy
 execute as @s[tag=setup-request] at @s run scoreboard objectives add custom-gambling-is-dropped-book dropped:written_book
+execute as @s[tag=setup-request] at @s run scoreboard objectives add custom-gambling-marker-owner-uuid dummy
 execute as @s[tag=setup-request] at @s run scoreboard objectives add custom-gambling-is-spinning dummy
 execute as @s[tag=setup-request] at @s run scoreboard objectives add custom-gambling-is-spinning-time dummy
 execute as @s[tag=setup-request] at @s run scoreboard objectives add custom-gambling-is-skip-animation dummy

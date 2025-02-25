@@ -65,6 +65,7 @@ execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remov
 execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove supply-queue
 execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove custom-gambling-emerald-count
 execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove custom-gambling-is-dropped-book
+execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove custom-gambling-marker-owner-uuid
 execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove custom-gambling-is-spinning
 execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove custom-gambling-is-spinning-time
 execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove custom-gambling-is-skip-animation
