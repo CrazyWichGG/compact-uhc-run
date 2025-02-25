@@ -1,6 +1,7 @@
 #server entities optimization
 #check if entities are not players or armor stands then count down their timeout
 execute as @e[type=player] run tag @s add entities-timeout-exception
+execute as @e[type=marker] run tag @s add entities-timeout-exception
 execute as @e[type=armor_stand] run tag @s add entities-timeout-exception
 execute as @e[type=item_frame] run tag @s add entities-timeout-exception
 execute as @e[type=glow_item_frame] run tag @s add entities-timeout-exception
