@@ -72,8 +72,7 @@
                   "score": "custom-gambling-bet-amount",
                   "target": "this",
                   "scale": 2
-                },
-                "infinity": 1
+                }
               }
             },
             {
@@ -91,7 +90,18 @@
       "entries": [
         {
           "type": "item",
-          "name": "arrow"
+          "name": "arrow",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "type": "score",
+                "score": "custom-gambling-bet-amount",
+                "target": "this",
+                "scale": 16
+              }
+            }
+          ]
         }
       ]
     }
