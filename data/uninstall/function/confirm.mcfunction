@@ -49,7 +49,6 @@ execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remov
 execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove invincibility-bossbar
 execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove preload-game
 execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove is-chunk-generated
-execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove is-player-rode-armorstand
 execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove spectator-spectate-player
 execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove server-entities
 execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove entities-timeout

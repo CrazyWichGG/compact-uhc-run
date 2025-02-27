@@ -130,13 +130,9 @@ execute as @s[tag=setup-request] at @s run scoreboard players set second preload
 execute as @s[tag=setup-request] at @s run scoreboard players set minute preload-game 0
 execute as @s[tag=setup-request] at @s run scoreboard players set player-total preload-game 0
 execute as @s[tag=setup-request] at @s run scoreboard players set player-generated preload-game 0
-execute as @s[tag=setup-request] at @s run scoreboard players set player-rode-armorstand preload-game 0
 execute as @s[tag=setup-request] at @s run scoreboard players set loaded-asset preload-game 0
 execute as @s[tag=setup-request] at @s run scoreboard players set required-asset preload-game 0
 execute as @s[tag=setup-request] at @s run scoreboard players set load-asset-stage preload-game 0
-
-#score is player rode armorstand
-execute as @s[tag=setup-request] at @s run scoreboard objectives add is-player-rode-armorstand dummy
 
 #score is chunk generated
 execute as @s[tag=setup-request] at @s run scoreboard objectives add is-chunk-generated dummy
