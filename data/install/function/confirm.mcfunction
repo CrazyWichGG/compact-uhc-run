@@ -99,6 +99,9 @@ execute as @s[tag=setup-request] at @s run scoreboard players set can-start play
 execute as @s[tag=setup-request] at @s run scoreboard objectives add hold-shop dummy
 execute as @s[tag=setup-request] at @s run scoreboard players set @a hold-shop 0
 
+#score gliding
+execute as @s[tag=setup-request] at @s run scoreboard objectives add gliding dummy
+
 #score game state
 execute as @s[tag=setup-request] at @s run scoreboard objectives add game-state dummy
 execute as @s[tag=setup-request] at @s run scoreboard players set lobby game-state 1
