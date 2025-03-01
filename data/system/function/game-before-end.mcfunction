@@ -11,11 +11,6 @@ execute as @a[team=ingame] at @s run tellraw @a [{"text":"\u0020 \u0020 \u0020 \
 execute as @a[team=ingame] at @s run tellraw @a [{"text":"\n   \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 Game time: ","color":"yellow"},{"score":{"name":"minute","objective":"game-time"},"color":"red"},{"text":"m ","color":"red"},{"score":{"name":"second","objective":"game-time"},"color":"red"},{"text":"s","color":"red"}]
 execute as @a[team=ingame] at @s run tellraw @a {"text":"\n---------------------------------------------------"}
 
-#invincible effect
-effect give @a weakness 15 255 true
-effect give @a resistance 15 255 true
-effect give @a regeneration 15 255 true
-
 #play sound
 execute as @a[team=ingame] at @s run playsound entity.player.levelup master @s
 

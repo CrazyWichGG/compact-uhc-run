@@ -84,8 +84,6 @@ execute as @s[tag=setup-request] at @s run scoreboard objectives add timer dummy
 execute as @s[tag=setup-request] at @s run scoreboard players set tick timer 0
 execute as @s[tag=setup-request] at @s run scoreboard players set second timer 20
 execute as @s[tag=setup-request] at @s run scoreboard players set end-timer timer 0
-execute as @s[tag=setup-request] at @s run scoreboard players set winner-annouce-time timer 1
-execute as @s[tag=setup-request] at @s run scoreboard players set game-end-time timer 300
 
 #score player
 execute as @s[tag=setup-request] at @s run scoreboard objectives add player dummy
@@ -108,6 +106,7 @@ execute as @s[tag=setup-request] at @s run scoreboard players set lobby game-sta
 execute as @s[tag=setup-request] at @s run scoreboard players set ingame game-state 0
 execute as @s[tag=setup-request] at @s run scoreboard players set gen-chunk game-state 0
 execute as @s[tag=setup-request] at @s run scoreboard players set load-asset game-state 0
+execute as @s[tag=setup-request] at @s run scoreboard players set end-game game-state 0
 
 #score game time
 execute as @s[tag=setup-request] at @s run scoreboard objectives add game-time dummy

@@ -15,7 +15,6 @@ execute as @a at @s store result score @s player-uuid run data get entity @s UUI
 function system:disable-pvp
 function system:disable-nether
 function system:timer
-function system:timer-end
 function system:border
 function system:gliding
 function system:jump-pad
@@ -44,6 +43,7 @@ function system:server-status
 function system:entities-timeout
 function system:supply-drop
 function system:enderchest
+function system:end-game-check
 
 ## custom
 function system:custom-active/gambling
