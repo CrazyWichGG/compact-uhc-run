@@ -20,6 +20,7 @@ team modify spectator collisionRule never
 scoreboard players set game-time time 0
 scoreboard players set @a ingame-player-kills 0
 scoreboard objectives setdisplay list health
+scoreboard objectives setdisplay below_name health
 
 #max health
 execute as @a at @s run attribute @s minecraft:max_health base set 40

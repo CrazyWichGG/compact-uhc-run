@@ -18,8 +18,9 @@ team empty spectator
 #reset game-time
 scoreboard players set game-time time 0
 
-#reset scoreboard list
+#reset scoreboard list/belowname
 scoreboard objectives setdisplay list
+scoreboard objectives setdisplay below_name
 
 #reset scoreboard
 scoreboard players set ingame player 0
