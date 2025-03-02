@@ -12,13 +12,13 @@ execute as @a[team=ingame] at @s run particle minecraft:dust{color:[1f,0f,0f],sc
 execute as @a at @s store result score @s player-uuid run data get entity @s UUID[1] 1
 
 # functions
+function system:total-player
 function system:disable-pvp
 function system:disable-nether
 function system:timer
 function system:border
 function system:gliding
 function system:jump-pad
-function system:total-player
 function system:obtain-emerald
 function system:border-countdown
 function system:border-bossbar-name
