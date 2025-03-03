@@ -44,6 +44,7 @@ function system:entities-timeout
 function system:supply-drop
 function system:enderchest
 function system:end-game-check
+function system:end-game-tick-slow
 
 ## custom
 function system:custom-active/gambling
