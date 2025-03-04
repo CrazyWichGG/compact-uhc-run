@@ -1,14 +1,23 @@
 # commands
-execute as @a at @s run spawnpoint @s ~ ~ ~
-execute as @a[team=ingame] at @s if score @s ingame-death matches 1 run function system:ingame-player-dead
-execute as @a[team=!ingame] at @s if score @s ingame-death matches 1 run scoreboard players set @s ingame-death 0
+# -set world spawn
 setworldspawn ~ ~2 ~
+# -set spawnpoint at player
+execute as @a at @s run spawnpoint @s ~ ~ ~
+# -death event
+execute as @a[team=ingame] at @s if score ingame game-state matches 1 if score @s ingame-death matches 1 run function system:ingame-player-dead
+execute as @a[team=!ingame] at @s if score ingame game-state matches 1 if score @s ingame-death matches 1 run scoreboard players set @s ingame-death 0
+execute as @a at @s unless score ingame game-state matches 1 if score @s ingame-death matches 1 run scoreboard players set @s ingame-death 0
+# -apply night vision
 execute as @a at @s run effect give @s night_vision infinite 0 true
-execute if score lobby game-state matches 1 as @a[gamemode=!creative] at @s run gamemode adventure @s
+# -reset gamemode in lobby
+execute if score lobby game-state matches 1 as @a[gamemode=!creative,gamemode=!spectator] at @s run gamemode adventure @s
+execute if score lobby game-state matches 1 as @a[team=spectator] at @s run gamemode adventure @s
+execute if score lobby game-state matches 1 as @a[team=spectator] at @s run team leave @s
+# -apply glowing on deathmatch
 execute if score border-state border-countdown matches 5.. run effect give @a[team=ingame] glowing infinite 0 true
-
+# -particle for spectator view
 execute as @a[team=ingame] at @s run particle minecraft:dust{color:[1f,0f,0f],scale:1} ~ ~ ~ 0 0 0 0.2 5 force @a[team=spectator]
-
+# -get player uuid
 execute as @a at @s store result score @s player-uuid run data get entity @s UUID[1] 1
 
 # functions

@@ -14,7 +14,7 @@ worldborder set 51
 
 #team
 team empty ingame
-team empty spectator
+team leave @a
 
 #reset game-time
 scoreboard players set game-time time 0
