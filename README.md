@@ -28,7 +28,8 @@ If you want to uninstall consider using `/function uninstall:_` then `/function 
 
 🔄️ **If you're updating from an older version, reinstall is required!**
 
-## 📥 New to Github?
+## 📥 How to download
 
-If you want to download this data pack, you can simply click the green button above and click on "Download ZIP".
-![image](https://github.com/CrazyWichGG/Compact-UHC-Run/assets/88188545/051938ad-1523-477a-88fe-c8c935a255d4)
+You can download the datapack via Modrinth to support me! [Download](https://modrinth.com/datapack/compact-uhc-run)
+
+Or you can download it directly from the GitHub repository as well.
