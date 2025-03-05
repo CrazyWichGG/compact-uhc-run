@@ -51,6 +51,7 @@ execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remov
 execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove preload-game
 execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove is-chunk-generated
 execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove spectator-spectate-player
+execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove player-leave
 execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove server-entities
 execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove entities-timeout
 execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove player-uuid

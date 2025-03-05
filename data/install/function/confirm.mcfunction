@@ -142,6 +142,9 @@ execute as @s[tag=setup-request] at @s run scoreboard objectives add is-chunk-ge
 #score spectator spectate player
 execute as @s[tag=setup-request] at @s run scoreboard objectives add spectator-spectate-player dummy
 
+#score quit player
+execute as @s[tag=setup-request] at @s run scoreboard objectives add player-leave minecraft.custom:leave_game
+
 #score supply data
 execute as @s[tag=setup-request] at @s run scoreboard objectives add supply-state-landing dummy
 execute as @s[tag=setup-request] at @s run scoreboard objectives add supply-state-landed dummy

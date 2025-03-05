@@ -38,6 +38,7 @@ function system:lobby-player-inborder
 function system:border-bossbar-score-sync
 function system:game-time
 function system:game-time-event
+function system:player-rejoin
 function system:player-join-late
 function system:bossbar-animation
 function system:ingame-early-invin
