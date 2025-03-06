@@ -176,4 +176,4 @@ execute if score old-combat custom matches 1 if score ingame game-state matches 
 execute if score old-combat custom matches 1 if score ingame game-state matches 1 as @a[team=!spectator] at @s if items entity @s player.cursor shield[minecraft:custom_data={inventory-handler:1b}] run item replace entity @s player.cursor from entity @s enderchest.0
 
 # --thrown
-execute if score old-combat custom matches 1 if score ingame game-state matches 1 as @a[team=!spectator] at @s unless items entity @s container.* shield[minecraft:custom_data={inventory-handler:1b}] run loot replace entity @s weapon.offhand loot system:inventory_handler/old_combat_shield
+execute if score old-combat custom matches 1 if score ingame game-state matches 1 as @a[team=!spectator] at @s unless items entity @s container.* shield[minecraft:custom_data={inventory-handler:1b}] run loot replace entity @s weapon.offhand loot system:inventory_handler/custom/old_combat/old_combat_shield
