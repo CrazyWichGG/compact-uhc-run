@@ -1,6 +1,6 @@
 [
   {
     "function": "minecraft:set_custom_data",
-    "tag": "{inventory-handler:1b}"
+    "tag": "{inventory_controller:1b}"
   }
 ]

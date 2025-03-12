@@ -6,5 +6,5 @@ execute as @a at @s if items entity @s player.cursor *[custom_data={settings-spe
 execute as @a at @s if items entity @s player.cursor *[custom_data={settings-spectator-trail:1b}] run function settings:spectator-trail/disable
 
 #clear cursor item
-execute if score lobby game-state matches 1 as @a at @s if items entity @s player.cursor *[custom_data={inventory-handler:1b}] run item replace entity @s player.cursor with air
+execute if score lobby game-state matches 1 as @a at @s if items entity @s player.cursor *[custom_data={inventory_controller:1b}] run item replace entity @s player.cursor with air
 

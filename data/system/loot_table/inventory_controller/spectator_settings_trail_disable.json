@@ -9,7 +9,7 @@
           "functions": [
             {
               "function": "set_custom_data",
-              "tag": "{inventory-handler:1b,settings-spectator-trail:1b}"
+              "tag": "{inventory_controller:1b,settings-spectator-trail:0b}"
             },
             {
               "function": "set_name",
@@ -47,8 +47,8 @@
                 ],
                 [
                   {
-                    "text": "ENABLED",
-                    "color": "green",
+                    "text": "DISABLED",
+                    "color": "red",
                     "italic": false
                   }
                 ]

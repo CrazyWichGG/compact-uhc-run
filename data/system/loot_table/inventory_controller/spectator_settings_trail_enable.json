@@ -5,18 +5,18 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:shield",
+          "name": "minecraft:redstone",
           "functions": [
             {
               "function": "set_custom_data",
-              "tag": "{inventory-handler:1b,inventory_handler_type:ingame,inventory_handler_item:custom.old_combat.offhand_item_replace}"
+              "tag": "{inventory_controller:1b,settings-spectator-trail:1b}"
             },
             {
               "function": "set_name",
               "name": [
                 [
                   {
-                    "text": "Old Combat Mode",
+                    "text": "In-game player's trail",
                     "color": "red",
                     "italic": false
                   }
@@ -28,45 +28,32 @@
               "lore": [
                 [
                   {
-                    "text": ""
-                  }
-                ],
-                [
-                  {
-                    "text": "Your offhand slot is disabled, and replaced with a shield",
-                    "color": "white",
-                    "italic": false
-                  }
-                ],
-                [
-                  {
-                    "text": "to simulate the old combat mechanics",
-                    "color": "white",
-                    "italic": false
-                  }
-                ],
-                [
-                  {
-                    "text": ""
-                  }
-                ],
-                [
-                  {
-                    "text": "Cannot simulate the exact mechanics as of now",
+                    "text": "Red particle trail follows in-game players,",
                     "color": "gray",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": "making them easier for spectators to track.",
+                    "color": "gray",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": ""
+                  }
+                ],
+                [
+                  {
+                    "text": "ENABLED",
+                    "color": "green",
                     "italic": false
                   }
                 ]
               ],
               "mode": "replace_all"
-            },
-            {
-              "function": "set_components",
-              "components": {
-                "unbreakable": {
-                  "show_in_tooltip": false
-                }
-              }
             }
           ]
         }

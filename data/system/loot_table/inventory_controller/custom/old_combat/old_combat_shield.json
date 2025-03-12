@@ -5,18 +5,18 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:music_disc_11",
+          "name": "minecraft:shield",
           "functions": [
             {
               "function": "set_custom_data",
-              "tag": "{inventory-handler:1b,inventory_handler_type:ingame,inventory_handler_item:custom.gun.offhand_item_replace}"
+              "tag": "{inventory_controller:1b,inventory_controller_phase:ingame,inventory_controller_item:custom.old_combat.offhand_item_replace}"
             },
             {
               "function": "set_name",
               "name": [
                 [
                   {
-                    "text": "Offhand Temporarily Disabled",
+                    "text": "Old Combat Mode",
                     "color": "red",
                     "italic": false
                   }
@@ -33,15 +33,27 @@
                 ],
                 [
                   {
-                    "text": "Your offhand is disabled while holding a gun.",
+                    "text": "Your offhand slot is disabled, and replaced with a shield",
                     "color": "white",
                     "italic": false
                   }
                 ],
                 [
                   {
-                    "text": "Don't worry, your item is safe!",
+                    "text": "to simulate the old combat mechanics",
                     "color": "white",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": ""
+                  }
+                ],
+                [
+                  {
+                    "text": "Cannot simulate the exact mechanics as of now",
+                    "color": "gray",
                     "italic": false
                   }
                 ]
@@ -51,8 +63,9 @@
             {
               "function": "set_components",
               "components": {
-                "!jukebox_playable": {},
-                "item_model": "air"
+                "unbreakable": {
+                  "show_in_tooltip": false
+                }
               }
             }
           ]

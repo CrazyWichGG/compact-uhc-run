@@ -1,7 +1,7 @@
 playsound entity.generic.explode master @s ~ ~ ~ 0.7 1 1
 item modify entity @s weapon.offhand system:custom/gun/sniper_no_ammo
 item replace entity @s weapon.mainhand from entity @s weapon.offhand
-loot replace entity @s weapon.offhand loot system:inventory_handler/custom/gun/offhand_item_replace
+loot replace entity @s weapon.offhand loot system:inventory_controller/custom/gun/offhand_item_replace
 
 ## Call this on entities which launch the raycast
 

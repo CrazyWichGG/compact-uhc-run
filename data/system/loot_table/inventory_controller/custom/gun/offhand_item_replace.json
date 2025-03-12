@@ -5,18 +5,18 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:redstone",
+          "name": "minecraft:music_disc_11",
           "functions": [
             {
               "function": "set_custom_data",
-              "tag": "{inventory-handler:1b,settings-spectator-trail:0b}"
+              "tag": "{inventory_controller:1b,inventory_controller_phase:ingame,inventory_controller_item:custom.gun.offhand_item_replace}"
             },
             {
               "function": "set_name",
               "name": [
                 [
                   {
-                    "text": "In-game player's trail",
+                    "text": "Offhand Temporarily Disabled",
                     "color": "red",
                     "italic": false
                   }
@@ -28,32 +28,32 @@
               "lore": [
                 [
                   {
-                    "text": "Red particle trail follows in-game players,",
-                    "color": "gray",
-                    "italic": false
-                  }
-                ],
-                [
-                  {
-                    "text": "making them easier for spectators to track.",
-                    "color": "gray",
-                    "italic": false
-                  }
-                ],
-                [
-                  {
                     "text": ""
                   }
                 ],
                 [
                   {
-                    "text": "DISABLED",
-                    "color": "red",
+                    "text": "Your offhand is disabled while holding a gun.",
+                    "color": "white",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": "Don't worry, your item is safe!",
+                    "color": "white",
                     "italic": false
                   }
                 ]
               ],
               "mode": "replace_all"
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "!jukebox_playable": {},
+                "item_model": "air"
+              }
             }
           ]
         }

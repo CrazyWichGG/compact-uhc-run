@@ -9,7 +9,7 @@
           "functions": [
             {
               "function": "set_custom_data",
-              "tag": "{inventory-handler:1b}"
+              "tag": "{inventory_controller:1b}"
             },
             {
               "function": "set_name",
@@ -24,7 +24,7 @@
             {
               "function": "set_components",
               "components": {
-                "hide_tooltip": {} 
+                "!hide_tooltip": {} 
               }
             }
           ]
