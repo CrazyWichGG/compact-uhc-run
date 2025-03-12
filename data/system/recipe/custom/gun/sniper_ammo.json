@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " N ",
+    "NIN",
+    "NIN"
+  ],
+  "key": {
+    "I": [
+      "iron_ingot"
+    ],
+    "N": [
+      "iron_nugget"
+    ]
+  },
+  "category": "equipment",
+  "result": {
+    "id": "music_disc_11",
+    "count": 4,
+    "components": {
+      "!jukebox_playable": {},
+      "max_stack_size": 16,
+      "custom_data": "{custom_item_group:ammo,custom_item:sniper_ammo}",
+      "item_model": "ghast_tear",
+      "enchantment_glint_override": true,
+      "custom_name": '{"text":"Sniper Ammo","color":"gold","italic":false}'
+    }
+  }
+}

@@ -1,0 +1,28 @@
+[
+  {
+    "function": "minecraft:set_custom_data",
+    "tag": "{gun_properties:{max_ammo:1,loaded_ammo:1,has_ammo:true,is_reloading:false}}"
+  },
+  {
+    "function": "set_lore",
+    "lore": [
+      {
+        "text": "Ammo Loaded!",
+        "color": "green",
+        "italic": false
+      }
+    ],
+    "mode": "replace_section",
+    "offset": 1
+  },
+  {
+    "function": "set_components",
+    "components": {
+      "charged_projectiles": [
+        {
+          "id": "arrow"
+        }
+      ]
+    }
+  }
+]

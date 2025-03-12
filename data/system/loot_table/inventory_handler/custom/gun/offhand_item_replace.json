@@ -5,18 +5,18 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:shield",
+          "name": "minecraft:music_disc_11",
           "functions": [
             {
               "function": "set_custom_data",
-              "tag": "{inventory-handler:1b,inventory_handler_type:ingame,inventory_handler_item:custom.old_combat.offhand_item_replace}"
+              "tag": "{inventory-handler:1b,inventory_handler_type:ingame,inventory_handler_item:custom.gun.offhand_item_replace}"
             },
             {
               "function": "set_name",
               "name": [
                 [
                   {
-                    "text": "Old Combat Mode",
+                    "text": "Offhand Temporarily Disabled",
                     "color": "red",
                     "italic": false
                   }
@@ -33,27 +33,15 @@
                 ],
                 [
                   {
-                    "text": "Your offhand slot is disabled, and replaced with a shield",
+                    "text": "Your offhand is disabled while holding a gun.",
                     "color": "white",
                     "italic": false
                   }
                 ],
                 [
                   {
-                    "text": "to simulate the old combat mechanics",
+                    "text": "Don't worry, your item is safe!",
                     "color": "white",
-                    "italic": false
-                  }
-                ],
-                [
-                  {
-                    "text": ""
-                  }
-                ],
-                [
-                  {
-                    "text": "Cannot simulate the exact mechanics as of now",
-                    "color": "gray",
                     "italic": false
                   }
                 ]
@@ -63,9 +51,8 @@
             {
               "function": "set_components",
               "components": {
-                "unbreakable": {
-                  "show_in_tooltip": false
-                }
+                "!jukebox_playable": {},
+                "item_model": "air"
               }
             }
           ]

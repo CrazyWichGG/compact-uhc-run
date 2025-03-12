@@ -1,0 +1,181 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:spyglass",
+          "functions": [
+            {
+              "function": "set_custom_data",
+              "tag": "{custom_item_group:gun,custom_item:sniper,gun_properties:{max_ammo:1,loaded_ammo:0,has_ammo:false,is_reloading:false,damage:{head:36,body:20,leg:10}}}"
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "item_model": "crossbow",
+                "enchantment_glint_override": true
+              }
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": [
+                {
+                  "text": "Sniper Rifle",
+                  "color": "gold",
+                  "italic": false
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                [
+                  {
+                    "text": ""
+                  }
+                ],
+                [
+                  {
+                    "text": "No Ammo!",
+                    "color": "red",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": ""
+                  }
+                ],
+                [
+                  {
+                    "text": "[",
+                    "color": "gold",
+                    "italic": false
+                  },
+                  {
+                    "keybind": "key.use"
+                  },
+                  {
+                    "text": "]",
+                    "color": "gold",
+                    "italic": false
+                  },
+                  {
+                    "text": " Scope",
+                    "color": "white",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": "[",
+                    "color": "gold",
+                    "italic": false
+                  },
+                  {
+                    "keybind": "key.swapOffhand"
+                  },
+                  {
+                    "text": "]",
+                    "color": "gold",
+                    "italic": false
+                  },
+                  {
+                    "text": " Shoot",
+                    "color": "white",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text":""
+                  }
+                ],
+                [
+                  {
+                    "text": "Damage",
+                    "color": "gold",
+                    "italic": false
+                  },
+                  {
+                    "text": "    "
+                  },
+                  {
+                    "text": "0-∞m"
+                  }
+                ],
+                [
+                  {
+                    "text": "Head",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "text": "        "
+                  },
+                  {
+                    "text": "36",
+                    "color": "white",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": "Body",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "text": "        "
+                  },
+                  {
+                    "text": "20",
+                    "color": "white",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": "Legs",
+                    "color": "white",
+                    "italic": false
+                  },
+                  {
+                    "text": "        "
+                  },
+                  {
+                    "text": "10",
+                    "color": "white",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": ""
+                  }
+                ],
+                [
+                  {
+                    "text": "A sniper rifle designed for deadly precision,",
+                    "color": "gray",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": "only headshots deliver an instant kill",
+                    "color": "gray",
+                    "italic": false
+                  }
+                ]
+              ],
+              "mode": "replace_all"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

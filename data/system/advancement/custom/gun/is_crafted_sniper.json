@@ -1,0 +1,13 @@
+{
+  "criteria": {
+    "is_crafted_sniper": {
+      "trigger": "recipe_crafted",
+      "conditions": {
+        "recipe_id": "system:custom/gun/sniper"
+      }
+    }
+  },
+  "rewards": {
+    "function": "system:custom-active/gun/trigger/crafted_sniper"
+  }
+}

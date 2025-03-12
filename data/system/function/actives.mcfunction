@@ -57,5 +57,10 @@ function system:end-game-check
 function system:end-game-tick-slow
 
 ## custom
+# -gambling
 function system:custom-active/gambling
+# -gun
+function system:custom-active/gun/sniper
+function system:custom-active/gun/actives
+# -old-combat
 function system:custom-active/old-combat

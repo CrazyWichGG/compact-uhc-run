@@ -239,6 +239,7 @@ execute as @s[tag=setup-request] at @s run scoreboard players set night-mode cus
 execute as @s[tag=setup-request] at @s run scoreboard players set old-combat custom 0
 execute as @s[tag=setup-request] at @s run scoreboard players set tiny custom 0
 execute as @s[tag=setup-request] at @s run scoreboard players set gambling custom 0
+execute as @s[tag=setup-request] at @s run scoreboard players set gun custom 0
 
 #score custom gambling
 execute as @s[tag=setup-request] at @s run scoreboard objectives add custom-gambling-emerald-count dummy
@@ -260,6 +261,15 @@ execute as @s[tag=setup-request] at @s run scoreboard objectives add custom-gamb
 execute as @s[tag=setup-request] at @s run scoreboard objectives add custom-gambling-reward-5reels dummy
 execute as @s[tag=setup-request] at @s run scoreboard objectives add custom-gambling-reward-pool dummy
 execute as @s[tag=setup-request] at @s run scoreboard objectives add custom-gambling-is-winning dummy
+
+#score custom gun
+execute as @s[tag=setup-request] at @s run scoreboard objectives add custom-gun-accuracy dummy
+execute as @s[tag=setup-request] at @s run scoreboard objectives add custom-gun-is-scoping dummy
+execute as @s[tag=setup-request] at @s run scoreboard objectives add custom-gun-is-not-holding-gun dummy
+execute as @s[tag=setup-request] at @s run scoreboard objectives add custom-gun-is-holding-gun dummy
+execute as @s[tag=setup-request] at @s run scoreboard objectives add custom-gun-having-sniper-ammo dummy
+execute as @s[tag=setup-request] at @s run scoreboard objectives add custom-gun-reloading dummy
+execute as @s[tag=setup-request] at @s run scoreboard objectives add custom-gun-bullet-distance dummy
 
 #team ingame
 execute as @s[tag=setup-request] at @s run team add ingame
@@ -381,6 +391,7 @@ execute as @s[tag=setup-request] at @s run gamerule spawnRadius 0
 execute as @s[tag=setup-request] at @s run gamerule doMobSpawning false
 execute as @s[tag=setup-request] at @s run gamerule playersNetherPortalDefaultDelay 2147483647
 execute as @s[tag=setup-request] at @s run gamerule playersNetherPortalCreativeDelay 2147483647
+execute as @s[tag=setup-request] at @s run gamerule doLimitedCrafting true
 
 #title times
 execute as @s[tag=setup-request] at @s run title @a times 0 100 20

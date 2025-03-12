@@ -1,0 +1,64 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:music_disc_11",
+          "functions": [
+            {
+              "function": "set_custom_data",
+              "tag": "{custom_item_group:ammo,custom_item:sniper_ammo}"
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "item_model": "ghast_tear",
+                "max_stack_size": 64,
+                "enchantment_glint_override": true,
+                "!jukebox_playable": {},
+                "charged_projectiles": [
+                  {
+                    "id": "minecraft:arrow",
+                    "count": 1
+                  }
+                ]
+              }
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": [
+                {
+                  "text": "Sniper Ammo",
+                  "color": "gold",
+                  "italic": false
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                [
+                  {
+                    "text": "High damage ammo designed to be",
+                    "color": "white",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": "used with Sniper Rifle",
+                    "color": "white",
+                    "italic": false
+                  }
+                ]
+              ],
+              "mode": "replace_all"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

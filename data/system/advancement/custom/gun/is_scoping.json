@@ -1,0 +1,20 @@
+{
+  "criteria": {
+    "is_scoping": {
+      "trigger": "using_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "spyglass"
+          ],
+          "predicates": {
+            "custom_data": "{custom_item_group:'gun',custom_item:'sniper'}"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "system:custom-active/gun/trigger/is-scoping"
+  }
+}

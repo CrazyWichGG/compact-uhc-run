@@ -83,6 +83,13 @@ execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remov
 execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove custom-gambling-reward-5reels
 execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove custom-gambling-reward-pool
 execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove custom-gambling-is-winning
+execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove custom-gun-accuracy
+execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove custom-gun-is-scoping
+execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove custom-gun-is-not-holding-gun
+execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove custom-gun-is-holding-gun
+execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove custom-gun-having-sniper-ammo
+execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove custom-gun-reloading
+execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove custom-gun-bullet-distance
 
 #bossbar remove
 execute as @s[tag=setup-uninstall-request] at @s run bossbar remove ingame
@@ -141,6 +148,7 @@ execute as @s[tag=setup-uninstall-request] at @s run gamerule spawnRadius 10
 execute as @s[tag=setup-uninstall-request] at @s run gamerule doMobSpawning true
 execute as @s[tag=setup-uninstall-request] at @s run gamerule playersNetherPortalDefaultDelay 80
 execute as @s[tag=setup-uninstall-request] at @s run gamerule playersNetherPortalCreativeDelay 1
+execute as @s[tag=setup-uninstall-request] at @s run gamerule doLimitedCrafting true
 
 #max health reset
 execute as @s[tag=setup-uninstall-request] at @s run execute as @a at @s run attribute @s max_health base set 20
