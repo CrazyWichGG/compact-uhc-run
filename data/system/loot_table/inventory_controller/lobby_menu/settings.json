@@ -1,0 +1,44 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:comparator",
+          "functions": [
+            {
+              "function": "set_custom_data",
+              "tag": "{inventory_controller:1b,inventory_controller_phase:lobby,inventory_controller_item:lobby_menu.settings}"
+            },
+            {
+              "function": "set_name",
+              "name": [
+                [
+                  {
+                    "text": "Settings",
+                    "color": "red",
+                    "italic": false
+                  }
+                ]
+              ]
+            },
+            {
+              "function": "set_lore",
+              "lore": [
+                [
+                  {
+                    "text": "Configuring your personal UHC Run experiences",
+                    "color": "gray",
+                    "italic": false
+                  }
+                ]
+              ],
+              "mode": "replace_all"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,1 +1,1 @@
-execute as @e[type=minecraft:armor_stand,name="map-center",limit=1] at @s run function system:actives
+execute as @e[type=minecraft:armor_stand,name="map-center",limit=1] at @s run function system:active

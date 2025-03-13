@@ -9,7 +9,7 @@
           "functions": [
             {
               "function": "set_custom_data",
-              "tag": "{inventory_controller:1b}"
+              "tag": "{inventory_controller:1b,inventory_controller_item:empty_item_cache_slot}"
             },
             {
               "function": "set_name",

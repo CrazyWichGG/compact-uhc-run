@@ -1,0 +1,31 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:arrow",
+          "functions": [
+            {
+              "function": "set_custom_data",
+              "tag": "{inventory_controller:1b,inventory_controller_item:back_arrow}"
+            },
+            {
+              "function": "set_name",
+              "name": [
+                [
+                  {
+                    "text": "Go Back",
+                    "color": "red",
+                    "italic": false
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

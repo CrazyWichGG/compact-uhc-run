@@ -1,0 +1,50 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_sword",
+          "functions": [
+            {
+              "function": "set_custom_data",
+              "tag": "{inventory_controller:1b,inventory_controller_phase:lobby,inventory_controller_item:lobby_menu.cosmetics.kill_effects}"
+            },
+            {
+              "function": "set_name",
+              "name": [
+                [
+                  {
+                    "text": "Kill Effects",
+                    "color": "green",
+                    "italic": false
+                  }
+                ]
+              ]
+            },
+            {
+              "function": "set_lore",
+              "lore": [
+                [
+                  {
+                    "text": "Watch your eneny die with cool animations or effects",
+                    "color": "gray",
+                    "italic": false
+                  }
+                ]
+              ],
+              "mode": "replace_all"
+            },
+            {
+              "function": "toggle_tooltips",
+              "toggles": {
+                "attribute_modifiers": false
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:emerald",
+          "functions": [
+            {
+              "function": "set_custom_data",
+              "tag": "{inventory_controller:1b,inventory_controller_phase:lobby,inventory_controller_item:lobby_menu.custom.gambling}"
+            },
+            {
+              "function": "set_name",
+              "name": [
+                [
+                  {
+                    "text": "Gambling",
+                    "color": "green",
+                    "italic": false
+                  }
+                ]
+              ]
+            },
+            {
+              "function": "set_lore",
+              "lore": [
+                [
+                  {
+                    "text": ""
+                  }
+                ],
+                [
+                  {
+                    "text": "NULL",
+                    "color": "gray",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": ""
+                  }
+                ],
+                [
+                  {
+                    "text": "Let your luck decide your fate,",
+                    "color": "gray",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": "either you win or lose a bet.",
+                    "color": "gray",
+                    "italic": false
+                  }
+                ]
+              ],
+              "mode": "replace_all"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -162,6 +162,19 @@ execute as @s[tag=setup-request] at @s run scoreboard objectives add server-enti
 # -entities timeout
 execute as @s[tag=setup-request] at @s run scoreboard objectives add entities-timeout dummy
 
+#inventory controller
+execute as @s[tag=setup-request] at @s run scoreboard objectives add inventory_controller.active_page dummy
+
+#score game settings
+execute as @s[tag=setup-request] at @s run scoreboard objectives add settings.game dummy
+
+#score personal settings
+# -spectator trail
+execute as @s[tag=setup-request] at @s run scoreboard objectives add settings.personal.spectator_trails dummy
+
+#score player uuid
+execute as @s[tag=setup-request] at @s run scoreboard objectives add player-uuid dummy
+
 
 #score mined ores
 # -coal
@@ -222,16 +235,6 @@ execute as @s[tag=setup-request] at @s run scoreboard players set @a mined-ore-r
 execute as @s[tag=setup-request] at @s run scoreboard objectives add mined-ore-raw-gold-block minecraft.mined:minecraft.raw_gold_block
 execute as @s[tag=setup-request] at @s run scoreboard players set @a mined-ore-raw-gold-block 0
 
-
-#score settings (global minigame settings)
-execute as @s[tag=setup-request] at @s run scoreboard objectives add settings-global dummy
-
-#score settings (personal minigame settings)
-# -spectator trail
-execute as @s[tag=setup-request] at @s run scoreboard objectives add settings-personal-spectator-trail dummy
-
-#score player uuid
-execute as @s[tag=setup-request] at @s run scoreboard objectives add player-uuid dummy
 
 #score custom (additional ingame event/feature)
 execute as @s[tag=setup-request] at @s run scoreboard objectives add custom dummy

@@ -1,0 +1,68 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:clock",
+          "functions": [
+            {
+              "function": "set_custom_data",
+              "tag": "{inventory_controller:1b,inventory_controller_phase:lobby,inventory_controller_item:lobby_menu.custom.night_mode}"
+            },
+            {
+              "function": "set_name",
+              "name": [
+                [
+                  {
+                    "text": "Night Mode",
+                    "color": "#9933ff",
+                    "italic": false
+                  }
+                ]
+              ]
+            },
+            {
+              "function": "set_lore",
+              "lore": [
+                [
+                  {
+                    "text": ""
+                  }
+                ],
+                [
+                  {
+                    "text": "NULL",
+                    "color": "gray",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": ""
+                  }
+                ],
+                [
+                  {
+                    "text": "Set the game time to night,",
+                    "color": "gray",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": "monsters can spawn on the surface.",
+                    "color": "gray",
+                    "italic": false
+                  }
+                ]
+              ],
+              "mode": "replace_all"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

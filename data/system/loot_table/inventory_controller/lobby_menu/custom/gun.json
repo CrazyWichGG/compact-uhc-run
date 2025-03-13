@@ -5,19 +5,24 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:redstone",
+          "name": "minecraft:crossbow",
           "functions": [
             {
               "function": "set_custom_data",
-              "tag": "{inventory_controller:1b,settings-spectator-trail:0b}"
+              "tag": "{inventory_controller:1b,inventory_controller_phase:lobby,inventory_controller_item:lobby_menu.custom.gun}"
             },
             {
               "function": "set_name",
               "name": [
                 [
                   {
-                    "text": "In-game player's trail",
+                    "text": "Gun",
                     "color": "red",
+                    "italic": false
+                  },
+                  {
+                    "text": " (Protype)",
+                    "color": "dark_gray",
                     "italic": false
                   }
                 ]
@@ -28,14 +33,12 @@
               "lore": [
                 [
                   {
-                    "text": "Red particle trail follows in-game players,",
-                    "color": "gray",
-                    "italic": false
+                    "text": ""
                   }
                 ],
                 [
                   {
-                    "text": "making them easier for spectators to track.",
+                    "text": "NULL",
                     "color": "gray",
                     "italic": false
                   }
@@ -47,8 +50,15 @@
                 ],
                 [
                   {
-                    "text": "DISABLED",
-                    "color": "red",
+                    "text": "New projectile weapons were introduced,",
+                    "color": "gray",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": "which body part you shoot matters!",
+                    "color": "gray",
                     "italic": false
                   }
                 ]

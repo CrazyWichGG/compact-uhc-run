@@ -15,8 +15,6 @@ execute if score lobby game-state matches 1 as @a[team=spectator] at @s run game
 execute if score lobby game-state matches 1 as @a[team=spectator] at @s run team leave @s
 # -apply glowing on deathmatch
 execute if score border-state border-countdown matches 5.. run effect give @a[team=ingame] glowing infinite 0 true
-# -particle for spectator view
-execute as @a[team=ingame] at @s run particle minecraft:dust{color:[1f,0f,0f],scale:1} ~ ~ ~ 0 0 0 0.2 5 force @a[team=spectator]
 # -get player uuid
 execute as @a at @s store result score @s player-uuid run data get entity @s UUID[1] 1
 
@@ -42,12 +40,20 @@ function system:player-rejoin
 function system:player-join-late
 function system:bossbar-animation
 function system:ingame-early-invin
+
+#preload game
 function system:preload-game/generate-chunk
 function system:preload-game/load-asset
+
+#inventory controller
+function system:inventory_controller/lobby_main
+function system:inventory_controller/ingame
+
+#settings
+function system:settings/set_default_value
+function system:settings/active
+
 function system:spectator-spectate-player
-#function system:settings-default
-function system:inventory-item-handler
-function system:inventory-item-handler-action
 function system:statistics-handler
 function system:server-status
 function system:entities-timeout
@@ -61,6 +67,6 @@ function system:end-game-tick-slow
 function system:custom-active/gambling
 # -gun
 function system:custom-active/gun/sniper
-function system:custom-active/gun/actives
+function system:custom-active/gun/active
 # -old-combat
 function system:custom-active/old-combat

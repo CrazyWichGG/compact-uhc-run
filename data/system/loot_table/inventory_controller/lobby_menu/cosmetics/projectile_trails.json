@@ -5,19 +5,19 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:comparator",
+          "name": "minecraft:arrow",
           "functions": [
             {
               "function": "set_custom_data",
-              "tag": "{inventory_controller:1b}"
+              "tag": "{inventory_controller:1b,inventory_controller_phase:lobby,inventory_controller_item:lobby_menu.cosmetics.projectile_trails}"
             },
             {
               "function": "set_name",
               "name": [
                 [
                   {
-                    "text": "Spectator Settings",
-                    "color": "aqua",
+                    "text": "Projectile Trails",
+                    "color": "green",
                     "italic": false
                   }
                 ]
@@ -28,7 +28,7 @@
               "lore": [
                 [
                   {
-                    "text": "Change your spectator settings below!",
+                    "text": "Change your projectile trail particles",
                     "color": "gray",
                     "italic": false
                   }

@@ -1,0 +1,44 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:feather",
+          "functions": [
+            {
+              "function": "set_custom_data",
+              "tag": "{inventory_controller:1b,inventory_controller_phase:lobby,inventory_controller_item:lobby_menu.cosmetics.gliding_effects}"
+            },
+            {
+              "function": "set_name",
+              "name": [
+                [
+                  {
+                    "text": "Gliding Effects",
+                    "color": "green",
+                    "italic": false
+                  }
+                ]
+              ]
+            },
+            {
+              "function": "set_lore",
+              "lore": [
+                [
+                  {
+                    "text": "Gliding down with various beautiful effects",
+                    "color": "gray",
+                    "italic": false
+                  }
+                ]
+              ],
+              "mode": "replace_all"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

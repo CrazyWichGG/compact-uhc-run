@@ -1,0 +1,73 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:redstone",
+          "functions": [
+            {
+              "function": "set_custom_data",
+              "tag": "{inventory_controller:1b,inventory_controller_phase:lobby,inventory_controller_item:lobby_menu.settings.spectator_trails}"
+            },
+            {
+              "function": "set_name",
+              "name": [
+                [
+                  {
+                    "text": "In-game player's trail",
+                    "color": "red",
+                    "italic": false
+                  },
+                  {
+                    "text": " (Spectator)",
+                    "color": "dark_gray",
+                    "italic": false
+                  }
+                ]
+              ]
+            },
+            {
+              "function": "set_lore",
+              "lore": [
+                [
+                  {
+                    "text": ""
+                  }
+                ],
+                [
+                  {
+                    "text": "NULL",
+                    "color": "gray",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": ""
+                  }
+                ],
+                [
+                  {
+                    "text": "Red particle trail follows in-game players,",
+                    "color": "gray",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": "making them easier for spectators to track.",
+                    "color": "gray",
+                    "italic": false
+                  }
+                ]
+              ],
+              "mode": "replace_all"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

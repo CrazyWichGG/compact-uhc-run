@@ -5,27 +5,23 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:gray_stained_glass_pane",
+          "name": "minecraft:barrier",
           "functions": [
             {
               "function": "set_custom_data",
-              "tag": "{inventory_controller:1b}"
+              "tag": "{inventory_controller:1b,inventory_controller_item:back_barrier}"
             },
             {
               "function": "set_name",
               "name": [
                 [
                   {
-                    "text": ""
+                    "text": "Go Back",
+                    "color": "red",
+                    "italic": false
                   }
                 ]
               ]
-            },
-            {
-              "function": "set_components",
-              "components": {
-                "!hide_tooltip": {} 
-              }
             }
           ]
         }

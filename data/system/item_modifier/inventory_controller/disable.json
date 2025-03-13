@@ -1,0 +1,24 @@
+[
+  {
+    "function": "set_custom_data",
+    "tag": "{is_enabled:0b}"
+  },
+  {
+    "function": "set_lore",
+    "lore": [
+      {
+        "text": "DISABLED",
+        "color": "red",
+        "italic": false
+      }
+    ],
+    "mode": "replace_section",
+    "offset": 1
+  },
+  {
+    "function": "set_components",
+    "components": {
+      "enchantment_glint_override": false
+    }
+  }
+]
