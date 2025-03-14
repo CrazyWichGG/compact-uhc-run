@@ -26,3 +26,5 @@ loot replace entity @s inventory.24 loot system:inventory_controller/disabled_sl
 loot replace entity @s inventory.25 loot system:inventory_controller/disabled_slot
 loot replace entity @s inventory.26 loot system:inventory_controller/disabled_slot
 
+#permission detect
+execute as @s[tag=!admin] run item modify entity @s inventory.14 system:inventory_controller/custom_no_permission

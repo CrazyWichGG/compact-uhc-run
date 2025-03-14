@@ -36,3 +36,12 @@ execute if score gun custom matches 1 run item modify entity @s inventory.14 sys
 
 execute if score lucky-block custom matches 0 run item modify entity @s inventory.15 system:inventory_controller/disable
 execute if score lucky-block custom matches 1 run item modify entity @s inventory.15 system:inventory_controller/enable
+
+
+#permission detect
+execute as @s[tag=!admin] unless items entity @s inventory.10 *[custom_data~{no_permission:1b}] run item modify entity @s inventory.10 system:inventory_controller/custom_no_permission
+execute as @s[tag=!admin] unless items entity @s inventory.11 *[custom_data~{no_permission:1b}] run item modify entity @s inventory.11 system:inventory_controller/custom_no_permission
+execute as @s[tag=!admin] unless items entity @s inventory.12 *[custom_data~{no_permission:1b}] run item modify entity @s inventory.12 system:inventory_controller/custom_no_permission
+execute as @s[tag=!admin] unless items entity @s inventory.13 *[custom_data~{no_permission:1b}] run item modify entity @s inventory.13 system:inventory_controller/custom_no_permission
+execute as @s[tag=!admin] unless items entity @s inventory.14 *[custom_data~{no_permission:1b}] run item modify entity @s inventory.14 system:inventory_controller/custom_no_permission
+execute as @s[tag=!admin] unless items entity @s inventory.15 *[custom_data~{no_permission:1b}] run item modify entity @s inventory.15 system:inventory_controller/custom_no_permission

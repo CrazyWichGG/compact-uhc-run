@@ -49,6 +49,10 @@ function system:preload-game/load-asset
 function system:inventory_controller/lobby_main
 function system:inventory_controller/ingame
 
+#cosmetics
+function system:cosmetics/set_default_value
+function system:cosmetics/projectile_trails
+
 #settings
 function system:settings/set_default_value
 function system:settings/active

@@ -38,6 +38,10 @@ execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remov
 execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove player-uuid
 execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove custom
 execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove inventory_controller.active_page
+execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove cosmetics.projectile_trails
+execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove cosmetics.gliding_effects
+execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove cosmetics.kill_effects
+execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove cosmetics.victory_dances
 execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove settings.game
 execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove settings.personal.spectator_trails
 execute as @s[tag=setup-uninstall-request] at @s run scoreboard objectives remove supply-state-landing
@@ -165,6 +169,9 @@ execute as @s[tag=setup-uninstall-request] at @s run kill @e[type=minecraft:armo
 
 #remove forceload
 execute as @s[tag=setup-uninstall-request] at @s run forceload remove all
+
+#remove admin tag
+execute as @s[tag=setup-uninstall-request] at @s run tag @a remove admin
 
 #permission remove
 execute as @s[tag=setup-uninstall-request] at @s run tellraw @s {"text":"\nUninstall complete","color":"green"}

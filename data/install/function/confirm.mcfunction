@@ -165,6 +165,12 @@ execute as @s[tag=setup-request] at @s run scoreboard objectives add entities-ti
 #inventory controller
 execute as @s[tag=setup-request] at @s run scoreboard objectives add inventory_controller.active_page dummy
 
+#score cosmetics
+execute as @s[tag=setup-request] at @s run scoreboard objectives add cosmetics.projectile_trails dummy
+execute as @s[tag=setup-request] at @s run scoreboard objectives add cosmetics.gliding_effects dummy
+execute as @s[tag=setup-request] at @s run scoreboard objectives add cosmetics.kill_effects dummy
+execute as @s[tag=setup-request] at @s run scoreboard objectives add cosmetics.victory_dances dummy
+
 #score game settings
 execute as @s[tag=setup-request] at @s run scoreboard objectives add settings.game dummy
 
@@ -410,6 +416,9 @@ execute as @s[tag=setup-request] at @s run setworldspawn ~ ~ ~
 
 #setblock command_block with function run
 #execute as @s[tag=setup-request] at @s run setblock ~ ~-2 ~ repeating_command_block{Command:"function system:run",auto:true}
+
+#apply admin tag
+execute as @s[tag=setup-request] at @s run tag @s add admin
 
 #permission remove
 execute as @s[tag=setup-request] at @s run tellraw @s {"text":"\nSetup complete","color":"green"}
