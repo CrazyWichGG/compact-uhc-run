@@ -6,9 +6,10 @@ execute as @a[tag=gliding] at @s if score @s cosmetics.gliding_effects matches 1
 execute as @a[tag=gliding] at @s if score @s cosmetics.gliding_effects matches 2 rotated ~ 0 run particle minecraft:totem_of_undying ^ ^1 ^-1 0 0 0 0.2 5 normal @a
 #heart
 execute as @a[tag=gliding] at @s if score @s cosmetics.gliding_effects matches 3 rotated ~ 0 run particle minecraft:heart ^ ^1 ^-1 0.2 0.2 0.2 0 3 normal @a
-#soul
-execute as @a[tag=gliding] at @s if score @s cosmetics.gliding_effects matches 4 rotated ~ 0 run particle minecraft:soul ^ ^1 ^-1 0.3 0.3 0.3 .05 5 normal @a
 #flame
-execute as @a[tag=gliding] at @s if score @s cosmetics.gliding_effects matches 5 rotated ~ 0 run particle minecraft:flame ^ ^1 ^-1 0.2 0.2 0.2 .05 4 normal @a
-
+execute as @a[tag=gliding] at @s if score @s cosmetics.gliding_effects matches 4 rotated ~ 0 run particle minecraft:flame ^ ^1 ^-1 0.2 0.2 0.2 .05 4 normal @a
+#soul fire
+execute as @a[tag=gliding] at @s if score @s cosmetics.gliding_effects matches 5 rotated ~ 0 run particle minecraft:soul_fire_flame ^ ^1 ^-1 0.2 0.2 0.2 .05 4 normal @a
+#soul
+execute as @a[tag=gliding] at @s if score @s cosmetics.gliding_effects matches 6 rotated ~ 0 run particle minecraft:soul ^ ^1 ^-1 0.3 0.3 0.3 .05 5 normal @a
 

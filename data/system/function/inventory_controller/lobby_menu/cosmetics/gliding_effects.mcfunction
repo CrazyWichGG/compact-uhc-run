@@ -3,9 +3,9 @@ execute unless items entity @s inventory.10 *[custom_data~{inventory_controller:
 execute unless items entity @s inventory.11 *[custom_data~{inventory_controller:1b,is_selected:0b,inventory_controller_item:lobby_menu.cosmetics.gliding_effects.cherry_leaves}] run loot replace entity @s inventory.11 loot system:inventory_controller/lobby_menu/cosmetics/gliding_effects/cherry_leaves
 execute unless items entity @s inventory.12 *[custom_data~{inventory_controller:1b,is_selected:0b,inventory_controller_item:lobby_menu.cosmetics.gliding_effects.totem}] run loot replace entity @s inventory.12 loot system:inventory_controller/lobby_menu/cosmetics/gliding_effects/totem
 execute unless items entity @s inventory.13 *[custom_data~{inventory_controller:1b,is_selected:0b,inventory_controller_item:lobby_menu.cosmetics.gliding_effects.heart}] run loot replace entity @s inventory.13 loot system:inventory_controller/lobby_menu/cosmetics/gliding_effects/heart
-execute unless items entity @s inventory.14 *[custom_data~{inventory_controller:1b,is_selected:0b,inventory_controller_item:lobby_menu.cosmetics.gliding_effects.soul}] run loot replace entity @s inventory.14 loot system:inventory_controller/lobby_menu/cosmetics/gliding_effects/soul
-execute unless items entity @s inventory.15 *[custom_data~{inventory_controller:1b,is_selected:0b,inventory_controller_item:lobby_menu.cosmetics.gliding_effects.flame}] run loot replace entity @s inventory.15 loot system:inventory_controller/lobby_menu/cosmetics/gliding_effects/flame
-item replace entity @s inventory.16 with air
+execute unless items entity @s inventory.14 *[custom_data~{inventory_controller:1b,is_selected:0b,inventory_controller_item:lobby_menu.cosmetics.gliding_effects.flame}] run loot replace entity @s inventory.14 loot system:inventory_controller/lobby_menu/cosmetics/gliding_effects/flame
+execute unless items entity @s inventory.15 *[custom_data~{inventory_controller:1b,is_selected:0b,inventory_controller_item:lobby_menu.cosmetics.gliding_effects.soul_fire}] run loot replace entity @s inventory.15 loot system:inventory_controller/lobby_menu/cosmetics/gliding_effects/soul_fire
+execute unless items entity @s inventory.16 *[custom_data~{inventory_controller:1b,is_selected:0b,inventory_controller_item:lobby_menu.cosmetics.gliding_effects.soul}] run loot replace entity @s inventory.16 loot system:inventory_controller/lobby_menu/cosmetics/gliding_effects/soul
 loot replace entity @s inventory.17 loot system:inventory_controller/disabled_slot
 loot replace entity @s inventory.18 loot system:inventory_controller/disabled_slot
 item replace entity @s inventory.19 with air
@@ -24,5 +24,6 @@ execute if score @s cosmetics.gliding_effects matches 2 run item modify entity @
 execute if score @s cosmetics.gliding_effects matches 3 run item modify entity @s inventory.13 system:inventory_controller/selected
 execute if score @s cosmetics.gliding_effects matches 4 run item modify entity @s inventory.14 system:inventory_controller/selected
 execute if score @s cosmetics.gliding_effects matches 5 run item modify entity @s inventory.15 system:inventory_controller/selected
+execute if score @s cosmetics.gliding_effects matches 6 run item modify entity @s inventory.16 system:inventory_controller/selected
 
 

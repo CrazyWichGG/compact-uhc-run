@@ -14,4 +14,6 @@ execute as @e[type=#system:projectiles,nbt={LeftOwner:1b}] at @s if predicate sy
 execute as @e[type=#system:projectiles,nbt={LeftOwner:1b}] at @s if predicate system:is_moving on origin if score @s cosmetics.projectile_trails matches 7 run particle dragon_breath ~ ~ ~ 0 0 0 0.015 3 normal @a
 #sonic boom
 execute as @e[type=#system:projectiles,nbt={LeftOwner:1b}] at @s if predicate system:is_moving on origin if score @s cosmetics.projectile_trails matches 8 run particle sonic_boom ~ ~ ~ 0 0 0 0 0 normal @a
+#soul fire
+execute as @e[type=#system:projectiles,nbt={LeftOwner:1b}] at @s if predicate system:is_moving on origin if score @s cosmetics.projectile_trails matches 9 run particle soul_fire_flame ~ ~ ~ 0 0 0 0.025 2 normal @a
 

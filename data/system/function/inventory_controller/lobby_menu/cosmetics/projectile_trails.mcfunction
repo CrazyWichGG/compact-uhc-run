@@ -10,7 +10,7 @@ loot replace entity @s inventory.17 loot system:inventory_controller/disabled_sl
 loot replace entity @s inventory.18 loot system:inventory_controller/disabled_slot
 execute unless items entity @s inventory.19 *[custom_data~{inventory_controller:1b,is_selected:0b,inventory_controller_item:lobby_menu.cosmetics.projectile_trails.dragon_breath}] run loot replace entity @s inventory.19 loot system:inventory_controller/lobby_menu/cosmetics/projectile_trails/dragon_breath
 execute unless items entity @s inventory.20 *[custom_data~{inventory_controller:1b,is_selected:0b,inventory_controller_item:lobby_menu.cosmetics.projectile_trails.sonic_boom}] run loot replace entity @s inventory.20 loot system:inventory_controller/lobby_menu/cosmetics/projectile_trails/sonic_boom
-item replace entity @s inventory.21 with air
+execute unless items entity @s inventory.21 *[custom_data~{inventory_controller:1b,is_selected:0b,inventory_controller_item:lobby_menu.cosmetics.projectile_trails.soul_fire}] run loot replace entity @s inventory.21 loot system:inventory_controller/lobby_menu/cosmetics/projectile_trails/soul_fire
 item replace entity @s inventory.22 with air
 item replace entity @s inventory.23 with air
 item replace entity @s inventory.24 with air
@@ -27,5 +27,6 @@ execute if score @s cosmetics.projectile_trails matches 5 run item modify entity
 execute if score @s cosmetics.projectile_trails matches 6 run item modify entity @s inventory.16 system:inventory_controller/selected
 execute if score @s cosmetics.projectile_trails matches 7 run item modify entity @s inventory.19 system:inventory_controller/selected
 execute if score @s cosmetics.projectile_trails matches 8 run item modify entity @s inventory.20 system:inventory_controller/selected
+execute if score @s cosmetics.projectile_trails matches 9 run item modify entity @s inventory.21 system:inventory_controller/selected
 
 
