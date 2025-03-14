@@ -52,6 +52,7 @@ function system:inventory_controller/ingame
 #cosmetics
 function system:cosmetics/set_default_value
 function system:cosmetics/projectile_trails
+function system:cosmetics/gliding_effects
 
 #settings
 function system:settings/set_default_value
