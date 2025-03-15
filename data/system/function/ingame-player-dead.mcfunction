@@ -34,3 +34,7 @@ execute as @s at @s run playsound entity.lightning_bolt.thunder master @a ~ ~ ~ 
 execute as @s at @s run kill @e[type=item,nbt={Item:{id:"minecraft:nether_star",components:{"minecraft:custom_data":{custom_item:shop_menu}}}},distance=..10,limit=1]
 
 #customs
+
+
+#cosmetics
+function system:cosmetics/kill_effects_trigger

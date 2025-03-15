@@ -169,7 +169,9 @@ execute as @s[tag=setup-request] at @s run scoreboard objectives add inventory_c
 execute as @s[tag=setup-request] at @s run scoreboard objectives add cosmetics.projectile_trails dummy
 execute as @s[tag=setup-request] at @s run scoreboard objectives add cosmetics.gliding_effects dummy
 execute as @s[tag=setup-request] at @s run scoreboard objectives add cosmetics.kill_effects dummy
+execute as @s[tag=setup-request] at @s run scoreboard objectives add cosmetics.kill_effects.playing dummy
 execute as @s[tag=setup-request] at @s run scoreboard objectives add cosmetics.victory_dances dummy
+execute as @s[tag=setup-request] at @s run scoreboard objectives add cosmetics.victory_dances.playing dummy
 
 #score game settings
 execute as @s[tag=setup-request] at @s run scoreboard objectives add settings.game dummy
