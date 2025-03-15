@@ -49,6 +49,7 @@ execute if score lobby game-state matches 1 as @a[gamemode=!creative,gamemode=!s
 execute if score lobby game-state matches 1 as @a[gamemode=!creative,gamemode=!spectator] if score @s inventory_controller.active_page matches 1100 run function system:inventory_controller/lobby_menu/cosmetics/projectile_trails
 execute if score lobby game-state matches 1 as @a[gamemode=!creative,gamemode=!spectator] if score @s inventory_controller.active_page matches 1200 run function system:inventory_controller/lobby_menu/cosmetics/gliding_effects
 execute if score lobby game-state matches 1 as @a[gamemode=!creative,gamemode=!spectator] if score @s inventory_controller.active_page matches 1300 run function system:inventory_controller/lobby_menu/cosmetics/kill_effects
+execute if score lobby game-state matches 1 as @a[gamemode=!creative,gamemode=!spectator] if score @s inventory_controller.active_page matches 1400 run function system:inventory_controller/lobby_menu/cosmetics/victory_dances
 execute if score lobby game-state matches 1 as @a[gamemode=!creative,gamemode=!spectator] if score @s inventory_controller.active_page matches 2000 run function system:inventory_controller/lobby_menu/settings
 execute if score lobby game-state matches 1 as @a[gamemode=!creative,gamemode=!spectator] if score @s inventory_controller.active_page matches 3000 run function system:inventory_controller/lobby_menu/custom
 
@@ -59,6 +60,7 @@ execute if score lobby game-state matches 1 as @a[gamemode=!creative,gamemode=!s
 execute if score lobby game-state matches 1 as @a[gamemode=!creative,gamemode=!spectator] if items entity @s player.cursor *[custom_data~{inventory_controller:1b,inventory_controller_item:lobby_menu.cosmetics.projectile_trails}] run scoreboard players set @s inventory_controller.active_page 1100
 execute if score lobby game-state matches 1 as @a[gamemode=!creative,gamemode=!spectator] if items entity @s player.cursor *[custom_data~{inventory_controller:1b,inventory_controller_item:lobby_menu.cosmetics.gliding_effects}] run scoreboard players set @s inventory_controller.active_page 1200
 execute if score lobby game-state matches 1 as @a[gamemode=!creative,gamemode=!spectator] if items entity @s player.cursor *[custom_data~{inventory_controller:1b,inventory_controller_item:lobby_menu.cosmetics.kill_effects}] run scoreboard players set @s inventory_controller.active_page 1300
+execute if score lobby game-state matches 1 as @a[gamemode=!creative,gamemode=!spectator] if items entity @s player.cursor *[custom_data~{inventory_controller:1b,inventory_controller_item:lobby_menu.cosmetics.victory_dances}] run scoreboard players set @s inventory_controller.active_page 1400
 execute if score lobby game-state matches 1 as @a[gamemode=!creative,gamemode=!spectator] if items entity @s player.cursor *[custom_data~{inventory_controller:1b,inventory_controller_item:lobby_menu.settings}] run scoreboard players set @s inventory_controller.active_page 2000
 execute if score lobby game-state matches 1 as @a[gamemode=!creative,gamemode=!spectator] if items entity @s player.cursor *[custom_data~{inventory_controller:1b,inventory_controller_item:lobby_menu.custom}] run scoreboard players set @s inventory_controller.active_page 3000
 
@@ -94,6 +96,9 @@ execute if score lobby game-state matches 1 as @a[gamemode=!creative,gamemode=!s
 execute if score lobby game-state matches 1 as @a[gamemode=!creative,gamemode=!spectator] at @s if items entity @s player.cursor *[custom_data~{inventory_controller:1b,inventory_controller_item:lobby_menu.cosmetics.kill_effects.none}] run scoreboard players set @s cosmetics.kill_effects 0
 execute if score lobby game-state matches 1 as @a[gamemode=!creative,gamemode=!spectator] at @s if items entity @s player.cursor *[custom_data~{inventory_controller:1b,inventory_controller_item:lobby_menu.cosmetics.kill_effects.blood}] run scoreboard players set @s cosmetics.kill_effects 1
 execute if score lobby game-state matches 1 as @a[gamemode=!creative,gamemode=!spectator] at @s if items entity @s player.cursor *[custom_data~{inventory_controller:1b,inventory_controller_item:lobby_menu.cosmetics.kill_effects.snow}] run scoreboard players set @s cosmetics.kill_effects 2
+# --victory dances
+execute if score lobby game-state matches 1 as @a[gamemode=!creative,gamemode=!spectator] at @s if items entity @s player.cursor *[custom_data~{inventory_controller:1b,inventory_controller_item:lobby_menu.cosmetics.victory_dances.none}] run scoreboard players set @s cosmetics.victory_dances 0
+execute if score lobby game-state matches 1 as @a[gamemode=!creative,gamemode=!spectator] at @s if items entity @s player.cursor *[custom_data~{inventory_controller:1b,inventory_controller_item:lobby_menu.cosmetics.victory_dances.thunder_storm}] run scoreboard players set @s cosmetics.victory_dances 1
 
 # --playsound
 execute if score lobby game-state matches 1 as @a[gamemode=!creative,gamemode=!spectator] at @s if items entity @s player.cursor *[custom_data~{inventory_controller:1b,is_selected:0b}] run playsound entity.experience_orb.pickup master @s ~ ~ ~ 1 1 1

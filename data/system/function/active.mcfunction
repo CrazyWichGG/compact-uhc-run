@@ -54,6 +54,7 @@ function system:cosmetics/set_default_value
 function system:cosmetics/projectile_trails
 function system:cosmetics/gliding_effects
 function system:cosmetics/kill_effects
+function system:cosmetics/victory_dances
 
 #settings
 function system:settings/set_default_value

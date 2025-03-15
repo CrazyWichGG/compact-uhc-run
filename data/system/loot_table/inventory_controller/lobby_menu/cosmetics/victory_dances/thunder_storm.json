@@ -1,0 +1,81 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:lightning_rod",
+          "functions": [
+            {
+              "function": "set_custom_data",
+              "tag": "{is_selected:0b,inventory_controller:1b,inventory_controller_phase:lobby,inventory_controller_item:lobby_menu.cosmetics.victory_dances.thunder_storm}"
+            },
+            {
+              "function": "set_name",
+              "name": [
+                [
+                  {
+                    "text": "Thunder Storm",
+                    "color": "green",
+                    "italic": false
+                  }
+                ]
+              ]
+            },
+            {
+              "function": "set_lore",
+              "lore": [
+                [
+                  {
+                    "text": "Victory Dance",
+                    "color": "dark_gray",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": ""
+                  }
+                ],
+                [
+                  {
+                    "text": "Click to select!",
+                    "color": "yellow",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": ""
+                  }
+                ],
+                [
+                  {
+                    "text": "A flash of lightning a roar of thunder,",
+                    "color": "gray",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "text": "the sign of your victory!",
+                    "color": "gray",
+                    "italic": false
+                  }
+                ]
+              ],
+              "mode": "replace_all"
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "enchantment_glint_override": false
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
