@@ -12,9 +12,9 @@ scoreboard players add @s custom-gun-bullet-distance 1
 #execute if score @s custom-gun-bullet-distance matches ..1000 if score @s custom-gun-bullet-distance matches 1 rotated ~ ~ if block ~ ~ ~ air run function system:custom-active/gun/raycast/sniper/raycasting
 
 # Make raycast visible
-execute as @a[tag=!raycasting] run particle minecraft:smoke ~ ~ ~ 0 0 0 0 0 normal @s
-execute as @s if score @s custom-gun-is-scoping matches 1 run particle minecraft:smoke ~ ~-.3 ~ 0 0 0 0 0 normal @s
-execute as @s if score @s custom-gun-is-scoping matches 0 run particle minecraft:smoke ~ ~-.2 ~ 0 0 0 0 0 normal @s
+execute as @a[tag=!raycasting] run particle minecraft:smoke ~ ~ ~ 0 0 0 0 0 force @s
+execute as @s if score @s custom-gun-is-scoping matches 1 run particle minecraft:smoke ~ ~-.3 ~ 0 0 0 0 0 force @s
+execute as @s if score @s custom-gun-is-scoping matches 0 run particle minecraft:smoke ~ ~-.2 ~ 0 0 0 0 0 force @s
 
 # Repeat the raycast if certain conditions are met
 # Parameters:
