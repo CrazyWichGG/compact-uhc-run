@@ -15,12 +15,12 @@ execute if score end-game game-state matches 1 run scoreboard players add end-ti
 
 # -end
 execute if score end-game game-state matches 1 if score end-timer timer matches 10 run function system:game-before-end
-execute if score end-game game-state matches 1 if score end-timer timer matches 300 run function system:game-end
+execute if score end-game game-state matches 1 if score end-timer timer matches 600 run function system:game-end
 
 # -invincible effect
-execute if score end-game game-state matches 1 if score end-timer timer matches 1..300 run effect give @a weakness 1 255 true
-execute if score end-game game-state matches 1 if score end-timer timer matches 1..300 run effect give @a resistance 1 255 true
-execute if score end-game game-state matches 1 if score end-timer timer matches 1..300 run effect give @a regeneration 1 255 true
-execute if score end-game game-state matches 1 if score end-timer timer matches 1..300 run effect give @a fire_resistance 1 255 true
-execute if score end-game game-state matches 1 if score end-timer timer matches 1..300 run effect give @a saturation 1 255 true
-execute if score end-game game-state matches 1 if score end-timer timer matches 1..300 run effect give @a water_breathing 1 255 true
+execute if score end-game game-state matches 1 if score end-timer timer matches 1.. run effect give @a weakness 1 255 true
+execute if score end-game game-state matches 1 if score end-timer timer matches 1.. run effect give @a resistance 1 255 true
+execute if score end-game game-state matches 1 if score end-timer timer matches 1.. run effect give @a regeneration 1 255 true
+execute if score end-game game-state matches 1 if score end-timer timer matches 1.. run effect give @a fire_resistance 1 255 true
+execute if score end-game game-state matches 1 if score end-timer timer matches 1.. run effect give @a saturation 1 255 true
+execute if score end-game game-state matches 1 if score end-timer timer matches 1.. run effect give @a water_breathing 1 255 true

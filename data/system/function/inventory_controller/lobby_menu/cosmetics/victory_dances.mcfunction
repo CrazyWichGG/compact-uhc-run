@@ -1,7 +1,7 @@
 loot replace entity @s inventory.9 loot system:inventory_controller/disabled_slot
 execute unless items entity @s inventory.10 *[custom_data~{inventory_controller:1b,is_selected:0b,inventory_controller_item:lobby_menu.cosmetics.victory_dances.none}] run loot replace entity @s inventory.10 loot system:inventory_controller/lobby_menu/cosmetics/victory_dances/none
 execute unless items entity @s inventory.11 *[custom_data~{inventory_controller:1b,is_selected:0b,inventory_controller_item:lobby_menu.cosmetics.victory_dances.thunder_storm}] run loot replace entity @s inventory.11 loot system:inventory_controller/lobby_menu/cosmetics/victory_dances/thunder_storm
-item replace entity @s inventory.12 with air
+execute unless items entity @s inventory.12 *[custom_data~{inventory_controller:1b,is_selected:0b,inventory_controller_item:lobby_menu.cosmetics.victory_dances.meteor_shower}] run loot replace entity @s inventory.12 loot system:inventory_controller/lobby_menu/cosmetics/victory_dances/meteor_shower
 item replace entity @s inventory.13 with air
 item replace entity @s inventory.14 with air
 item replace entity @s inventory.15 with air
@@ -20,5 +20,6 @@ loot replace entity @s inventory.26 loot system:inventory_controller/disabled_sl
 #item modification
 execute if score @s cosmetics.victory_dances matches 0 run item modify entity @s inventory.10 system:inventory_controller/selected
 execute if score @s cosmetics.victory_dances matches 1 run item modify entity @s inventory.11 system:inventory_controller/selected
+execute if score @s cosmetics.victory_dances matches 2 run item modify entity @s inventory.12 system:inventory_controller/selected
 
 

@@ -1,6 +1,3 @@
-#scoreboard
-scoreboard players set @s ingame-death 0
-
 #team create
 team add spectator
 team modify spectator color gray
@@ -38,3 +35,6 @@ execute as @s at @s run kill @e[type=item,nbt={Item:{id:"minecraft:nether_star",
 
 #cosmetics
 function system:cosmetics/kill_effects_trigger
+
+#reset scoreboard
+scoreboard players set @s ingame-death 0
