@@ -3,7 +3,7 @@ execute as @a unless score @s inventory_controller.active_page = @s inventory_co
 
 
 #action bar title
-execute if score lobby game-state matches 1 as @a at @s run title @s actionbar [{"text":"Press ","color":"white"},{"text":"[","color":"green"},{"keybind": "key.inventory","color":"green"},{"text":"]","color":"green"},{"text":" to view your statistics and more","color":"white"}]
+execute if score lobby game-state matches 1 as @a at @s run title @s actionbar [{"text":"Press ","color":"white"},{"text":"[","color":"green"},{"keybind": "key.inventory","color":"green"},{"text":"]","color":"green"},{"text":" to select your cosmetics and more","color":"white"}]
 
 
 #clear entity item
