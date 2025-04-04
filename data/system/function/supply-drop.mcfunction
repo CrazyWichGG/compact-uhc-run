@@ -26,7 +26,7 @@ execute as @e[type=minecraft:armor_stand,tag=supply-drop,team=supply-state-prepa
 
 #set up ready supply
 execute as @e[type=minecraft:armor_stand,tag=supply-drop,team=supply-state-ready] at @s run scoreboard players reset @s supply-queue
-execute as @e[type=minecraft:armor_stand,tag=supply-drop,team=supply-state-ready] at @s run summon minecraft:block_display ~ ~ ~ {block_state:{Name:"barrel",Properties:{facing:"up"}},NoGravity:1b,CustomName:'{"text":"supply-display"}'}
+execute as @e[type=minecraft:armor_stand,tag=supply-drop,team=supply-state-ready] at @s run summon minecraft:block_display ~ ~ ~ {block_state:{Name:"barrel",Properties:{facing:"up"}},NoGravity:1b,CustomName:'supply-display'}
 execute as @e[type=minecraft:armor_stand,tag=supply-drop,team=supply-state-ready] at @s run team join supply-state-landing @s
 
 #ready supply landing
@@ -51,13 +51,13 @@ execute as @e[type=minecraft:armor_stand,tag=epic-supply-drop,team=supply-state-
 execute as @e[type=minecraft:armor_stand,tag=epic-supply-drop,team=supply-state-landed] at @s unless block ~ ~ ~ barrel{LootTable:"system:supply_drop/epic"} run team join supply-glowing-yellow @e[type=minecraft:shulker,tag=supply-drop-glowing,limit=1,sort=nearest]
 
 #on ground once landed
-execute as @e[type=minecraft:armor_stand,tag=early-supply-drop,team=supply-state-landed] at @s if score @s supply-state-landed matches 1 run setblock ~ ~ ~ minecraft:barrel[facing=up]{LootTable:"system:supply_drop/early",CustomName:'{"text":"Early Supply Drop"}',components:{"minecraft:custom_data":{special-item:supply-barrel}}} destroy
+execute as @e[type=minecraft:armor_stand,tag=early-supply-drop,team=supply-state-landed] at @s if score @s supply-state-landed matches 1 run setblock ~ ~ ~ minecraft:barrel[facing=up]{LootTable:"system:supply_drop/early",CustomName:"Early Supply Drop",components:{"minecraft:custom_data":{special-item:supply-barrel}}} destroy
 execute as @e[type=minecraft:armor_stand,tag=early-supply-drop,team=supply-state-landed] at @s if score @s supply-state-landed matches 1 run tellraw @a [{"text":"Early Supply","color":"green"},{"text":" has landed at ","color":"white"},{"text":"X: "},{"score":{"name":"@s","objective":"supply-coordinates-x"},"color":"yellow"},{"text":", Y: "},{"score":{"name":"@s","objective":"supply-coordinates-y"},"color":"yellow"},{"text":", Z: "},{"score":{"name":"@s","objective":"supply-coordinates-z"},"color":"yellow"}]
 
-execute as @e[type=minecraft:armor_stand,tag=mid-supply-drop,team=supply-state-landed] at @s if score @s supply-state-landed matches 1 run setblock ~ ~ ~ minecraft:barrel[facing=up]{LootTable:"system:supply_drop/mid",CustomName:'{"text":"Mid-Game Supply Drop"}',components:{"minecraft:custom_data":{special-item:supply-barrel}}} destroy
+execute as @e[type=minecraft:armor_stand,tag=mid-supply-drop,team=supply-state-landed] at @s if score @s supply-state-landed matches 1 run setblock ~ ~ ~ minecraft:barrel[facing=up]{LootTable:"system:supply_drop/mid",CustomName:"Mid-Game Supply Drop",components:{"minecraft:custom_data":{special-item:supply-barrel}}} destroy
 execute as @e[type=minecraft:armor_stand,tag=mid-supply-drop,team=supply-state-landed] at @s if score @s supply-state-landed matches 1 run tellraw @a [{"text":"Mid-Game Supply","color":"aqua"},{"text":" has landed at ","color":"white"},{"text":"X: "},{"score":{"name":"@s","objective":"supply-coordinates-x"},"color":"yellow"},{"text":", Y: "},{"score":{"name":"@s","objective":"supply-coordinates-y"},"color":"yellow"},{"text":", Z: "},{"score":{"name":"@s","objective":"supply-coordinates-z"},"color":"yellow"}]
 
-execute as @e[type=minecraft:armor_stand,tag=epic-supply-drop,team=supply-state-landed] at @s if score @s supply-state-landed matches 1 run setblock ~ ~ ~ minecraft:barrel[facing=up]{LootTable:"system:supply_drop/epic",CustomName:'{"text":"Epic Supply Drop"}',components:{"minecraft:custom_data":{special-item:supply-barrel}}} destroy
+execute as @e[type=minecraft:armor_stand,tag=epic-supply-drop,team=supply-state-landed] at @s if score @s supply-state-landed matches 1 run setblock ~ ~ ~ minecraft:barrel[facing=up]{LootTable:"system:supply_drop/epic",CustomName:"Epic Supply Drop",components:{"minecraft:custom_data":{special-item:supply-barrel}}} destroy
 execute as @e[type=minecraft:armor_stand,tag=epic-supply-drop,team=supply-state-landed] at @s if score @s supply-state-landed matches 1 run tellraw @a [{"text":"Epic Supply","color":"light_purple"},{"text":" has landed at ","color":"white"},{"text":"X: "},{"score":{"name":"@s","objective":"supply-coordinates-x"},"color":"yellow"},{"text":", Y: "},{"score":{"name":"@s","objective":"supply-coordinates-y"},"color":"yellow"},{"text":", Z: "},{"score":{"name":"@s","objective":"supply-coordinates-z"},"color":"yellow"}]
 
 execute as @e[type=minecraft:armor_stand,tag=supply-drop,team=supply-state-landed] at @s if score @s supply-state-landed matches 1 run kill @e[type=minecraft:block_display,name="supply-display",limit=1,sort=nearest]
@@ -68,7 +68,7 @@ execute as @e[type=minecraft:armor_stand,tag=supply-drop,team=supply-state-lande
 # -once destroyed
 execute as @e[type=minecraft:armor_stand,tag=supply-drop,team=supply-state-landed] at @s if score @s supply-state-landed matches 2.. unless block ~ ~ ~ minecraft:barrel run kill @e[type=minecraft:item,nbt={Item:{id:"minecraft:barrel"}},limit=1,sort=nearest]
 
-execute as @e[type=minecraft:armor_stand,tag=early-supply-drop,team=supply-state-landed] at @s if score @s supply-state-landed matches 2.. unless block ~ ~ ~ minecraft:barrel run setblock ~ ~ ~ barrel[facing=up]{CustomName:'{"text":"Early Supply Drop"}',components:{"minecraft:custom_data":{special-item:supply-barrel}}} destroy
-execute as @e[type=minecraft:armor_stand,tag=mid-supply-drop,team=supply-state-landed] at @s if score @s supply-state-landed matches 2.. unless block ~ ~ ~ minecraft:barrel run setblock ~ ~ ~ barrel[facing=up]{CustomName:'{"text":"Mid-Game Supply Drop"}',components:{"minecraft:custom_data":{special-item:supply-barrel}}} destroy
-execute as @e[type=minecraft:armor_stand,tag=epic-supply-drop,team=supply-state-landed] at @s if score @s supply-state-landed matches 2.. unless block ~ ~ ~ minecraft:barrel run setblock ~ ~ ~ barrel[facing=up]{CustomName:'{"text":"Epic Supply Drop"}',components:{"minecraft:custom_data":{special-item:supply-barrel}}} destroy
+execute as @e[type=minecraft:armor_stand,tag=early-supply-drop,team=supply-state-landed] at @s if score @s supply-state-landed matches 2.. unless block ~ ~ ~ minecraft:barrel run setblock ~ ~ ~ barrel[facing=up]{CustomName:"Early Supply Drop",components:{"minecraft:custom_data":{special-item:supply-barrel}}} destroy
+execute as @e[type=minecraft:armor_stand,tag=mid-supply-drop,team=supply-state-landed] at @s if score @s supply-state-landed matches 2.. unless block ~ ~ ~ minecraft:barrel run setblock ~ ~ ~ barrel[facing=up]{CustomName:"Mid-Game Supply Drop",components:{"minecraft:custom_data":{special-item:supply-barrel}}} destroy
+execute as @e[type=minecraft:armor_stand,tag=epic-supply-drop,team=supply-state-landed] at @s if score @s supply-state-landed matches 2.. unless block ~ ~ ~ minecraft:barrel run setblock ~ ~ ~ barrel[facing=up]{CustomName:"Epic Supply Drop",components:{"minecraft:custom_data":{special-item:supply-barrel}}} destroy
 

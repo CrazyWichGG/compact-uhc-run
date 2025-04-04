@@ -28,7 +28,7 @@ worldborder set 1500
 execute as @a[team=ingame] at @s run tp @s ~ ~200 ~
 
 #summon armor stand for riding
-execute as @a[team=ingame] at @s run summon minecraft:armor_stand ~ ~ ~ {Invisible:1b,Invulnerable:1b,NoGravity:1b,NoBasePlate:1b,CustomName:'{"text":"preload-game"}',Rotation:[0f,270f]}
+execute as @a[team=ingame] at @s run summon minecraft:armor_stand ~ ~ ~ {Invisible:1b,Invulnerable:1b,NoGravity:1b,NoBasePlate:1b,CustomName:"preload-game",Rotation:[0f,270f]}
 
 #ride armor stand
 execute as @a[team=ingame] at @s run ride @s mount @e[type=armor_stand,name='preload-game',limit=1,sort=nearest]

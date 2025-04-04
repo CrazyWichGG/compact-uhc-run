@@ -15,7 +15,7 @@ execute as @s[tag=setup-request] at @s run tellraw @s {"text":"Starting setup ma
 execute as @s[tag=setup-request] at @s run tellraw @s {"text":"DO NOT MOVE!","color":"red"}
 
 #armor stand center
-execute as @s[tag=setup-request] at @s align xyz positioned ~0.5 ~ ~0.5 run summon armor_stand ~ ~ ~ {Silent:1b,Invisible:1b,Invulnerable:1b,NoBasePlate:1b,NoGravity:1b,Marker:1b,CustomName:'{"text":"map-center"}'}
+execute as @s[tag=setup-request] at @s align xyz positioned ~0.5 ~ ~0.5 run summon armor_stand ~ ~ ~ {Silent:1b,Invisible:1b,Invulnerable:1b,NoBasePlate:1b,NoGravity:1b,Marker:1b,CustomName:"map-center"}
 
 #score time
 execute as @s[tag=setup-request] at @a run scoreboard objectives add time dummy

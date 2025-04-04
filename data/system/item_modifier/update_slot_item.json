@@ -30,13 +30,13 @@
           "text": "\n1 emerald",
           "italic": false,
           "color": "black",
-          "clickEvent": {
+          "click_event": {
             "action": "run_command",
-            "value": "/trigger custom-gambling-set-bet-amount-trigger set 1"
+            "command": "/trigger custom-gambling-set-bet-amount-trigger set 1"
           },
-          "hoverEvent": {
+          "hover_event": {
             "action": "show_text",
-            "contents": [
+            "value": [
               {
                 "text": "Click to set your bet to 1 emerald"
               }
@@ -47,13 +47,13 @@
           "text": "\n2 emeralds",
           "italic": false,
           "color": "black",
-          "clickEvent": {
+          "click_event": {
             "action": "run_command",
-            "value": "/trigger custom-gambling-set-bet-amount-trigger set 2"
+            "command": "/trigger custom-gambling-set-bet-amount-trigger set 2"
           },
-          "hoverEvent": {
+          "hover_event": {
             "action": "show_text",
-            "contents": [
+            "value": [
               {
                 "text": "Click to set your bet to 2 emeralds"
               }
@@ -64,13 +64,13 @@
           "text": "\n4 emeralds",
           "italic": false,
           "color": "black",
-          "clickEvent": {
+          "click_event": {
             "action": "run_command",
-            "value": "/trigger custom-gambling-set-bet-amount-trigger set 4"
+            "command": "/trigger custom-gambling-set-bet-amount-trigger set 4"
           },
-          "hoverEvent": {
+          "hover_event": {
             "action": "show_text",
-            "contents": [
+            "value": [
               {
                 "text": "Click to set your bet to 4 emeralds"
               }
@@ -81,13 +81,13 @@
           "text": "\n8 emeralds",
           "italic": false,
           "color": "black",
-          "clickEvent": {
+          "click_event": {
             "action": "run_command",
-            "value": "/trigger custom-gambling-set-bet-amount-trigger set 8"
+            "command": "/trigger custom-gambling-set-bet-amount-trigger set 8"
           },
-          "hoverEvent": {
+          "hover_event": {
             "action": "show_text",
-            "contents": [
+            "value": [
               {
                 "text": "Click to set your bet to 8 emeralds"
               }
@@ -98,13 +98,13 @@
           "text": "\n16 emeralds",
           "italic": false,
           "color": "black",
-          "clickEvent": {
+          "click_event": {
             "action": "run_command",
-            "value": "/trigger custom-gambling-set-bet-amount-trigger set 16"
+            "command": "/trigger custom-gambling-set-bet-amount-trigger set 16"
           },
-          "hoverEvent": {
+          "hover_event": {
             "action": "show_text",
-            "contents": [
+            "value": [
               {
                 "text": "Click to set your bet to 16 emeralds"
               }
@@ -115,13 +115,13 @@
           "text": "\n32 emeralds",
           "italic": false,
           "color": "black",
-          "clickEvent": {
+          "click_event": {
             "action": "run_command",
-            "value": "/trigger custom-gambling-set-bet-amount-trigger set 32"
+            "command": "/trigger custom-gambling-set-bet-amount-trigger set 32"
           },
-          "hoverEvent": {
+          "hover_event": {
             "action": "show_text",
-            "contents": [
+            "value": [
               {
                 "text": "Click to set your bet to 32 emeralds"
               }
@@ -132,13 +132,13 @@
           "text": "\n64 emeralds",
           "italic": false,
           "color": "black",
-          "clickEvent": {
+          "click_event": {
             "action": "run_command",
-            "value": "/trigger custom-gambling-set-bet-amount-trigger set 64"
+            "command": "/trigger custom-gambling-set-bet-amount-trigger set 64"
           },
-          "hoverEvent": {
+          "hover_event": {
             "action": "show_text",
-            "contents": [
+            "value": [
               {
                 "text": "Click to set your bet to 64 emeralds"
               }
