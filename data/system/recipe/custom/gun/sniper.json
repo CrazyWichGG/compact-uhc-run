@@ -29,7 +29,7 @@
       "custom_data": "{custom_item:recipe_result,recipe_result:sniper}",
       "item_model": "crossbow",
       "enchantment_glint_override": true,
-      "custom_name": '{"text":"Sniper Rifle","color":"gold","italic":false}'
+      "custom_name": {"text":"Sniper Rifle","color":"gold","italic":false}
     }
   }
 }

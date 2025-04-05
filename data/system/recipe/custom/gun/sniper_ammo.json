@@ -23,7 +23,7 @@
       "custom_data": "{custom_item_group:ammo,custom_item:sniper_ammo}",
       "item_model": "ghast_tear",
       "enchantment_glint_override": true,
-      "custom_name": '{"text":"Sniper Ammo","color":"gold","italic":false}'
+      "custom_name": {"text":"Sniper Ammo","color":"gold","italic":false}
     }
   }
 }
