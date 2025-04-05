@@ -5,7 +5,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:shield",
+          "name": "minecraft:music_disc_11",
           "functions": [
             {
               "function": "set_custom_data",
@@ -33,27 +33,15 @@
                 ],
                 [
                   {
-                    "text": "Your offhand slot is disabled, and replaced with a shield",
+                    "text": "Your offhand slot is disabled to simulate",
                     "color": "white",
                     "italic": false
                   }
                 ],
                 [
                   {
-                    "text": "to simulate the old combat mechanics",
+                    "text": "the old combat mechanics",
                     "color": "white",
-                    "italic": false
-                  }
-                ],
-                [
-                  {
-                    "text": ""
-                  }
-                ],
-                [
-                  {
-                    "text": "Cannot simulate the exact mechanics as of now",
-                    "color": "gray",
                     "italic": false
                   }
                 ]
@@ -63,8 +51,14 @@
             {
               "function": "set_components",
               "components": {
-                "unbreakable": {
-                  "show_in_tooltip": false
+                "item_model": "air",
+                "!jukebox_playable": {},
+                "unbreakable": {},
+                "tooltip_display": {
+                    "hidden_components": [
+                        "unbreakable",
+                        "jukebox_playable"
+                    ]
                 }
               }
             }

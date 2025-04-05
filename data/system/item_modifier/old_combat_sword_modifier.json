@@ -1,0 +1,33 @@
+[
+  {
+    "function": "minecraft:set_components",
+    "components": {
+      "blocks_attacks": {
+        "block_delay_seconds": 0.0,
+        "disable_cooldown_scale": 0.0,
+        "damage_reductions": [
+          {
+            "type": [
+              "mob_attack",
+              "player_attack",
+              "arrow",
+              "mob_projectile",
+              "explosion",
+              "player_explosion",
+              "trident",
+              "fireball"
+            ],
+            "base": 0,
+            "factor": 0.5
+          }
+        ],
+        "item_damage": {
+          "base": 0,
+          "factor": 0.0,
+          "threshold": 0.0
+        },
+        "block_sound": "entity.player.hurt"
+      }
+    }
+  }
+]

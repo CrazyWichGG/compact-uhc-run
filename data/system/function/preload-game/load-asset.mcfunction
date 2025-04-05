@@ -25,6 +25,7 @@ execute if score load-asset game-state matches 1 if score load-asset-stage prelo
 execute if score load-asset game-state matches 1 if score load-asset-stage preload-game matches 3 run function event:supply-drop/summon-supply-drop-phase4
 execute if score load-asset game-state matches 1 if score load-asset-stage preload-game matches 4 run function event:supply-drop/summon-supply-drop-phase5
 
+#loaded asset
 execute if score load-asset game-state matches 1 as @e[type=armor_stand,name='map-center',limit=1] at @s as @e[type=armor_stand,tag=supply-drop,team=supply-state-load] at @s if loaded ~ ~ ~ run scoreboard players add loaded-asset preload-game 1
 
 #title

@@ -70,7 +70,7 @@ scoreboard players add @a[team=ingame] total-games-played 1
 
 #customs
 # -old combat
-execute if score old-combat custom matches 1 as @a[team=ingame] at @s run loot replace entity @s weapon.offhand loot system:inventory_controller/custom/old_combat/old_combat_shield
+execute if score old-combat custom matches 1 as @a[team=ingame] at @s run loot replace entity @s weapon.offhand loot system:inventory_controller/custom/old_combat/offhand_item_replace
 
 # -night mode
 execute if score night-mode custom matches 0 run title @a subtitle {"text":"Good luck and have fun!","color":"white"}
