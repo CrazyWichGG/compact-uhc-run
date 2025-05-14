@@ -1,9 +1,11 @@
 #add teams when sever restart
-team add supply-state-load
+team add supply-state-loading
+team add supply-state-loaded
 team add supply-state-prepare
 team add supply-state-ready
 team add supply-state-landing
 team add supply-state-landed
+
 team add supply-glowing-green
 team modify supply-glowing-green color green
 team add supply-glowing-yellow
