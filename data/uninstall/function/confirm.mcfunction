@@ -158,7 +158,7 @@ execute as @s[tag=setup-uninstall-request] at @s run gamerule playersNetherPorta
 execute as @s[tag=setup-uninstall-request] at @s run gamerule doLimitedCrafting true
 
 #max health reset
-execute as @s[tag=setup-uninstall-request] at @s run execute as @a at @s run attribute @s max_health base set 20
+execute as @s[tag=setup-uninstall-request] at @s run execute as @a at @s run attribute @s max_health modifier remove max_health
 
 #checking installation
 execute as @s[tag=setup-uninstall-request] at @s run execute as @s at @s if entity @e[type=minecraft:armor_stand,name="map-center"] run tellraw @s {"text":"Removing..."}

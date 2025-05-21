@@ -23,7 +23,7 @@ scoreboard objectives setdisplay list health
 scoreboard objectives setdisplay below_name health
 
 #max health
-execute as @a at @s run attribute @s minecraft:max_health base set 40
+execute as @a at @s run attribute @s minecraft:max_health modifier add max_health 20 add_value
 
 #clear inventory
 clear @a[team=ingame]
@@ -50,9 +50,9 @@ execute if score night-mode custom matches 0 run time set day
 execute if score night-mode custom matches 1 run time set midnight
 
 # -old combat
-execute if score old-combat custom matches 0 as @a[team=ingame] at @s run attribute @s minecraft:attack_speed base set 4
-execute if score old-combat custom matches 1 as @a[team=ingame] at @s run attribute @s minecraft:attack_speed base set 100
+execute if score old-combat custom matches 0 as @a[team=ingame] at @s run attribute @s minecraft:attack_speed modifier remove custom.old_combat
+execute if score old-combat custom matches 1 as @a[team=ingame] at @s run attribute @s minecraft:attack_speed modifier add custom.old_combat 96 add_value
 
 # -tiny
-execute if score tiny custom matches 0 as @a[team=ingame] at @s run attribute @s minecraft:scale base set 1
-execute if score tiny custom matches 1 as @a[team=ingame] at @s run attribute @s minecraft:scale base set 0.5
+execute if score tiny custom matches 0 as @a[team=ingame] at @s run attribute @s minecraft:scale modifier remove custom.tiny
+execute if score tiny custom matches 1 as @a[team=ingame] at @s run attribute @s minecraft:scale modifier add custom.tiny -0.5 add_value

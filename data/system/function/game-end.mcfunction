@@ -84,8 +84,8 @@ xp set @a 0 points
 time set day
 
 # -tiny
-execute if score tiny custom matches 0 as @a[team=ingame] at @s run attribute @s minecraft:scale base set 1
-execute if score tiny custom matches 1 as @a[team=ingame] at @s run attribute @s minecraft:scale base set 0.5
+execute if score tiny custom matches 0 as @a[team=ingame] at @s run attribute @s minecraft:scale modifier remove custom.tiny
+execute if score tiny custom matches 1 as @a[team=ingame] at @s run attribute @s minecraft:scale modifier add custom.tiny -0.5 add_value
 
 #cosmetics cleanup
 function system:cosmetics/victory_dances_cleanup
