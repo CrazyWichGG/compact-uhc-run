@@ -130,7 +130,7 @@ execute as @s[tag=setup-uninstall-request] at @s run team remove supply-glowing-
 execute as @s[tag=setup-uninstall-request] at @s run effect clear @a
 
 #clear inventory handler items
-execute as @s[tag=setup-uninstall-request] at @s run clear @a *[custom_data={inventory-handler:1b}]
+execute as @s[tag=setup-uninstall-request] at @s run clear @a *[custom_data={inventory_controller:1b}]
 
 #gamemode
 execute as @s[tag=setup-uninstall-request] at @s run gamemode survival @a
