@@ -32,6 +32,9 @@ clear @a[team=ingame]
 xp set @a[team=ingame] 0 levels
 xp set @a[team=ingame] 0 points
 
+#clear effects
+effect clear @a[team=ingame]
+
 #title
 title @a times 0 100 20
 
