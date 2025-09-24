@@ -63,7 +63,7 @@ function system:settings/active
 function system:spectator-spectate-player
 function system:statistics-handler
 function system:server-status
-function system:entities-timeout
+function system:entity_timeout
 function system:supply-drop
 function system:enderchest
 function system:end-game-check

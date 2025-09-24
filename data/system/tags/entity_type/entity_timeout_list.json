@@ -1,0 +1,30 @@
+{
+    "values": [
+        "#undead",
+        "creeper",
+        "spider",
+        "cave_spider",
+        "witch",
+        "silverfish",
+        "slime",
+        "magma_cube",
+        "ghast",
+        "piglin",
+        "piglin_brute",
+        "hoglin",
+        "zoglin",
+        "zombified_piglin",
+        "blaze",
+        "enderman",
+        "endermite",
+        "ender_dragon",
+        "warden",
+        "wither",
+        "#raiders",
+        "vex",
+        "guardian",
+        "elder_guardian",
+        "breeze",
+        "creaking"
+    ]
+}
