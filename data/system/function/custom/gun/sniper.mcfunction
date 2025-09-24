@@ -35,7 +35,7 @@ execute as @a at @s if items entity @s weapon.mainhand spyglass[custom_data~{cus
 execute as @a at @s if items entity @s weapon.mainhand spyglass[custom_data~{custom_item_group:"gun",custom_item:"sniper"}] if score @s custom-gun-is-holding-gun matches 0 unless items entity @s weapon.offhand *[custom_data~{inventory_controller:1b,inventory_controller_phase:ingame}] if score old-combat custom matches 0 run loot replace entity @s weapon.offhand loot system:inventory_controller/custom/gun/offhand_item_replace
 
 # - mainhand (shoot)
-execute as @a at @s if items entity @s weapon.offhand spyglass[custom_data~{custom_item_group:"gun",custom_item:"sniper",gun_properties:{has_ammo:1b}}] if items entity @s weapon.mainhand *[custom_data~{inventory_controller:1b,inventory_controller_phase:ingame}] run function system:custom-active/gun/raycast/sniper/start
+execute as @a at @s if items entity @s weapon.offhand spyglass[custom_data~{custom_item_group:"gun",custom_item:"sniper",gun_properties:{has_ammo:1b}}] if items entity @s weapon.mainhand *[custom_data~{inventory_controller:1b,inventory_controller_phase:ingame}] run function system:custom/gun/raycast/sniper/start
 
 # - not holding sniper gun
 # -- offhand

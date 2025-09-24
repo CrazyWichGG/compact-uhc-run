@@ -19,13 +19,13 @@ execute if score load-asset game-state matches 1 run scoreboard players set load
 execute if score load-asset game-state matches 1 run scoreboard players set required-asset preload-game 15
 
 #load asset
-execute if score load-asset game-state matches 1 if score load-asset-stage preload-game matches 0..2 run function event:supply-drop/summon-supply-drop-phase1
-execute if score load-asset game-state matches 1 if score load-asset-stage preload-game matches 3..5 run function event:supply-drop/summon-supply-drop-phase2
-execute if score load-asset game-state matches 1 if score load-asset-stage preload-game matches 6..8 run function event:supply-drop/summon-supply-drop-phase3
-execute if score load-asset game-state matches 1 if score load-asset-stage preload-game matches 9..11 run function event:supply-drop/summon-supply-drop-phase4
-execute if score load-asset game-state matches 1 if score load-asset-stage preload-game matches 12 run function event:supply-drop/summon-supply-drop-phase5
-execute if score load-asset game-state matches 1 if score load-asset-stage preload-game matches 13 run function event:supply-drop/summon-supply-drop-phase6
-execute if score load-asset game-state matches 1 if score load-asset-stage preload-game matches 14 run function event:supply-drop/summon-supply-drop-phase7
+execute if score load-asset game-state matches 1 if score load-asset-stage preload-game matches 0..2 run function system:event/supply_drop/summon_phase_1
+execute if score load-asset game-state matches 1 if score load-asset-stage preload-game matches 3..5 run function system:event/supply_drop/summon_phase_2
+execute if score load-asset game-state matches 1 if score load-asset-stage preload-game matches 6..8 run function system:event/supply_drop/summon_phase_3
+execute if score load-asset game-state matches 1 if score load-asset-stage preload-game matches 9..11 run function system:event/supply_drop/summon_phase_4
+execute if score load-asset game-state matches 1 if score load-asset-stage preload-game matches 12 run function system:event/supply_drop/summon_phase_5
+execute if score load-asset game-state matches 1 if score load-asset-stage preload-game matches 13 run function system:event/supply_drop/summon_phase_6
+execute if score load-asset game-state matches 1 if score load-asset-stage preload-game matches 14 run function system:event/supply_drop/summon_phase_7
 
 #loaded asset
 execute if score load-asset game-state matches 1 as @e[type=armor_stand,name='map-center',limit=1] at @s as @e[type=armor_stand,tag=supply-drop,team=supply-state-loaded] at @s if loaded ~ ~ ~ run scoreboard players add loaded-asset preload-game 1
@@ -49,7 +49,7 @@ execute if score load-asset game-state matches 1 if score loaded-asset preload-g
 execute if score load-asset game-state matches 1 if score loaded-asset preload-game = required-asset preload-game run title @a times 0 100 20
 execute if score load-asset game-state matches 1 if score loaded-asset preload-game = required-asset preload-game run gamerule spectatorsGenerateChunks true
 
-execute if score load-asset game-state matches 1 if score loaded-asset preload-game = required-asset preload-game run function system:game-start
+execute if score load-asset game-state matches 1 if score loaded-asset preload-game = required-asset preload-game run function system:game_start
 
 execute if score load-asset game-state matches 1 if score loaded-asset preload-game = required-asset preload-game run scoreboard players set lobby game-state 0
 execute if score load-asset game-state matches 1 if score loaded-asset preload-game = required-asset preload-game run scoreboard players set gen-chunk game-state 0

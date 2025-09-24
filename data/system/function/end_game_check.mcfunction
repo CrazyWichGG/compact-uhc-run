@@ -14,8 +14,8 @@ execute if score end-game game-state matches 0 run scoreboard players set end-ti
 execute if score end-game game-state matches 1 run scoreboard players add end-timer timer 1
 
 # -end
-execute if score end-game game-state matches 1 if score end-timer timer matches 10 run function system:game-before-end
-execute if score end-game game-state matches 1 if score end-timer timer matches 600 run function system:game-end
+execute if score end-game game-state matches 1 if score end-timer timer matches 10 run function system:game_before_end
+execute if score end-game game-state matches 1 if score end-timer timer matches 600 run function system:game_end
 
 # -invincible effect
 execute if score end-game game-state matches 1 if score end-timer timer matches 1.. run effect give @a weakness 1 255 true

@@ -10,7 +10,7 @@ loot replace entity @s weapon.offhand loot system:inventory_controller/custom/gu
 tag @s add raycasting
 
 # Anchor to the eyes and position with vector coordinates (Remove if not running from eyes of entity)
-execute as @s at @s anchored eyes positioned ^ ^ ^ run function system:custom-active/gun/raycast/sniper/raycasting
+execute as @s at @s anchored eyes positioned ^ ^ ^ run function system:custom/gun/raycast/sniper/raycasting
 
 # Remove the raycasting tag after raycast completion to prepare fo the next player
 tag @s remove raycasting

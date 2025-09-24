@@ -45,7 +45,7 @@ recipe give @a *
 weather clear
 
 #load asset
-function system:preload-game/start
+function system:preload_game/start
 
 #customs
 # -night mode

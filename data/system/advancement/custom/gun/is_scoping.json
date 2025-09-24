@@ -15,6 +15,6 @@
     }
   },
   "rewards": {
-    "function": "system:custom-active/gun/trigger/is-scoping"
+    "function": "system:custom/gun/trigger/is_scoping"
   }
 }

@@ -4,7 +4,7 @@ setworldspawn ~ ~2 ~
 # -set spawnpoint at player
 execute as @a at @s run spawnpoint @s ~ ~ ~
 # -death event
-execute as @a[team=ingame] at @s if score ingame game-state matches 1 if score @s ingame-death matches 1 run function system:ingame-player-dead
+execute as @a[team=ingame] at @s if score ingame game-state matches 1 if score @s ingame-death matches 1 run function system:ingame_player_dead
 execute as @a[team=!ingame] at @s if score ingame game-state matches 1 if score @s ingame-death matches 1 run scoreboard players set @s ingame-death 0
 execute as @a at @s unless score ingame game-state matches 1 if score @s ingame-death matches 1 run scoreboard players set @s ingame-death 0
 # -apply night vision
@@ -19,31 +19,33 @@ execute if score border-state border-countdown matches 5.. run effect give @a[te
 execute as @a at @s store result score @s player-uuid run data get entity @s UUID[1] 1
 
 # functions
-function system:total-player
-function system:disable-pvp
-function system:disable-nether
+function system:total_player
+function system:disable_pvp
+function system:disable_nether
 function system:timer
-function system:border
 function system:gliding
-function system:jump-pad
-function system:obtain-emerald
-function system:border-countdown
-function system:border-bossbar-name
-function system:border-size
+function system:jump_pad
+function system:obtain_emerald
 function system:shop
-function system:item-glowing
-function system:lobby-player-inborder
-function system:border-bossbar-score-sync
-function system:game-time
-function system:game-time-event
-function system:player-rejoin
-function system:player-join-late
-function system:bossbar-animation
-function system:ingame-early-invin
+function system:item_glowing
+function system:lobby_player_inborder
+function system:game_time
+function system:game_time_event
+function system:player_rejoin
+function system:player_join_late
+function system:bossbar_animation
+function system:ingame_early_invin
+
+#border
+function system:border/run
+function system:border/score_countdown
+function system:border/stage_bossbar_name
+function system:border/score_store_size
+function system:border/bossbar_score_sync
 
 #preload game
-function system:preload-game/generate-chunk
-function system:preload-game/load-asset
+function system:preload_game/generate_chunk
+function system:preload_game/load_asset
 
 #inventory controller
 function system:inventory_controller/lobby_main
@@ -60,20 +62,20 @@ function system:cosmetics/victory_dances
 function system:settings/set_default_value
 function system:settings/active
 
-function system:spectator-spectate-player
-function system:statistics-handler
-function system:server-status
+function system:spectator_spectate_player
+function system:statistics_handler
+function system:server_status
 function system:entity_timeout
-function system:supply-drop
+function system:supply_drop
 function system:enderchest
-function system:end-game-check
-function system:end-game-tick-slow
+function system:end_game_check
+function system:end_game_tick_slow
 
 ## custom
 # -gambling
-function system:custom-active/gambling
+function system:custom/gambling
 # -gun
-function system:custom-active/gun/sniper
-function system:custom-active/gun/active
+function system:custom/gun/sniper
+function system:custom/gun/active
 # -old-combat
-function system:custom-active/old-combat
+function system:custom/old_combat

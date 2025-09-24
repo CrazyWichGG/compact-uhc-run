@@ -8,10 +8,10 @@ scoreboard players set ingame game-state 1
 tellraw @a [{"text":"The game has started! Have fun ;)","color":"green"}]
 
 #border
-function game:stage-1
+function system:game/stage_1
 
 #invincible effect
-function system:ingame-early-invin-start
+function system:ingame_early_invin_start
 
 #game time
 scoreboard players set tick game-time 0
