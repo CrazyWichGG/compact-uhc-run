@@ -1,5 +1,7 @@
 {
     "values": [
+        "item",
+        "experience_orb",
         "#undead",
         "creeper",
         "spider",
