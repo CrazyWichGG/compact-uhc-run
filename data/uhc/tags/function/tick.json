@@ -1,0 +1,7 @@
+{
+    "values": [
+        "uhc:system/tick",
+        "uhc:system/lobby/check_players_ready/run",
+        "uhc:system/lobby/inventory_controller/run"
+    ]
+}

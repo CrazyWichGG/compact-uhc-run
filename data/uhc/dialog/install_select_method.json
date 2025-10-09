@@ -1,0 +1,41 @@
+{
+    "type": "multi_action",
+    "title": {
+        "text": "Select Installation Method",
+        "bold": true
+    },
+    "body": {
+        "type": "plain_message",
+        "contents": [
+            {
+                "text": "Choose how you want to install Compact UHC Run in your world.",
+                "color": "white"
+            }
+        ]
+    },
+    "actions": [
+        {
+            "label": "Install here",
+            "action": {
+                "type": "run_command",
+                "command": "function uhc:install/start"
+            },
+            "tooltip": {
+                "text": "Install the game at your current location as a map center"
+            }
+        },
+        {
+            "label": "Randomize center and install",
+            "action": {
+                "type": "run_command",
+                "command": "function uhc:install/randomize_center"
+            },
+            "tooltip": {
+                "text": "Randomize the map center and install the game there"
+            }
+        },
+        {
+            "label": "Cancel"
+        }
+    ]
+}

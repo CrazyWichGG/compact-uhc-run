@@ -1,0 +1,108 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "music_disc_11",
+                    "functions": [
+                        {
+                            "function": "set_name",
+                            "name": [
+                                {
+                                    "text": "[ ",
+                                    "color": "gray",
+                                    "bold": false,
+                                    "italic": false
+                                },
+                                {
+                                    "text": "PLAYER",
+                                    "color": "gray",
+                                    "bold": false
+                                },
+                                {
+                                    "text": " | ",
+                                    "color": "gray",
+                                    "bold": false
+                                },
+                                {
+                                    "text": "OBSERVER",
+                                    "color": "aqua",
+                                    "bold": true
+                                },
+                                {
+                                    "text": " ]",
+                                    "color": "gray",
+                                    "bold": false
+                                }
+                            ]
+                        },
+                        {
+                            "function": "set_lore",
+                            "lore": [
+                                [
+                                    ""
+                                ],
+                                [
+                                    {
+                                        "text": "Press ",
+                                        "color": "white",
+                                        "italic": false
+                                    },
+                                    {
+                                        "keybind": "key.use",
+                                        "color": "yellow"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "to toggle your role.",
+                                        "color": "white",
+                                        "italic": false
+                                    }
+                                ]
+                            ],
+                            "mode": "replace_all"
+                        },
+                        {
+                            "function": "set_custom_data",
+                            "tag": {
+                                "uhc": {
+                                    "item": "lobby.role_selector",
+                                    "lobby": {
+                                        "selected_role": "observer"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "function": "set_components",
+                            "components": {
+                                "item_model": "ender_eye",
+                                "!jukebox_playable": {},
+                                "consumable": {
+                                    "animation": "none",
+                                    "consume_seconds": 0,
+                                    "has_consume_particles": false,
+                                    "sound": "block.note_block.hat"
+                                },
+                                "use_cooldown": {
+                                    "seconds": 1,
+                                    "cooldown_group": "lobby.role_item"
+                                },
+                                "use_remainder": {
+                                    "id": "music_disc_11",
+                                    "components": {
+                                        "item_name": "",
+                                        "item_model": "iron_sword"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

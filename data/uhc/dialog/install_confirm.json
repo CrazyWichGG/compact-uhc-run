@@ -1,0 +1,50 @@
+{
+    "type": "multi_action",
+    "title": {
+        "text": "Install Compact UHC Run?",
+        "bold": true
+    },
+    "can_close_with_escape": true,
+    "body": {
+        "type": "plain_message",
+        "contents": [
+            {
+                "text": "This process will install Compact UHC Run in your world.\n",
+                "color": "white"
+            },
+            {
+                "text": "Make sure you're in your preferred center of the maps before processing.\n\n\n",
+                "color": "white"
+            },
+            [
+                {
+                    "text": "Clicking ",
+                    "color": "white"
+                },
+                {
+                    "text": "\"Process\"",
+                    "color": "yellow"
+                },
+                {
+                    "text": " will take you to the installation method selection.",
+                    "color": "white"
+                }
+            ]
+        ]
+    },
+    "actions": [
+        {
+            "label": "Process",
+            "action": {
+                "type": "show_dialog",
+                "dialog": "uhc:install_select_method"
+            },
+            "tooltip": {
+                "text": "Process to installation method selection"
+            }
+        },
+        {
+            "label": "Cancel"
+        }
+    ]
+}

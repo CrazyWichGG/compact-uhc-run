@@ -1,0 +1,50 @@
+{
+    "type": "multi_action",
+    "title": {
+        "text": "Uninstall Compact UHC Run?",
+        "bold": true
+    },
+    "can_close_with_escape": true,
+    "body": {
+        "type": "plain_message",
+        "contents": [
+            {
+                "text": "This process will remove Compact UHC Run from your world.\n",
+                "color": "white"
+            },
+            {
+                "text": "Statistics and players' selections will not be removed on uninstall.\n\n\n",
+                "color": "white"
+            },
+            [
+                {
+                    "text": "Clicking ",
+                    "color": "white"
+                },
+                {
+                    "text": "\"Process\"",
+                    "color": "yellow"
+                },
+                {
+                    "text": " will uninstall the game from your world.",
+                    "color": "white"
+                }
+            ]
+        ]
+    },
+    "actions": [
+        {
+            "label": "Process",
+            "action": {
+                "type": "run_command",
+                "command": "function uhc:uninstall/start"
+            },
+            "tooltip": {
+                "text": "Process an uninstallation"
+            }
+        },
+        {
+            "label": "Cancel"
+        }
+    ]
+}
