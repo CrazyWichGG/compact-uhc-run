@@ -1,5 +1,5 @@
 {
     "values": [
-        "#uhc:tick"
+        "uhc:system/tick"
     ]
 }

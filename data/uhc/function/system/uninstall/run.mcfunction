@@ -1,0 +1,1 @@
+say uninstallation process

@@ -1,20 +1,8 @@
 # installation process
 
 # storage data
-## static (per game)
-data modify storage uhc:data game.center_pos set from entity @n[type=marker,nbt={data:{is_map_center:1b}}] Pos
-
-## dynamic
-### via game process
-data modify storage uhc:data game.state set value "lobby"
-data modify storage uhc:data game.gamemode set value "solo"
-data modify storage uhc:data game.phase set value ""
-
-### via game config
-data modify storage uhc:data game.config set value {}
-
-# players data
-# execute as @a run data merge entity @s {data:{game:{team:'',is_spectator:0b},lobby:{is_ready:0b,role:'player'}}}
+## default value
+data merge storage uhc:game {state:"lobby",gamemode:"solo",global_config:{},ingame:{participated_teams:[]}}
 
 
 # lobby environment
@@ -32,16 +20,7 @@ weather clear
 
 
 
-# scores
-
-## temporary scoreboard
-scoreboard objectives add uhc.temp.statistics.death deathCount
-scoreboard objectives add uhc.temp.statistics.player_kill playerKillCount
-scoreboard objectives add uhc.temp.statistics.damage_dealt custom:damage_absorbed
-
-
-## role
-scoreboard objectives add uhc.game.player.role dummy
+# scoreboards
 
 
 ## lobby
@@ -54,80 +33,89 @@ scoreboard objectives add uhc.lobby.player.selected_role dummy
 scoreboard objectives add uhc.lobby.player.selected_team dummy
 
 ## statistics
+### temporary statistics
+scoreboard objectives add uhc.statistics.temp_death deathCount
+scoreboard objectives add uhc.statistics.temp_player_kill playerKillCount
+scoreboard objectives add uhc.statistics.temp_damage_dealt custom:damage_dealt
+
 ### total
-scoreboard objectives add uhc.game.statistics.total.deaths dummy
-scoreboard objectives add uhc.game.statistics.total.player_kills dummy
-scoreboard objectives add uhc.game.statistics.total.wins dummy
-scoreboard objectives add uhc.game.statistics.total.games_played dummy
-scoreboard objectives add uhc.game.statistics.total.damage_dealt dummy
+scoreboard objectives add uhc.statistics.total_deaths dummy
+scoreboard objectives add uhc.statistics.total_player_kills dummy
+scoreboard objectives add uhc.statistics.total_wins dummy
+scoreboard objectives add uhc.statistics.total_games_played dummy
+scoreboard objectives add uhc.statistics.total_damage_dealt dummy
 
 ### ingame
 #### personal
-scoreboard objectives add uhc.game.statistics.ingame.player_kills dummy
-scoreboard objectives add uhc.game.statistics.ingame.damage_dealt dummy
+scoreboard objectives add uhc.statistics.ingame.player_kills dummy
+scoreboard objectives add uhc.statistics.ingame.damage_dealt dummy
 #### team
-scoreboard objectives add uhc.game.statistics.ingame.team_kills.aqua dummy
-scoreboard objectives add uhc.game.statistics.ingame.team_kills.blue dummy
-scoreboard objectives add uhc.game.statistics.ingame.team_kills.cyan dummy
-scoreboard objectives add uhc.game.statistics.ingame.team_kills.gray dummy
-scoreboard objectives add uhc.game.statistics.ingame.team_kills.green dummy
-scoreboard objectives add uhc.game.statistics.ingame.team_kills.purple dummy
-scoreboard objectives add uhc.game.statistics.ingame.team_kills.orange dummy
-scoreboard objectives add uhc.game.statistics.ingame.team_kills.lime dummy
-scoreboard objectives add uhc.game.statistics.ingame.team_kills.pink dummy
-scoreboard objectives add uhc.game.statistics.ingame.team_kills.red dummy
-scoreboard objectives add uhc.game.statistics.ingame.team_kills.yellow dummy
+scoreboard objectives add uhc.statistics.ingame.team_kills.aqua dummy
+scoreboard objectives add uhc.statistics.ingame.team_kills.blue dummy
+scoreboard objectives add uhc.statistics.ingame.team_kills.cyan dummy
+scoreboard objectives add uhc.statistics.ingame.team_kills.gray dummy
+scoreboard objectives add uhc.statistics.ingame.team_kills.green dummy
+scoreboard objectives add uhc.statistics.ingame.team_kills.purple dummy
+scoreboard objectives add uhc.statistics.ingame.team_kills.orange dummy
+scoreboard objectives add uhc.statistics.ingame.team_kills.lime dummy
+scoreboard objectives add uhc.statistics.ingame.team_kills.pink dummy
+scoreboard objectives add uhc.statistics.ingame.team_kills.red dummy
+scoreboard objectives add uhc.statistics.ingame.team_kills.yellow dummy
 
 ## players' info
-scoreboard objectives add uhc.game.players_info.health health
-scoreboard objectives add uhc.game.players_info.armor armor
-scoreboard objectives add uhc.game.players_info.food food
-scoreboard objectives add uhc.game.players_info.air air
+scoreboard objectives add uhc.player_info.health health
+scoreboard objectives add uhc.player_info.armor armor
+scoreboard objectives add uhc.player_info.food food
+scoreboard objectives add uhc.player_info.air air
 
 
 
 ## ingame
-
+### role
+scoreboard objectives add uhc.ingame.player.role dummy
 
 ## scoreboard display
-scoreboard objectives add uhc.game.scoreboard_display.lobby dummy
+
+### lobby
+scoreboard objectives add uhc.scoreboard_display.lobby dummy
 
 ### black (empty)
+
 ### white (observer)
-scoreboard objectives add uhc.game.scoreboard_display.ingame.observer.solo dummy
-scoreboard objectives add uhc.game.scoreboard_display.ingame.observer.team dummy
+scoreboard objectives add uhc.scoreboard_display.ingame.observer.solo dummy
+scoreboard objectives add uhc.scoreboard_display.ingame.observer.team dummy
 ### gray (spectator solo)
-scoreboard objectives add uhc.game.scoreboard_display.ingame.spectator.solo dummy
+scoreboard objectives add uhc.scoreboard_display.ingame.spectator.solo dummy
 ### red (player solo)
-scoreboard objectives add uhc.game.scoreboard_display.ingame.player.solo dummy
+scoreboard objectives add uhc.scoreboard_display.ingame.player.solo dummy
 
 ### team colors
 ### aqua => aqua
-scoreboard objectives add uhc.game.scoreboard_display.ingame.player.team.aqua dummy
+scoreboard objectives add uhc.scoreboard_display.ingame.player.team.aqua dummy
 ### blue => blue
-scoreboard objectives add uhc.game.scoreboard_display.ingame.player.team.blue dummy
+scoreboard objectives add uhc.scoreboard_display.ingame.player.team.blue dummy
 ### dark_aqua => cyan
-scoreboard objectives add uhc.game.scoreboard_display.ingame.player.team.cyan dummy
+scoreboard objectives add uhc.scoreboard_display.ingame.player.team.cyan dummy
 ### dark_blue => dark_blue (unused)
-# scoreboard objectives add uhc.game.scoreboard_display.ingame.player.team.dark_blue dummy
+# scoreboard objectives add uhc.scoreboard_display.ingame.player.team.dark_blue dummy
 ### dark_gray => gray
-scoreboard objectives add uhc.game.scoreboard_display.ingame.player.team.gray dummy
+scoreboard objectives add uhc.scoreboard_display.ingame.player.team.gray dummy
 ### dark_green => green
-scoreboard objectives add uhc.game.scoreboard_display.ingame.player.team.green dummy
+scoreboard objectives add uhc.scoreboard_display.ingame.player.team.green dummy
 ### dark_purple => purple
-scoreboard objectives add uhc.game.scoreboard_display.ingame.player.team.purple dummy
+scoreboard objectives add uhc.scoreboard_display.ingame.player.team.purple dummy
 ### dark_red => dark_red (unused)
-# scoreboard objectives add uhc.game.scoreboard_display.ingame.player.team.dark_red dummy
+# scoreboard objectives add uhc.scoreboard_display.ingame.player.team.dark_red dummy
 ### gold => orange
-scoreboard objectives add uhc.game.scoreboard_display.ingame.player.team.orange dummy
+scoreboard objectives add uhc.scoreboard_display.ingame.player.team.orange dummy
 ### green => lime
-scoreboard objectives add uhc.game.scoreboard_display.ingame.player.team.lime dummy
+scoreboard objectives add uhc.scoreboard_display.ingame.player.team.lime dummy
 ### light_purple => pink
-scoreboard objectives add uhc.game.scoreboard_display.ingame.player.team.pink dummy
+scoreboard objectives add uhc.scoreboard_display.ingame.player.team.pink dummy
 ### red => red
-scoreboard objectives add uhc.game.scoreboard_display.ingame.player.team.red dummy
+scoreboard objectives add uhc.scoreboard_display.ingame.player.team.red dummy
 ### yellow => yellow
-scoreboard objectives add uhc.game.scoreboard_display.ingame.player.team.yellow dummy
+scoreboard objectives add uhc.scoreboard_display.ingame.player.team.yellow dummy
 
 
 
@@ -370,38 +358,39 @@ bossbar set uhc:lobby.player.ready visible true
 
 # gamerules (static settings)
 ## environment
-gamerule doDaylightCycle false
-gamerule doWeatherCycle false
-gamerule doInsomnia false
-gamerule doPatrolSpawning false
-gamerule doTraderSpawning false
-gamerule doWardenSpawning false
-gamerule globalSoundEvents false
-gamerule sendCommandFeedback false
-gamerule commandBlockOutput false
+gamerule advance_time false
+gamerule advance_weather false
+gamerule spawn_phantoms false
+gamerule spawn_patrols false
+gamerule spawn_wandering_traders false
+gamerule spawn_wardens false
+gamerule global_sound_events false
+gamerule send_command_feedback false
+gamerule command_block_output false
 
 ## gameplay
-gamerule keepInventory true
-gamerule doImmediateRespawn true
-gamerule doLimitedCrafting true
-gamerule playersSleepingPercentage 101
+gamerule keep_inventory true
+gamerule immediate_respawn true
+gamerule limited_crafting true
+gamerule players_sleeping_percentage 101
 
 # gamerules (dynamic settings)
 ## via game process
-gamerule doMobSpawning false
-gamerule doMobLoot false
-gamerule tntExplodes false
-gamerule mobGriefing false
-gamerule allowEnteringNetherUsingPortals false
+gamerule spawn_mobs false
+gamerule spawn_monsters false
+gamerule mob_drops false
+gamerule tnt_explodes false
+gamerule mob_griefing false
+gamerule allow_entering_nether_using_portals false
 gamerule pvp false
-gamerule fallDamage false
-gamerule fireDamage false
-gamerule freezeDamage false
-gamerule drowningDamage false
+gamerule fall_damage false
+gamerule fire_damage false
+gamerule freeze_damage false
+gamerule drowning_damage false
 
 ## via game config
-gamerule naturalRegeneration false
-gamerule announceAdvancements false
-gamerule locatorBar false
-gamerule reducedDebugInfo false
-gamerule spectatorsGenerateChunks false
+gamerule natural_health_regeneration false
+gamerule show_advancement_messages false
+gamerule locator_bar false
+gamerule reduced_debug_info false
+gamerule spectators_generate_chunks false

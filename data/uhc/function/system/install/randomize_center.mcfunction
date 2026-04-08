@@ -5,4 +5,4 @@ worldborder center ~ ~
 setworldspawn ~ ~ ~
 spawnpoint @a ~ ~ ~
 
-function uhc:install/start
+function uhc:system/install/start

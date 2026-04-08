@@ -1,1 +1,0 @@
-execute if data storage uhc:data {game:{state:"lobby"}} as @a[gamemode=adventure] run function uhc:system/lobby/inventory_manager/hotbar

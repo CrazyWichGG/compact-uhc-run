@@ -1,1 +1,1 @@
-dialog show @s uhc:uninstall_confirm
+function uhc:system/uninstall/start
