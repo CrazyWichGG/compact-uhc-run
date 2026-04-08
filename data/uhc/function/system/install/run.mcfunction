@@ -18,6 +18,9 @@ time set day
 ## weather
 weather clear
 
+# player behavior
+tp @a @s
+gamemode adventure @a
 
 
 # scoreboards
@@ -26,7 +29,6 @@ weather clear
 ## lobby
 ### ready status
 scoreboard objectives add uhc.lobby.player.ready dummy
-scoreboard objectives add uhc.lobby.player.is_ready dummy
 ### role
 scoreboard objectives add uhc.lobby.player.selected_role dummy
 ### team
