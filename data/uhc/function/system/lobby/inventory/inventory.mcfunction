@@ -1,0 +1,29 @@
+loot replace entity @s inventory.0 loot uhc:lobby/blank_item
+loot replace entity @s inventory.1 loot uhc:lobby/blank_item
+loot replace entity @s inventory.2 loot uhc:lobby/blank_item
+loot replace entity @s inventory.3 loot uhc:lobby/blank_item
+loot replace entity @s inventory.4 loot uhc:lobby/blank_item
+loot replace entity @s inventory.5 loot uhc:lobby/blank_item
+loot replace entity @s inventory.6 loot uhc:lobby/blank_item
+loot replace entity @s inventory.7 loot uhc:lobby/blank_item
+loot replace entity @s inventory.8 loot uhc:lobby/blank_item
+
+loot replace entity @s inventory.9 loot uhc:lobby/blank_item
+loot replace entity @s inventory.10 loot uhc:lobby/blank_item
+loot replace entity @s inventory.11 loot uhc:lobby/blank_item
+loot replace entity @s inventory.12 loot uhc:lobby/blank_item
+loot replace entity @s inventory.13 loot uhc:lobby/blank_item
+loot replace entity @s inventory.14 loot uhc:lobby/blank_item
+loot replace entity @s inventory.15 loot uhc:lobby/blank_item
+loot replace entity @s inventory.16 loot uhc:lobby/blank_item
+loot replace entity @s inventory.17 loot uhc:lobby/blank_item
+
+loot replace entity @s inventory.18 loot uhc:lobby/blank_item
+loot replace entity @s inventory.19 loot uhc:lobby/blank_item
+loot replace entity @s inventory.20 loot uhc:lobby/blank_item
+loot replace entity @s inventory.21 loot uhc:lobby/blank_item
+loot replace entity @s inventory.22 loot uhc:lobby/blank_item
+loot replace entity @s inventory.23 loot uhc:lobby/blank_item
+loot replace entity @s inventory.24 loot uhc:lobby/blank_item
+loot replace entity @s inventory.25 loot uhc:lobby/blank_item
+loot replace entity @s inventory.26 loot uhc:lobby/blank_item

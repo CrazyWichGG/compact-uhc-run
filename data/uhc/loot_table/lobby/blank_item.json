@@ -1,0 +1,32 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "gray_stained_glass_pane",
+                    "functions": [
+                        {
+                            "function": "set_components",
+                            "components": {
+                                "tooltip_display": {
+                                    "hide_tooltip": true
+                                }
+                            }
+                        },
+                        {
+                            "function": "set_custom_data",
+                            "tag": {
+                                "uhc_item": true,
+                                "uhc_item_name": "blank_item",
+                                "uhc_item_group": "lobby",
+                                "uhc_item_properties": {}
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -2,7 +2,7 @@
 
 # storage data
 ## default value
-data merge storage uhc:game {state:"lobby",gamemode:"solo",global_config:{},ingame:{participated_teams:[]}}
+data merge storage uhc:game {is_installed:true,state:"lobby",gamemode:"solo",global_config:{},ingame:{participated_teams:[]}}
 
 
 # lobby environment
@@ -402,3 +402,6 @@ gamerule show_advancement_messages false
 gamerule locator_bar false
 gamerule reduced_debug_info false
 gamerule spectators_generate_chunks false
+
+# final reload to trigger schedule
+reload
