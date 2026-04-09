@@ -36,33 +36,33 @@ scoreboard objectives add uhc.lobby.player.selected_team dummy
 
 ## statistics
 ### temporary statistics
-scoreboard objectives add uhc.statistics.temp_death deathCount
-scoreboard objectives add uhc.statistics.temp_player_kill playerKillCount
-scoreboard objectives add uhc.statistics.temp_damage_dealt custom:damage_dealt
+scoreboard objectives add uhc.stats.temp_death deathCount
+scoreboard objectives add uhc.stats.temp_player_kill playerKillCount
+scoreboard objectives add uhc.stats.temp_damage_dealt custom:damage_dealt
 
 ### total
-scoreboard objectives add uhc.statistics.total_deaths dummy
-scoreboard objectives add uhc.statistics.total_player_kills dummy
-scoreboard objectives add uhc.statistics.total_wins dummy
-scoreboard objectives add uhc.statistics.total_games_played dummy
-scoreboard objectives add uhc.statistics.total_damage_dealt dummy
+scoreboard objectives add uhc.stats.total_deaths dummy
+scoreboard objectives add uhc.stats.total_player_kills dummy
+scoreboard objectives add uhc.stats.total_wins dummy
+scoreboard objectives add uhc.stats.total_games_played dummy
+scoreboard objectives add uhc.stats.total_damage_dealt dummy
 
 ### ingame
 #### personal
-scoreboard objectives add uhc.statistics.ingame.player_kills dummy
-scoreboard objectives add uhc.statistics.ingame.damage_dealt dummy
+scoreboard objectives add uhc.stats.ingame.player_kills dummy
+scoreboard objectives add uhc.stats.ingame.damage_dealt dummy
 #### team
-scoreboard objectives add uhc.statistics.ingame.team_kills.aqua dummy
-scoreboard objectives add uhc.statistics.ingame.team_kills.blue dummy
-scoreboard objectives add uhc.statistics.ingame.team_kills.cyan dummy
-scoreboard objectives add uhc.statistics.ingame.team_kills.gray dummy
-scoreboard objectives add uhc.statistics.ingame.team_kills.green dummy
-scoreboard objectives add uhc.statistics.ingame.team_kills.purple dummy
-scoreboard objectives add uhc.statistics.ingame.team_kills.orange dummy
-scoreboard objectives add uhc.statistics.ingame.team_kills.lime dummy
-scoreboard objectives add uhc.statistics.ingame.team_kills.pink dummy
-scoreboard objectives add uhc.statistics.ingame.team_kills.red dummy
-scoreboard objectives add uhc.statistics.ingame.team_kills.yellow dummy
+scoreboard objectives add uhc.stats.ingame.team_kills.aqua dummy
+scoreboard objectives add uhc.stats.ingame.team_kills.blue dummy
+scoreboard objectives add uhc.stats.ingame.team_kills.cyan dummy
+scoreboard objectives add uhc.stats.ingame.team_kills.gray dummy
+scoreboard objectives add uhc.stats.ingame.team_kills.green dummy
+scoreboard objectives add uhc.stats.ingame.team_kills.purple dummy
+scoreboard objectives add uhc.stats.ingame.team_kills.orange dummy
+scoreboard objectives add uhc.stats.ingame.team_kills.lime dummy
+scoreboard objectives add uhc.stats.ingame.team_kills.pink dummy
+scoreboard objectives add uhc.stats.ingame.team_kills.red dummy
+scoreboard objectives add uhc.stats.ingame.team_kills.yellow dummy
 
 ## players' info
 scoreboard objectives add uhc.player_info.health health
@@ -75,6 +75,8 @@ scoreboard objectives add uhc.player_info.air air
 ## ingame
 ### role
 scoreboard objectives add uhc.ingame.player.role dummy
+
+
 
 ## scoreboard display
 
