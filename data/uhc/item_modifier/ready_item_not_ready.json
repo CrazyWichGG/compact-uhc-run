@@ -1,0 +1,51 @@
+[
+    {
+        "function": "set_components",
+        "components": {
+            "item_name": [{"text": "You are ","color": "white","italic": false},{"text": "NOT READY!","color": "gray","italic": false}],
+            "lore": [
+                [
+                    {
+                        "text": ""
+                    }
+                ],
+                [
+                    {
+                        "text": "Every players must be ready for the game to start!",
+                        "color": "white",
+                        "italic": false
+                    }
+                ],
+                [
+                    {
+                        "text": ""
+                    }
+                ],
+                [
+                    {
+                        "text": "Press ",
+                        "color": "gray",
+                        "italic": false
+                    },
+                    {
+                        "keybind": "key.use",
+                        "color": "yellow"
+                    },
+                    {
+                        "text": " to get ready!",
+                        "color": "gray"
+                    }
+                ]
+            ],
+            "item_model": "gray_dye"
+        }
+    },
+    {
+        "function": "set_custom_data",
+        "tag": {
+            "uhc_item_properties": {
+                "is_ready": false
+            }
+        }
+    }
+]

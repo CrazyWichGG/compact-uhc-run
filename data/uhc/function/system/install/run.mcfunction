@@ -26,6 +26,10 @@ gamemode adventure @a
 # scoreboards
 
 
+## interaction item
+scoreboard objectives add uhc.interaction.written_book used:written_book
+
+
 ## lobby
 ### ready status
 scoreboard objectives add uhc.lobby.player.ready dummy
