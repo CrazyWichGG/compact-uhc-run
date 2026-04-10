@@ -1,6 +1,6 @@
 # trigger function from uhc:system/interaction/detect_written_book
 
-scoreboard players set @s uhc.lobby.player.ready 1
+scoreboard players set @s uhc.lobby.ready_status 1
 item modify entity @s hotbar.4 uhc:lobby/ready_item_ready
 
 # reset value

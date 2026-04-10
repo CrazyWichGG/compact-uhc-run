@@ -32,7 +32,9 @@ scoreboard objectives add uhc.interaction.written_book used:written_book
 
 ## lobby
 ### ready status
-scoreboard objectives add uhc.lobby.player.ready dummy
+scoreboard objectives add uhc.lobby.ready_status dummy
+### start countdown
+scoreboard objectives add uhc.lobby.start_countdown dummy
 ### role
 scoreboard objectives add uhc.lobby.player.selected_role dummy
 ### team
