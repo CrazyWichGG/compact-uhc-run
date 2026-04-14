@@ -359,11 +359,11 @@ team modify uhc.ingame.team.yellow prefix [{"text":" "},{"type":"object","atlas"
 # bossbar
 ## lobby
 ### ready status
-bossbar add uhc:lobby.player.ready "uhc:lobby.player.ready"
-bossbar set uhc:lobby.player.ready color green
-bossbar set uhc:lobby.player.ready style notched_10
-bossbar set uhc:lobby.player.ready players @a
-bossbar set uhc:lobby.player.ready visible true
+bossbar add uhc:lobby.ready_status "uhc:lobby.ready_status"
+bossbar set uhc:lobby.ready_status color green
+bossbar set uhc:lobby.ready_status style notched_10
+bossbar set uhc:lobby.ready_status players @a
+bossbar set uhc:lobby.ready_status visible true
 
 
 # gamerules (static settings)
