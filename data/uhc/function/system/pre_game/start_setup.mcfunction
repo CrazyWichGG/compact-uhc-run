@@ -7,6 +7,9 @@ scoreboard players set $step uhc.pre_game.step 0
 # summon new map center
 execute as @n[type=marker,nbt={data:{lobby_center:1b}}] at @s run summon marker ~ ~ ~ {data:{map_center:1b}}
 
+# random map center
+# spreadplayers ~ ~ 0 300 false @n[type=marker,nbt={data:{map_center:1b}}]
+
 # set environment
 execute as @n[type=marker,nbt={data:{map_center:1b}}] at @s run function uhc:system/pre_game/setup/environment
 

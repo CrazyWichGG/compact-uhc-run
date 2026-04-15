@@ -77,6 +77,11 @@ scoreboard objectives add uhc.player_info.food food
 scoreboard objectives add uhc.player_info.air air
 
 
+## pre game
+### pre game step
+scoreboard objectives add uhc.pre_game.step dummy
+### generate chunk status
+scoreboard objectives add uhc.pre_game.chunk_gen_status dummy
 
 ## ingame
 ### role

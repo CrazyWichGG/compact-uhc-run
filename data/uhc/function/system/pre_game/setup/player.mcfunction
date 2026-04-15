@@ -5,6 +5,10 @@ xp set @a 0 points
 # clear items
 clear @a
 
+# gamemode
+gamemode adventure @a[scores={uhc.ingame.player.role=0}]
+gamemode spectator @a[scores={uhc.ingame.player.role=1}]
+
 # attribute
 execute as @a run attribute @s max_health base set 40
 
