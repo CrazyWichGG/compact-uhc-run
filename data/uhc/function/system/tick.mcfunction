@@ -9,6 +9,8 @@ execute unless data storage uhc:game {is_installed:true} run return fail
 execute if data storage uhc:game {state:"lobby"} as @a if score @s uhc.interaction.written_book matches 1.. run function uhc:system/interaction/detect_written_book
 ## inventory
 execute if data storage uhc:game {state:"lobby"} run function uhc:system/lobby/inventory/run
+## set selected role
+execute if data storage uhc:game {state:"lobby"} run function uhc:system/lobby/set_selected_role
 ## start
 execute if data storage uhc:game {state:"lobby"} run function uhc:system/lobby/start/condition_check
 

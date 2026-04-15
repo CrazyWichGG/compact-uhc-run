@@ -4,6 +4,9 @@ data modify storage uhc:game state set value "pre-game"
 # set pre game step
 scoreboard players set $step uhc.pre_game.step 0
 
+# set ingame role from selected role
+execute as @a run scoreboard players operation @s uhc.ingame.player.role = @s uhc.lobby.player.selected_role
+
 # summon new map center
 execute as @n[type=marker,nbt={data:{lobby_center:1b}}] at @s run summon marker ~ ~ ~ {data:{map_center:1b}}
 
