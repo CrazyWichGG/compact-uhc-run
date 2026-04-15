@@ -42,7 +42,3 @@ execute if score $countdown uhc.lobby.start_countdown matches 40 as @a at @s run
 execute if score $countdown uhc.lobby.start_countdown matches 20 run title @a subtitle {"text":"1","color":"red"}
 execute if score $countdown uhc.lobby.start_countdown matches 20 run title @a title ""
 execute if score $countdown uhc.lobby.start_countdown matches 20 as @a at @s run playsound block.note_block.hat master @s ~ ~ ~ 1 1 1
-
-execute if score $countdown uhc.lobby.start_countdown matches 0 run title @a subtitle {"text":"Teleporting...","color":"yellow"}
-execute if score $countdown uhc.lobby.start_countdown matches 0 run title @a title ""
-execute if score $countdown uhc.lobby.start_countdown matches 0 as @a at @s run playsound block.note_block.hat master @s ~ ~ ~ 1 1 1
