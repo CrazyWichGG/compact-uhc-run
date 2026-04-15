@@ -23,3 +23,6 @@ execute unless data storage uhc:game {gamemode:"solo"} run function uhc:system/p
 # gamemode based spawn platform
 execute if data storage uhc:game {gamemode:"solo"} as @a[scores={uhc.ingame.player.role=0}] at @s run function uhc:system/pre_game/setup/spawn_platform/solo
 execute unless data storage uhc:game {gamemode:"solo"} run function uhc:system/pre_game/setup/spawn_platform/team
+
+# start stopwatch
+stopwatch create uhc:pre_game.load_time

@@ -11,3 +11,6 @@ execute if data storage uhc:game {state:"lobby"} as @a if score @s uhc.interacti
 execute if data storage uhc:game {state:"lobby"} run function uhc:system/lobby/inventory/run
 ## start
 execute if data storage uhc:game {state:"lobby"} run function uhc:system/lobby/start/condition_check
+
+# pre game
+execute if data storage uhc:game {state:"pre-game"} run function uhc:system/pre_game/run
