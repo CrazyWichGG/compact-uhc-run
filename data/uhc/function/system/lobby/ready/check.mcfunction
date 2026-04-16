@@ -11,6 +11,9 @@ execute as @a run scoreboard players add $total_player uhc.lobby.ready_status 1
 execute as @a if score @s uhc.lobby.ready_status matches 1 run scoreboard players add $total_ready uhc.lobby.ready_status 1
 
 # update bossbar
+
+bossbar set uhc:lobby.ready_status players @a
+
 execute store result bossbar uhc:lobby.ready_status max run scoreboard players get $total_player uhc.lobby.ready_status
 execute store result bossbar uhc:lobby.ready_status value run scoreboard players get $total_ready uhc.lobby.ready_status
 
