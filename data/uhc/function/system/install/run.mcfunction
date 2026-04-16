@@ -79,13 +79,13 @@ scoreboard objectives add uhc.player_info.air air
 
 ## pre game
 ### pre game step
-scoreboard objectives add uhc.pre_game.step dummy
+scoreboard objectives add uhc.pre_game dummy
 ### generate chunk status
 scoreboard objectives add uhc.pre_game.chunk_gen_status dummy
 
-## ingame
+## in game
 ### role
-scoreboard objectives add uhc.ingame.player.role dummy
+scoreboard objectives add uhc.ingame.player_role dummy
 
 
 
