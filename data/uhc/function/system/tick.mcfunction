@@ -16,3 +16,7 @@ execute if data storage uhc:game {state:"lobby"} run function uhc:system/lobby/s
 
 # pre game
 execute if data storage uhc:game {state:"pre-game"} run function uhc:system/pre_game/run
+
+# ingame
+## gliding
+execute if data storage uhc:game {state:"ingame"} run function uhc:system/game/gliding/gliding

@@ -40,6 +40,23 @@ scoreboard objectives add uhc.lobby.player.selected_role dummy
 ### team
 scoreboard objectives add uhc.lobby.player.selected_team dummy
 
+
+
+## pre game
+### pre game main
+scoreboard objectives add uhc.pre_game dummy
+### generate chunk status
+scoreboard objectives add uhc.pre_game.chunk_gen_status dummy
+
+## in game
+### role
+scoreboard objectives add uhc.ingame.player_role dummy
+### gliding
+scoreboard objectives add uhc.ingame.gliding dummy
+### timestamp
+scoreboard objectives add uhc.ingame.timestamp dummy
+
+
 ## statistics
 ### temporary statistics
 scoreboard objectives add uhc.stats.temp_death deathCount
@@ -75,17 +92,6 @@ scoreboard objectives add uhc.player_info.health health
 scoreboard objectives add uhc.player_info.armor armor
 scoreboard objectives add uhc.player_info.food food
 scoreboard objectives add uhc.player_info.air air
-
-
-## pre game
-### pre game main
-scoreboard objectives add uhc.pre_game dummy
-### generate chunk status
-scoreboard objectives add uhc.pre_game.chunk_gen_status dummy
-
-## in game
-### role
-scoreboard objectives add uhc.ingame.player_role dummy
 
 
 
