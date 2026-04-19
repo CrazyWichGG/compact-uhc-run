@@ -362,6 +362,7 @@ bossbar set uhc:lobby.ready_status visible true
 ### progress bossbar
 bossbar add uhc:pre_game.loading_process "uhc:pre_game.loading_process"
 bossbar set uhc:pre_game.loading_process color yellow
+bossbar set uhc:pre_game.loading_process style notched_10
 bossbar set uhc:pre_game.loading_process players @a
 bossbar set uhc:pre_game.loading_process visible false
 bossbar set uhc:pre_game.loading_process value 1
