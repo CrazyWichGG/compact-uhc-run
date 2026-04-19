@@ -6,8 +6,6 @@ bossbar set uhc:pre_game.loading_process name {text:"Teleporting...",color:"yell
 bossbar set uhc:pre_game.loading_process color yellow
 bossbar set uhc:pre_game.loading_process players @a
 bossbar set uhc:pre_game.loading_process visible true
-bossbar set uhc:pre_game.loading_process value 1
-bossbar set uhc:pre_game.loading_process max 1
 
 # summon new map center
 execute as @n[type=marker,nbt={data:{lobby_center:1b}}] at @s run summon marker ~ ~ ~ {data:{map_center:1b}}
