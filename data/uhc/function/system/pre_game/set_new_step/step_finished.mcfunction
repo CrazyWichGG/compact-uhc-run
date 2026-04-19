@@ -10,4 +10,4 @@ effect clear @a blindness
 # reset titles
 title @a reset
 
-function uhc:system/pre_game/finish_setup
+function uhc:system/pre_game/end

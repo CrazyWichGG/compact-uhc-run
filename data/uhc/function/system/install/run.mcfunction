@@ -25,43 +25,25 @@ gamemode adventure @a
 
 # scoreboards
 
-
 ## interaction item
 scoreboard objectives add uhc.interaction.written_book used:written_book
 
-
 ## lobby
-### ready status
-scoreboard objectives add uhc.lobby.ready_status dummy
-### start countdown
-scoreboard objectives add uhc.lobby.start_countdown dummy
-### role
-scoreboard objectives add uhc.lobby.player.selected_role dummy
-### team
-scoreboard objectives add uhc.lobby.player.selected_team dummy
-
-
+function uhc:storage/create/lobby
 
 ## pre game
-### pre game main
-scoreboard objectives add uhc.pre_game dummy
-### generate chunk status
-scoreboard objectives add uhc.pre_game.chunk_gen_status dummy
+function uhc:storage/create/pre_game
 
 ## in game
-### role
-scoreboard objectives add uhc.ingame.player_role dummy
-### gliding
-scoreboard objectives add uhc.ingame.gliding dummy
-### timestamp
-scoreboard objectives add uhc.ingame.timestamp dummy
+function uhc:storage/create/ingame
+
+## post game
+function uhc:storage/create/post_game
 
 
 ## statistics
 ### temporary statistics
-scoreboard objectives add uhc.stats.temp_death deathCount
-scoreboard objectives add uhc.stats.temp_player_kill playerKillCount
-scoreboard objectives add uhc.stats.temp_damage_dealt custom:damage_dealt
+function uhc:storage/create/temp_stats
 
 ### total
 scoreboard objectives add uhc.stats.total_deaths dummy
@@ -425,5 +407,5 @@ gamerule locator_bar false
 gamerule reduced_debug_info false
 gamerule spectators_generate_chunks false
 
-# final reload to trigger schedule
-reload
+# trigger schedule
+function uhc:system/schedule

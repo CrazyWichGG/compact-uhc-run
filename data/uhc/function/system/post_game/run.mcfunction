@@ -1,0 +1,1 @@
+execute if stopwatch uhc:post_game.duration 30.. run function uhc:system/post_game/end

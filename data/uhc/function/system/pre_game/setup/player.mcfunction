@@ -1,3 +1,6 @@
+# join team
+execute if data storage uhc:game {gamemode:"solo"} run team join uhc.ingame.solo.player @a[scores={uhc.ingame.player_role=0}]
+
 # reset xp
 xp set @a 0 levels
 xp set @a 0 points

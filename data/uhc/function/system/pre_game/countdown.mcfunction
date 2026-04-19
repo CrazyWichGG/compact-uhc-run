@@ -2,7 +2,7 @@
 execute if score $countdown uhc.pre_game matches ..0 run return run function uhc:system/pre_game/set_new_step/step_finished
 
 # effect
-effect give @a[scores={uhc.ingame.player_role=0}] blindness infinite 0 false
+effect give @a[scores={uhc.ingame.player_role=0}] blindness infinite 0 true
 
 # title times
 title @a times 0 100 20
