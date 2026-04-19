@@ -2,7 +2,7 @@
 scoreboard players set $step uhc.pre_game 0
 
 # set progress bossbar
-bossbar add uhc:pre_game.loading_process {text:"Teleporting...",color:"yellow"}
+bossbar set uhc:pre_game.loading_process name {text:"Teleporting...",color:"yellow"}
 bossbar set uhc:pre_game.loading_process color yellow
 bossbar set uhc:pre_game.loading_process players @a
 bossbar set uhc:pre_game.loading_process visible true

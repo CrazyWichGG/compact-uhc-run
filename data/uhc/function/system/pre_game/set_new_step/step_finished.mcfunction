@@ -2,7 +2,7 @@
 scoreboard players set $step uhc.pre_game 3
 
 # remove bossbar
-bossbar remove uhc:pre_game.loading_process
+bossbar set uhc:pre_game.loading_process visible false
 
 # clear effect
 effect clear @a blindness
